@@ -859,7 +859,7 @@ html, body {
    Article Page Styles
    ===================================================== */
 .article-page {
-    padding-top: calc(var(--header-height) + var(--space-md));
+    padding-top: calc(var(--header-height) + var(--space-xl));
     min-height: 100vh;
 }
 
@@ -989,10 +989,17 @@ html, body {
     margin-bottom: var(--space-lg);
 }
 
-/* Article Page Responsive */
+/* Article Page Responsive - Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .article-page {
+        padding-top: 120px;
+    }
+}
+
+/* Article Page Responsive - Mobile */
 @media (max-width: 768px) {
     .article-page {
-        padding-top: calc(var(--header-height) + var(--space-sm));
+        padding-top: calc(var(--header-height) + var(--space-lg));
     }
 
     .article-header {
