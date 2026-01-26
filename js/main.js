@@ -1,54 +1,52 @@
 /**
  * Antik Bilge - Main JavaScript
+ * Minimal & Professional
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
+    // Elements
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    const header = document.getElementById('header');
+    const navLinks = document.querySelectorAll('.nav-menu a');
 
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.classList.toggle('active');
+    // Mobile Menu Toggle
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Close menu when clicking on a link
-        navLinks.querySelectorAll('a').forEach(link => {
+        // Close menu when clicking a link
+        navLinks.forEach(function(link) {
             link.addEventListener('click', function() {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
             });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     }
 
-    // Header scroll effect
-    const header = document.querySelector('.header');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 100) {
-            header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.05)';
-        }
-
-        lastScroll = currentScroll;
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Smooth Scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             if (href === '#') return;
 
-            e.preventDefault();
             const target = document.querySelector(href);
-
             if (target) {
-                const headerHeight = header.offsetHeight;
+                e.preventDefault();
+                const headerHeight = header ? header.offsetHeight : 70;
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
                 window.scrollTo({
@@ -59,88 +57,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Newsletter form handling
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
-
-            // Here you would typically send this to your backend
-            alert('Teşekkürler! ' + email + ' adresiniz listeye eklendi.');
-            this.reset();
+    // Header shadow on scroll
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
         });
     }
 
-    // Contact form handling
+    // Form Handling
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Here you would typically send this to your backend
-            alert('Mesajınız alındı. En kısa sürede size dönüş yapacağız.');
+            const formData = new FormData(this);
+            const name = formData.get('name');
+
+            alert('Teşekkürler ' + name + '! Mesajınız alındı. En kısa sürede size dönüş yapacağız.');
             this.reset();
         });
     }
 
-    // Lazy loading images with Intersection Observer
-    const lazyImages = document.querySelectorAll('img[data-src]');
-
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.add('loaded');
-                    observer.unobserve(img);
-                }
-            });
-        });
-
-        lazyImages.forEach(img => imageObserver.observe(img));
-    } else {
-        // Fallback for older browsers
-        lazyImages.forEach(img => {
-            img.src = img.dataset.src;
-        });
-    }
-
-    // Add animation on scroll
-    const animateOnScroll = document.querySelectorAll('.article-card, .category-card');
-
-    if ('IntersectionObserver' in window) {
-        const animationObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        animateOnScroll.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            animationObserver.observe(el);
-        });
-    }
-
-    // Active navigation link based on scroll position
+    // Active link on scroll
     const sections = document.querySelectorAll('section[id]');
 
     function updateActiveLink() {
-        const scrollPosition = window.pageYOffset + header.offsetHeight + 100;
+        const scrollPos = window.scrollY + 100;
 
-        sections.forEach(section => {
+        sections.forEach(function(section) {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
 
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                document.querySelectorAll('.nav-links a').forEach(link => {
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                navLinks.forEach(function(link) {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === '#' + sectionId) {
                         link.classList.add('active');

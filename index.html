@@ -9,259 +9,266 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.png" alt="Antik Bilge Logo" class="logo-img">
-                    <span class="logo-text">Antik Bilge</span>
-                </a>
-                <ul class="nav-links">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Antik Bilge" class="logo-img">
+                <span class="logo-text">Antik Bilge</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <ul class="nav-menu">
                     <li><a href="index.html" class="active">Ana Sayfa</a></li>
-                    <li><a href="#articles">Yazılar</a></li>
-                    <li><a href="#categories">Kategoriler</a></li>
-                    <li><a href="#about">Hakkımda</a></li>
-                    <li><a href="#contact">İletişim</a></li>
+                    <li><a href="#tarih">Tarih</a></li>
+                    <li><a href="#mitoloji">Mitoloji</a></li>
+                    <li><a href="#arkeoloji">Arkeoloji</a></li>
+                    <li><a href="#sanat-tarihi">Sanat Tarihi</a></li>
+                    <li><a href="#hakkimda">Hakkımda</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
                 </ul>
-                <button class="mobile-menu-btn" aria-label="Menü">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1>Antik Bilge</h1>
-            <p class="hero-subtitle">Geçmişin Izinde, Bilgeliğin Peşinde</p>
-            <p class="hero-description">Tarih, Mitoloji, Sanat Tarihi ve Arkeoloji dünyasına hoş geldiniz</p>
-            <div class="hero-buttons">
-                <a href="#articles" class="btn btn-primary">Yazıları Keşfet</a>
-                <a href="#about" class="btn btn-secondary">Hakkımda</a>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-badge">Keşfet</span>
+                    <h1>Geçmişin İzinde,<br>Bilgeliğin Peşinde</h1>
+                    <p>Tarih, mitoloji, sanat tarihi ve arkeoloji dünyasından en güncel ve ilgi çekici içerikler.</p>
+                    <a href="#yazilar" class="btn-primary">Yazıları Keşfet</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Categories Section -->
-    <section id="categories" class="categories">
-        <div class="container">
-            <h2 class="section-title">Kategoriler</h2>
-            <div class="category-grid">
-                <a href="#" class="category-card">
-                    <div class="category-icon">&#127963;</div>
-                    <h3>Tarih</h3>
-                    <p>Antik medeniyetlerden modern çağa uzanan tarihi yolculuklar</p>
-                </a>
-                <a href="#" class="category-card">
-                    <div class="category-icon">&#9876;</div>
-                    <h3>Mitoloji</h3>
-                    <p>Tanrılar, kahramanlar ve efsanevi hikayeler</p>
-                </a>
-                <a href="#" class="category-card">
-                    <div class="category-icon">&#127912;</div>
-                    <h3>Sanat Tarihi</h3>
-                    <p>Çağlar boyunca sanatın evrimi ve başyapıtlar</p>
-                </a>
-                <a href="#" class="category-card">
-                    <div class="category-icon">&#9874;</div>
-                    <h3>Arkeoloji</h3>
-                    <p>Toprak altından gün yüzüne çıkan hazineler</p>
-                </a>
+        <!-- Categories -->
+        <section class="categories" id="kategoriler">
+            <div class="container">
+                <div class="categories-grid">
+                    <a href="#tarih" class="category-item" id="tarih">
+                        <span class="category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                        </span>
+                        <span class="category-name">Tarih</span>
+                    </a>
+                    <a href="#mitoloji" class="category-item" id="mitoloji">
+                        <span class="category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </span>
+                        <span class="category-name">Mitoloji</span>
+                    </a>
+                    <a href="#arkeoloji" class="category-item" id="arkeoloji">
+                        <span class="category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"/></svg>
+                        </span>
+                        <span class="category-name">Arkeoloji</span>
+                    </a>
+                    <a href="#sanat-tarihi" class="category-item" id="sanat-tarihi">
+                        <span class="category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.555C21.965 6.012 17.461 2 12 2z"/></svg>
+                        </span>
+                        <span class="category-name">Sanat Tarihi</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Featured Articles Section -->
-    <section id="articles" class="articles">
-        <div class="container">
-            <h2 class="section-title">Son Yazılar</h2>
-            <div class="articles-grid">
-                <!-- Article 1 -->
-                <article class="article-card">
-                    <div class="article-image">
-                        <img src="images/placeholder-1.jpg" alt="Antik Yunan Mitolojisi" onerror="this.style.display='none'">
-                        <span class="article-category">Mitoloji</span>
-                    </div>
-                    <div class="article-content">
-                        <h3><a href="articles/yunan-mitolojisi.html">Antik Yunan Mitolojisinde Olimpos Tanrıları</a></h3>
-                        <p>Zeus'tan Hades'e, Athena'dan Apollon'a Olimpos'un kudretli tanrılarını keşfedin...</p>
-                        <div class="article-meta">
-                            <span class="date">24 Ocak 2026</span>
-                            <span class="read-time">8 dk okuma</span>
-                        </div>
-                    </div>
-                </article>
+        <!-- Articles Section -->
+        <section class="articles" id="yazilar">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Son Yazılar</h2>
+                    <a href="#" class="view-all">Tümünü Gör &rarr;</a>
+                </div>
 
-                <!-- Article 2 -->
-                <article class="article-card">
-                    <div class="article-image">
-                        <img src="images/placeholder-2.jpg" alt="Göbeklitepe" onerror="this.style.display='none'">
-                        <span class="article-category">Arkeoloji</span>
-                    </div>
-                    <div class="article-content">
-                        <h3><a href="articles/gobeklitepe.html">Göbeklitepe: Tarihi Yeniden Yazan Keşif</a></h3>
-                        <p>12.000 yıllık sırlarıyla insanlık tarihini değiştiren Göbeklitepe'nin hikayesi...</p>
-                        <div class="article-meta">
-                            <span class="date">20 Ocak 2026</span>
-                            <span class="read-time">10 dk okuma</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="article-card">
-                    <div class="article-image">
-                        <img src="images/placeholder-3.jpg" alt="Rönesans" onerror="this.style.display='none'">
-                        <span class="article-category">Sanat Tarihi</span>
-                    </div>
-                    <div class="article-content">
-                        <h3><a href="articles/ronesans.html">Rönesans: Sanatın Yeniden Doğuşu</a></h3>
-                        <p>Leonardo, Michelangelo ve Raffaello ile sanat tarihinin en parlak dönemi...</p>
-                        <div class="article-meta">
-                            <span class="date">15 Ocak 2026</span>
-                            <span class="read-time">12 dk okuma</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 4 -->
-                <article class="article-card">
-                    <div class="article-image">
-                        <img src="images/placeholder-4.jpg" alt="Osmanlı" onerror="this.style.display='none'">
-                        <span class="article-category">Tarih</span>
-                    </div>
-                    <div class="article-content">
-                        <h3><a href="articles/osmanli-mimarisi.html">Osmanlı Mimarisinin Altın Çağı</a></h3>
-                        <p>Mimar Sinan'ın eserleri ve Osmanlı mimarisinin benzersiz estetiği...</p>
-                        <div class="article-meta">
-                            <span class="date">10 Ocak 2026</span>
-                            <span class="read-time">9 dk okuma</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 5 -->
-                <article class="article-card">
-                    <div class="article-image">
-                        <img src="images/placeholder-5.jpg" alt="Mısır" onerror="this.style.display='none'">
-                        <span class="article-category">Tarih</span>
-                    </div>
-                    <div class="article-content">
-                        <h3><a href="articles/misir-piramitleri.html">Mısır Piramitlerinin Gizemi</a></h3>
-                        <p>Firavunların ebedi anıtları ve antik Mısır'ın mühendislik harikası...</p>
-                        <div class="article-meta">
-                            <span class="date">5 Ocak 2026</span>
-                            <span class="read-time">11 dk okuma</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 6 -->
-                <article class="article-card">
-                    <div class="article-image">
-                        <img src="images/placeholder-6.jpg" alt="Sümer" onerror="this.style.display='none'">
-                        <span class="article-category">Mitoloji</span>
-                    </div>
-                    <div class="article-content">
-                        <h3><a href="articles/sumer-mitolojisi.html">Sümer Mitolojisi ve Gılgamış Destanı</a></h3>
-                        <p>İnsanlığın ilk yazılı destanı ve Mezopotamya'nın kadim tanrıları...</p>
-                        <div class="article-meta">
-                            <span class="date">1 Ocak 2026</span>
-                            <span class="read-time">10 dk okuma</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="articles-more">
-                <a href="#" class="btn btn-outline">Tüm Yazıları Gör</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">Hakkımda</h2>
-                    <p>Merhaba, ben <strong>Antik Bilge</strong>'nin arkasındaki isim. Tarih, mitoloji, sanat tarihi ve arkeoloji tutkunu bir içerik üreticisiyim.</p>
-                    <p>Instagram ve YouTube'da başlayan bu yolculuk, şimdi bu web sitesiyle daha derin ve kapsamlı içeriklerle devam ediyor. Amacım, geçmişin bilgeliğini günümüze taşımak ve bu zengin mirası sizlerle paylaşmak.</p>
-                    <p>Her yazımda, antik medeniyetlerin izlerini sürerek, mitolojik hikayeleri keşfederek ve sanat tarihinin başyapıtlarını inceleyerek bilgi dolu bir yolculuğa çıkıyoruz.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/antik.bilge" target="_blank" rel="noopener" class="social-link instagram" title="Instagram">
-                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <div class="articles-grid">
+                    <!-- Article 1 -->
+                    <article class="article-card">
+                        <a href="articles/yunan-mitolojisi.html" class="article-image">
+                            <div class="article-image-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                            </div>
+                            <span class="article-category">Mitoloji</span>
                         </a>
-                        <a href="https://youtube.com/@antikbilge" target="_blank" rel="noopener" class="social-link youtube" title="YouTube">
-                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        <div class="article-content">
+                            <h3><a href="articles/yunan-mitolojisi.html">Antik Yunan Mitolojisinde Olimpos Tanrıları</a></h3>
+                            <p>Zeus'tan Hades'e, Athena'dan Apollon'a Olimpos'un kudretli tanrılarını keşfedin.</p>
+                            <div class="article-meta">
+                                <time datetime="2026-01-24">24 Ocak 2026</time>
+                                <span class="read-time">8 dk</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="article-card">
+                        <a href="articles/gobeklitepe.html" class="article-image">
+                            <div class="article-image-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                            </div>
+                            <span class="article-category">Arkeoloji</span>
                         </a>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="images/logo.png" alt="Antik Bilge Logo" class="about-logo">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Bültenimize Katılın</h2>
-                <p>Yeni yazılardan ve içeriklerden haberdar olmak için e-posta listemize katılın.</p>
-                <form class="newsletter-form" action="#" method="post">
-                    <input type="email" placeholder="E-posta adresiniz" required>
-                    <button type="submit" class="btn btn-primary">Abone Ol</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">İletişim</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p>Sorularınız, önerileriniz veya işbirliği teklifleriniz için benimle iletişime geçebilirsiniz.</p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <span class="contact-icon">&#9993;</span>
-                            <span>antikbilge.co@gmail.com</span>
+                        <div class="article-content">
+                            <h3><a href="articles/gobeklitepe.html">Göbeklitepe: Tarihi Yeniden Yazan Keşif</a></h3>
+                            <p>12.000 yıllık sırlarıyla insanlık tarihini değiştiren Göbeklitepe'nin hikayesi.</p>
+                            <div class="article-meta">
+                                <time datetime="2026-01-20">20 Ocak 2026</time>
+                                <span class="read-time">10 dk</span>
+                            </div>
                         </div>
-                        <div class="contact-method">
-                            <span class="contact-icon">&#128205;</span>
-                            <span>Türkiye</span>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="article-card">
+                        <a href="#" class="article-image">
+                            <div class="article-image-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                            </div>
+                            <span class="article-category">Sanat Tarihi</span>
+                        </a>
+                        <div class="article-content">
+                            <h3><a href="#">Rönesans: Sanatın Yeniden Doğuşu</a></h3>
+                            <p>Leonardo, Michelangelo ve Raffaello ile sanat tarihinin en parlak dönemi.</p>
+                            <div class="article-meta">
+                                <time datetime="2026-01-15">15 Ocak 2026</time>
+                                <span class="read-time">12 dk</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="article-card">
+                        <a href="#" class="article-image">
+                            <div class="article-image-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                            </div>
+                            <span class="article-category">Tarih</span>
+                        </a>
+                        <div class="article-content">
+                            <h3><a href="#">Osmanlı Mimarisinin Altın Çağı</a></h3>
+                            <p>Mimar Sinan'ın eserleri ve Osmanlı mimarisinin benzersiz estetiği.</p>
+                            <div class="article-meta">
+                                <time datetime="2026-01-10">10 Ocak 2026</time>
+                                <span class="read-time">9 dk</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="article-card">
+                        <a href="#" class="article-image">
+                            <div class="article-image-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                            </div>
+                            <span class="article-category">Tarih</span>
+                        </a>
+                        <div class="article-content">
+                            <h3><a href="#">Mısır Piramitlerinin Gizemi</a></h3>
+                            <p>Firavunların ebedi anıtları ve antik Mısır'ın mühendislik harikası.</p>
+                            <div class="article-meta">
+                                <time datetime="2026-01-05">5 Ocak 2026</time>
+                                <span class="read-time">11 dk</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="article-card">
+                        <a href="#" class="article-image">
+                            <div class="article-image-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                            </div>
+                            <span class="article-category">Mitoloji</span>
+                        </a>
+                        <div class="article-content">
+                            <h3><a href="#">Sümer Mitolojisi ve Gılgamış Destanı</a></h3>
+                            <p>İnsanlığın ilk yazılı destanı ve Mezopotamya'nın kadim tanrıları.</p>
+                            <div class="article-meta">
+                                <time datetime="2026-01-01">1 Ocak 2026</time>
+                                <span class="read-time">10 dk</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="hakkimda">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="images/logo.png" alt="Antik Bilge" class="about-logo">
+                    </div>
+                    <div class="about-content">
+                        <h2>Hakkımda</h2>
+                        <p>Merhaba, ben <strong>Antik Bilge</strong>'nin arkasındaki isim. Tarih, mitoloji, sanat tarihi ve arkeoloji tutkunu bir içerik üreticisiyim.</p>
+                        <p>Instagram ve YouTube'da başlayan bu yolculuk, şimdi bu web sitesiyle daha derin ve kapsamlı içeriklerle devam ediyor. Amacım, geçmişin bilgeliğini günümüze taşımak ve bu zengin mirası sizlerle paylaşmak.</p>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/antik.bilge" target="_blank" rel="noopener" class="social-btn instagram">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                Instagram
+                            </a>
+                            <a href="https://youtube.com/@antikbilge" target="_blank" rel="noopener" class="social-btn youtube">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                YouTube
+                            </a>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/antik.bilge" target="_blank" rel="noopener" class="social-link instagram">Instagram</a>
-                        <a href="https://youtube.com/@antikbilge" target="_blank" rel="noopener" class="social-link youtube">YouTube</a>
-                    </div>
                 </div>
-                <form class="contact-form" action="#" method="post">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Adınız" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="E-posta adresiniz" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Gönder</button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="iletisim">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>İletişim</h2>
+                        <p>Sorularınız, önerileriniz veya işbirliği teklifleriniz için benimle iletişime geçebilirsiniz.</p>
+                        <div class="contact-details">
+                            <a href="mailto:antikbilge.co@gmail.com" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                antikbilge.co@gmail.com
+                            </a>
+                            <a href="https://www.instagram.com/antik.bilge" target="_blank" rel="noopener" class="contact-item">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/><circle cx="12" cy="12" r="3.5"/><circle cx="18.5" cy="5.5" r="1.5"/></svg>
+                                @antik.bilge
+                            </a>
+                            <a href="https://youtube.com/@antikbilge" target="_blank" rel="noopener" class="contact-item">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                @antikbilge
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="#" method="post">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Adınız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="E-posta adresiniz" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -269,38 +276,22 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <img src="images/logo.png" alt="Antik Bilge Logo" class="logo-img">
+                        <img src="images/logo.png" alt="Antik Bilge" class="logo-img">
                         <span class="logo-text">Antik Bilge</span>
                     </a>
                     <p>Geçmişin izinde, bilgeliğin peşinde.</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Sayfalar</h4>
-                    <ul>
-                        <li><a href="index.html">Ana Sayfa</a></li>
-                        <li><a href="#articles">Yazılar</a></li>
-                        <li><a href="#categories">Kategoriler</a></li>
-                        <li><a href="#about">Hakkımda</a></li>
-                        <li><a href="#contact">İletişim</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Kategoriler</h4>
-                    <ul>
-                        <li><a href="#">Tarih</a></li>
-                        <li><a href="#">Mitoloji</a></li>
-                        <li><a href="#">Sanat Tarihi</a></li>
-                        <li><a href="#">Arkeoloji</a></li>
-                    </ul>
-                </div>
+
                 <div class="footer-social">
-                    <h4>Takip Edin</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/antik.bilge" target="_blank" rel="noopener">Instagram</a>
-                        <a href="https://youtube.com/@antikbilge" target="_blank" rel="noopener">YouTube</a>
-                    </div>
+                    <a href="https://www.instagram.com/antik.bilge" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@antikbilge" target="_blank" rel="noopener" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Antik Bilge. Tüm hakları saklıdır.</p>
             </div>
