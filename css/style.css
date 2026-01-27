@@ -98,15 +98,9 @@ button {
     padding: 0 var(--space-md);
 }
 
-/* Page Sections - Single Page Navigation */
-.page-section {
-    display: none;
+/* First section padding for fixed header */
+.articles {
     padding-top: calc(var(--header-height) + var(--space-lg));
-    min-height: calc(100vh - var(--header-height));
-}
-
-.page-section.active {
-    display: block;
 }
 
 /* Typography */

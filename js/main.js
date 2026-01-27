@@ -1,6 +1,5 @@
 /**
  * Antik Bilge - Main JavaScript
- * Single Page Navigation
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -9,32 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav = document.getElementById('nav');
     const header = document.getElementById('header');
     const navLinks = document.querySelectorAll('.nav-menu a');
-    const sections = document.querySelectorAll('.page-section');
-
-    // Show section function
-    function showSection(sectionId) {
-        // Hide all sections
-        sections.forEach(function(section) {
-            section.classList.remove('active');
-        });
-
-        // Show target section
-        const targetSection = document.getElementById(sectionId);
-        if (targetSection) {
-            targetSection.classList.add('active');
-        }
-
-        // Update active link
-        navLinks.forEach(function(link) {
-            link.classList.remove('active');
-            if (link.getAttribute('data-section') === sectionId) {
-                link.classList.add('active');
-            }
-        });
-
-        // Scroll to top
-        window.scrollTo(0, 0);
-    }
 
     // Mobile Menu Toggle
     if (hamburger && nav) {
@@ -43,34 +16,41 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.classList.toggle('active');
             document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
         });
-    }
 
-    // Navigation click handler
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
+        // Close menu when clicking a link
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
 
-            const sectionId = this.getAttribute('data-section');
-            if (sectionId) {
-                showSection(sectionId);
-            }
-
-            // Close mobile menu
-            if (hamburger && nav) {
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) {
                 hamburger.classList.remove('active');
                 nav.classList.remove('active');
                 document.body.style.overflow = '';
             }
         });
-    });
+    }
 
-    // Close menu on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && nav && nav.classList.contains('active')) {
-            hamburger.classList.remove('active');
-            nav.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+    // Scroll to section on anchor click
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                const headerHeight = header ? header.offsetHeight : 70;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                window.scrollTo(0, targetPosition);
+            }
+        });
     });
 
     // Header shadow on scroll
@@ -96,11 +76,5 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Teşekkürler ' + name + '! Mesajınız alındı. En kısa sürede size dönüş yapacağız.');
             this.reset();
         });
-    }
-
-    // Check URL hash on load
-    if (window.location.hash) {
-        const hash = window.location.hash.substring(1);
-        showSection(hash);
     }
 });
