@@ -98,9 +98,9 @@ button {
     padding: 0 var(--space-md);
 }
 
-/* First section padding for fixed header */
+/* Articles section */
 .articles {
-    padding-top: calc(var(--header-height) + var(--space-lg));
+    padding-top: var(--space-xl);
 }
 
 /* Typography */
@@ -116,65 +116,104 @@ h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
 h3 { font-size: clamp(1.125rem, 2vw, 1.25rem); }
 
 /* =====================================================
+   Top Bar
+   ===================================================== */
+.top-bar {
+    background: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-xs) 0;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-lg);
+}
+
+.top-nav a {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    transition: color var(--transition);
+}
+
+.top-nav a:hover {
+    color: var(--color-primary);
+}
+
+/* =====================================================
    Header
    ===================================================== */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: var(--color-bg-card);
-    border-bottom: 1px solid var(--color-border);
-    height: var(--header-height);
+    background: var(--color-bg);
+    padding: var(--space-lg) 0;
 }
 
 .header .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 100%;
+    justify-content: center;
 }
 
 /* Logo */
 .logo {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
-    z-index: 1001;
+    gap: var(--space-md);
 }
 
 .logo-img {
-    width: 42px;
-    height: 42px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .logo-text {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--color-primary);
 }
 
-/* Navigation */
-.nav-menu {
+/* =====================================================
+   Category Bar
+   ===================================================== */
+.category-bar {
+    background: var(--color-primary);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.category-bar .container {
     display: flex;
     align-items: center;
-    gap: var(--space-lg);
+    justify-content: center;
 }
 
-.nav-menu a {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--color-text);
-    padding: var(--space-xs) 0;
-    position: relative;
+.category-menu {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-menu a.active {
-    color: var(--color-primary);
+.category-menu li a {
+    display: block;
+    padding: var(--space-md) var(--space-lg);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background var(--transition);
+}
+
+.category-menu li a:hover {
+    background: var(--color-primary-dark);
 }
 
 /* Hamburger Menu */
@@ -182,14 +221,17 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.25rem); }
     display: none;
     flex-direction: column;
     gap: 5px;
-    padding: var(--space-xs);
+    padding: var(--space-sm);
     z-index: 1001;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .hamburger span {
     width: 24px;
     height: 2px;
-    background: var(--color-primary);
+    background: white;
     transition: all var(--transition);
 }
 
@@ -801,37 +843,57 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.25rem); }
    Responsive Design
    ===================================================== */
 
-/* Tablet & Mobile Navigation - Show hamburger menu */
+/* Tablet */
 @media (max-width: 992px) {
     .hamburger {
         display: flex;
+        position: absolute;
+        right: var(--space-md);
     }
 
-    .nav {
+    .category-bar .container {
+        justify-content: flex-start;
+    }
+
+    .category-menu {
         position: fixed;
         top: 0;
-        right: -100%;
+        left: -100%;
         width: 100%;
         height: 100vh;
-        background: var(--color-bg-card);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: right var(--transition);
-    }
-
-    .nav.active {
-        right: 0;
-    }
-
-    .nav-menu {
+        background: var(--color-primary);
         flex-direction: column;
-        gap: var(--space-lg);
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        transition: left var(--transition);
+        z-index: 1000;
     }
 
-    .nav-menu a {
-        font-size: 1.25rem;
+    .category-menu.active {
+        left: 0;
+    }
+
+    .category-menu li a {
+        padding: var(--space-md) var(--space-xl);
+        font-size: 1.2rem;
+    }
+
+    .top-nav {
+        gap: var(--space-md);
+    }
+
+    .top-nav a {
+        font-size: 0.8rem;
+    }
+
+    .logo-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-text {
+        font-size: 1.8rem;
     }
 
     .articles-grid {
@@ -865,23 +927,21 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.25rem); }
 
 /* Mobile */
 @media (max-width: 768px) {
-    :root {
-        --header-height: 60px;
-    }
-
-    /* Hero */
-    .hero {
-        padding: calc(var(--header-height) + var(--space-xl)) 0 var(--space-xl);
-    }
-
-    /* Categories */
-    .categories-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .top-nav {
         gap: var(--space-sm);
     }
 
-    .category-item {
-        padding: var(--space-md) var(--space-sm);
+    .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        padding: var(--space-md) 0;
     }
 
     /* Articles */
