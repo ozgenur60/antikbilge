@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Smooth Scroll for anchor links
+    // Scroll for anchor links (instant, no smooth scroll)
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -49,10 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const headerHeight = header ? header.offsetHeight : 70;
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                window.scrollTo(0, targetPosition);
             }
         });
     });
@@ -82,27 +79,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Active link on scroll
-    const sections = document.querySelectorAll('section[id]');
-
-    function updateActiveLink() {
-        const scrollPos = window.scrollY + 100;
-
-        sections.forEach(function(section) {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                navLinks.forEach(function(link) {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + sectionId) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }
-
-    window.addEventListener('scroll', updateActiveLink);
 });
