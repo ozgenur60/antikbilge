@@ -22,14 +22,10 @@
 
             <nav class="nav" id="nav">
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Ana Sayfa</a></li>
-                    <li><a href="#tarih">Tarih</a></li>
-                    <li><a href="#mitoloji">Mitoloji</a></li>
-                    <li><a href="#arkeoloji">Arkeoloji</a></li>
-                    <li><a href="#sanat-tarihi">Sanat Tarihi</a></li>
-                    <li><a href="#hakkimizda">Hakkımızda</a></li>
-                    <li><a href="#katilim">Katılım</a></li>
-                    <li><a href="#iletisim">İletişim</a></li>
+                    <li><a href="#yazilar" class="active" data-section="yazilar">Ana Sayfa</a></li>
+                    <li><a href="#hakkimizda" data-section="hakkimizda">Hakkımızda</a></li>
+                    <li><a href="#katilim" data-section="katilim">Katılım</a></li>
+                    <li><a href="#iletisim" data-section="iletisim">İletişim</a></li>
                 </ul>
             </nav>
 
@@ -42,20 +38,8 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <span class="hero-badge">Keşfet</span>
-                    <h1>Geçmişin İzinde,<br>Bilgeliğin Peşinde</h1>
-                    <p>Tarih, mitoloji, sanat tarihi ve arkeoloji dünyasından en güncel ve ilgi çekici içerikler.</p>
-                    <a href="#yazilar" class="btn-primary">Yazıları Keşfet</a>
-                </div>
-            </div>
-        </section>
-
         <!-- Articles Section -->
-        <section class="articles" id="yazilar">
+        <section class="articles page-section active" id="yazilar">
             <div class="container">
                 <div class="section-header">
                     <h2>Son Yazılar</h2>
@@ -175,7 +159,7 @@
         </section>
 
         <!-- About Section -->
-        <section class="about" id="hakkimizda">
+        <section class="about page-section" id="hakkimizda">
             <div class="container">
                 <div class="about-grid">
                     <div class="about-image">
@@ -204,7 +188,7 @@
         </section>
 
         <!-- Katılım Section -->
-        <section class="participation" id="katilim">
+        <section class="participation page-section" id="katilim">
             <div class="container">
                 <div class="participation-content">
                     <h2>Katılım</h2>
@@ -235,7 +219,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="contact" id="iletisim">
+        <section class="contact page-section" id="iletisim">
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-info">

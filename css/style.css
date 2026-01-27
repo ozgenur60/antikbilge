@@ -98,6 +98,17 @@ button {
     padding: 0 var(--space-md);
 }
 
+/* Page Sections - Single Page Navigation */
+.page-section {
+    display: none;
+    padding-top: calc(var(--header-height) + var(--space-lg));
+    min-height: calc(100vh - var(--header-height));
+}
+
+.page-section.active {
+    display: block;
+}
+
 /* Typography */
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
