@@ -512,6 +512,13 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.25rem); }
 /* =====================================================
    About Section
    ===================================================== */
+/* Page sections - hidden by default, shown via JS */
+.about,
+.participation,
+.contact {
+    display: none;
+}
+
 .about {
     padding: var(--space-2xl) 0;
     background: var(--color-bg-alt);

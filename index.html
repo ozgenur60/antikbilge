@@ -11,29 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
-        // Immediate hash check - runs before page renders
+        // Immediate hash check - show correct section before render
         (function() {
             var hash = window.location.hash.replace('#', '');
             var validSections = ['hakkimizda', 'katilim', 'iletisim'];
-            var css = '';
             if (hash && validSections.indexOf(hash) !== -1) {
-                // Hide articles, show only the target section
-                css = '.articles{display:none!important}';
-                validSections.forEach(function(s) {
-                    if (s !== hash) {
-                        css += '#' + s + '{display:none!important}';
-                    }
-                });
-            } else {
-                // Show articles, hide page sections
-                validSections.forEach(function(s) {
-                    css += '#' + s + '{display:none!important}';
-                });
+                // Hide articles, show target section
+                document.write('<style id="initial-state">.articles{display:none}#' + hash + '{display:block}</style>');
             }
-            var style = document.createElement('style');
-            style.id = 'initial-page-state';
-            style.textContent = css;
-            document.head.appendChild(style);
         })();
     </script>
 </head>

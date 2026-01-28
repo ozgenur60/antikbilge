@@ -163,8 +163,8 @@
             });
         });
 
-        // Remove initial page state style (set by inline script in head)
-        var initialStyle = document.getElementById('initial-page-state');
+        // Remove initial state style (set by inline script in head)
+        var initialStyle = document.getElementById('initial-state');
         if (initialStyle) {
             initialStyle.remove();
         }
