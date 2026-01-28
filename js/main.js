@@ -1,6 +1,7 @@
 /**
  * Antik Bilge - Main JavaScript
  * Single page sections - no scroll between them
+ * URL hash based navigation for page refresh support
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,18 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // All page sections (Hakkımızda, Katılım, İletişim)
     const pageSections = [aboutSection, participationSection, contactSection];
-
-    // Hide all page sections initially
-    function hidePageSections() {
-        pageSections.forEach(function(section) {
-            if (section) section.style.display = 'none';
-        });
-        if (footer) footer.style.display = 'block';
-        if (mainSection) mainSection.style.display = 'block';
-    }
+    const validSections = ['hakkimizda', 'katilim', 'iletisim'];
 
     // Show only one section
-    function showSection(sectionId) {
+    function showSection(sectionId, updateHash) {
         // Hide main content and all page sections
         if (mainSection) mainSection.style.display = 'none';
         pageSections.forEach(function(section) {
@@ -39,17 +32,35 @@ document.addEventListener('DOMContentLoaded', function() {
         if (target) {
             target.style.display = 'block';
             window.scrollTo(0, 0);
+            // Update URL hash (without triggering hashchange)
+            if (updateHash !== false) {
+                history.replaceState(null, null, '#' + sectionId);
+            }
         }
     }
 
     // Show home (articles)
-    function showHome() {
+    function showHome(updateHash) {
         pageSections.forEach(function(section) {
             if (section) section.style.display = 'none';
         });
         if (mainSection) mainSection.style.display = 'block';
         if (footer) footer.style.display = 'block';
         window.scrollTo(0, 0);
+        // Clear URL hash
+        if (updateHash !== false) {
+            history.replaceState(null, null, window.location.pathname);
+        }
+    }
+
+    // Handle navigation based on hash
+    function handleHash() {
+        const hash = window.location.hash.replace('#', '');
+        if (hash && validSections.includes(hash)) {
+            showSection(hash, false);
+        } else {
+            showHome(false);
+        }
     }
 
     // Top nav click handlers (Hakkımızda, Katılım, İletişim)
@@ -70,6 +81,9 @@ document.addEventListener('DOMContentLoaded', function() {
             showHome();
         });
     }
+
+    // Handle browser back/forward buttons
+    window.addEventListener('hashchange', handleHash);
 
     // Mobile Menu Toggle
     if (hamburger && categoryMenu) {
@@ -101,6 +115,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initialize - show home
-    hidePageSections();
+    // =====================================================
+    // Image Protection - Prevent download/save
+    // =====================================================
+    const protectedImages = document.querySelectorAll('.about-logo, .protected-image');
+
+    protectedImages.forEach(function(img) {
+        // Prevent right-click context menu
+        img.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Prevent drag
+        img.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Prevent touch hold on mobile
+        img.addEventListener('touchstart', function(e) {
+            if (e.touches.length > 1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    });
+
+    // Initialize - check hash and show appropriate section
+    handleHash();
 });
