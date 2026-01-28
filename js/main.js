@@ -163,6 +163,12 @@
             });
         });
 
+        // Remove initial page state style (set by inline script in head)
+        var initialStyle = document.getElementById('initial-page-state');
+        if (initialStyle) {
+            initialStyle.remove();
+        }
+
         // Initialize - show correct section based on URL hash
         handleNavigation();
     }
