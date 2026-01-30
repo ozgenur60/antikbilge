@@ -163,14 +163,15 @@
             });
         });
 
-        // Remove initial state style (set by inline script in head)
+        // Initialize - show correct section based on URL hash
+        // IMPORTANT: Call this BEFORE removing initial-state style
+        handleNavigation();
+
+        // Remove initial state style AFTER inline styles are set
         var initialStyle = document.getElementById('initial-state');
         if (initialStyle) {
             initialStyle.remove();
         }
-
-        // Initialize - show correct section based on URL hash
-        handleNavigation();
     }
 
     // Run init when DOM is ready
