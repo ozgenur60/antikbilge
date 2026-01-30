@@ -136,6 +136,15 @@
             });
         });
 
+        // Handle home link in category menu
+        var homeLink = document.querySelector('.home-link');
+        if (homeLink) {
+            homeLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                navigateHome();
+            });
+        }
+
         // Handle browser back/forward buttons
         window.addEventListener('popstate', function(e) {
             handleNavigation();
