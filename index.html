@@ -64,120 +64,244 @@
     <main>
         <!-- Articles Section -->
         <section class="articles" id="yazilar">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Son Yazılar</h2>
-                    <a href="#" class="view-all">Tümünü Gör &rarr;</a>
+
+            <!-- Featured Hero Section - Arkeofili Style -->
+            <div class="featured-hero">
+                <div class="container">
+                    <div class="featured-grid">
+                        <!-- Main Featured Article (Big - Left) -->
+                        <article class="featured-main">
+                            <a href="articles/gobeklitepe.html" class="featured-link">
+                                <div class="featured-image-placeholder">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                </div>
+                                <div class="featured-overlay">
+                                    <span class="featured-category">Arkeoloji</span>
+                                    <h2 class="featured-title">Göbeklitepe: Tarihi Yeniden Yazan Keşif</h2>
+                                    <p class="featured-author">Antik Bilge</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- Small Featured Articles (Right - 2x2 Grid) -->
+                        <div class="featured-side">
+                            <article class="featured-small">
+                                <a href="articles/yunan-mitolojisi.html" class="featured-link">
+                                    <div class="featured-image-placeholder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                    </div>
+                                    <div class="featured-overlay">
+                                        <h3 class="featured-title-small">Antik Yunan Mitolojisinde Olimpos Tanrıları</h3>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="featured-small">
+                                <a href="#" class="featured-link">
+                                    <div class="featured-image-placeholder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                    </div>
+                                    <div class="featured-overlay">
+                                        <h3 class="featured-title-small">Rönesans: Sanatın Yeniden Doğuşu</h3>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="featured-small">
+                                <a href="#" class="featured-link">
+                                    <div class="featured-image-placeholder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                    </div>
+                                    <div class="featured-overlay">
+                                        <h3 class="featured-title-small">Mısır Piramitlerinin Gizemi</h3>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="featured-small">
+                                <a href="#" class="featured-link">
+                                    <div class="featured-image-placeholder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                    </div>
+                                    <div class="featured-overlay">
+                                        <h3 class="featured-title-small">Osmanlı Mimarisinin Altın Çağı</h3>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="articles-grid">
-                    <!-- Article 1 -->
-                    <article class="article-card">
-                        <a href="articles/yunan-mitolojisi.html" class="article-image">
-                            <div class="article-image-placeholder">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <!-- Don't Miss Banner -->
+            <div class="dont-miss-banner">
+                <div class="container">
+                    <span class="dont-miss-label">KAÇIRMAYIN</span>
+                    <p class="dont-miss-text">Sümer Mitolojisi ve Gılgamış Destanı: İnsanlığın İlk Yazılı Destanı</p>
+                </div>
+            </div>
+
+            <!-- Content Sections -->
+            <div class="container">
+                <div class="content-layout">
+
+                    <!-- Main Content (Left) -->
+                    <div class="main-content">
+
+                        <!-- Son Yazılar Section -->
+                        <div class="content-section">
+                            <div class="section-header">
+                                <h2>Son Yazılar</h2>
+                                <a href="#" class="view-all">Tümünü Gör &rarr;</a>
                             </div>
-                            <span class="article-category">Mitoloji</span>
-                        </a>
-                        <div class="article-content">
-                            <h3><a href="articles/yunan-mitolojisi.html">Antik Yunan Mitolojisinde Olimpos Tanrıları</a></h3>
-                            <p>Zeus'tan Hades'e, Athena'dan Apollon'a Olimpos'un kudretli tanrılarını keşfedin.</p>
-                            <div class="article-meta">
-                                <time datetime="2026-01-24">24 Ocak 2026</time>
-                                <span class="read-time">8 dk</span>
+                            <div class="articles-list">
+                                <!-- Article 1 -->
+                                <article class="article-card-horizontal">
+                                    <a href="articles/yunan-mitolojisi.html" class="article-thumb">
+                                        <div class="article-image-placeholder">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                        </div>
+                                        <span class="article-category">Mitoloji</span>
+                                    </a>
+                                    <div class="article-content">
+                                        <h3><a href="articles/yunan-mitolojisi.html">Antik Yunan Mitolojisinde Olimpos Tanrıları</a></h3>
+                                        <p>Zeus'tan Hades'e, Athena'dan Apollon'a Olimpos'un kudretli tanrılarını keşfedin.</p>
+                                        <div class="article-meta">
+                                            <time datetime="2026-01-24">24 Ocak 2026</time>
+                                            <span class="read-time">8 dk</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <!-- Article 2 -->
+                                <article class="article-card-horizontal">
+                                    <a href="articles/gobeklitepe.html" class="article-thumb">
+                                        <div class="article-image-placeholder">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                        </div>
+                                        <span class="article-category">Arkeoloji</span>
+                                    </a>
+                                    <div class="article-content">
+                                        <h3><a href="articles/gobeklitepe.html">Göbeklitepe: Tarihi Yeniden Yazan Keşif</a></h3>
+                                        <p>12.000 yıllık sırlarıyla insanlık tarihini değiştiren Göbeklitepe'nin hikayesi.</p>
+                                        <div class="article-meta">
+                                            <time datetime="2026-01-20">20 Ocak 2026</time>
+                                            <span class="read-time">10 dk</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <!-- Article 3 -->
+                                <article class="article-card-horizontal">
+                                    <a href="#" class="article-thumb">
+                                        <div class="article-image-placeholder">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                        </div>
+                                        <span class="article-category">Sanat Tarihi</span>
+                                    </a>
+                                    <div class="article-content">
+                                        <h3><a href="#">Rönesans: Sanatın Yeniden Doğuşu</a></h3>
+                                        <p>Leonardo, Michelangelo ve Raffaello ile sanat tarihinin en parlak dönemi.</p>
+                                        <div class="article-meta">
+                                            <time datetime="2026-01-15">15 Ocak 2026</time>
+                                            <span class="read-time">12 dk</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <!-- Article 4 -->
+                                <article class="article-card-horizontal">
+                                    <a href="#" class="article-thumb">
+                                        <div class="article-image-placeholder">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                        </div>
+                                        <span class="article-category">Tarih</span>
+                                    </a>
+                                    <div class="article-content">
+                                        <h3><a href="#">Osmanlı Mimarisinin Altın Çağı</a></h3>
+                                        <p>Mimar Sinan'ın eserleri ve Osmanlı mimarisinin benzersiz estetiği.</p>
+                                        <div class="article-meta">
+                                            <time datetime="2026-01-10">10 Ocak 2026</time>
+                                            <span class="read-time">9 dk</span>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
                         </div>
-                    </article>
+                    </div>
 
-                    <!-- Article 2 -->
-                    <article class="article-card">
-                        <a href="articles/gobeklitepe.html" class="article-image">
-                            <div class="article-image-placeholder">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                            </div>
-                            <span class="article-category">Arkeoloji</span>
-                        </a>
-                        <div class="article-content">
-                            <h3><a href="articles/gobeklitepe.html">Göbeklitepe: Tarihi Yeniden Yazan Keşif</a></h3>
-                            <p>12.000 yıllık sırlarıyla insanlık tarihini değiştiren Göbeklitepe'nin hikayesi.</p>
-                            <div class="article-meta">
-                                <time datetime="2026-01-20">20 Ocak 2026</time>
-                                <span class="read-time">10 dk</span>
+                    <!-- Sidebar (Right) -->
+                    <aside class="sidebar">
+
+                        <!-- Çok Okunanlar Section -->
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Çok Okunanlar</h3>
+                            <div class="popular-list">
+                                <article class="popular-item">
+                                    <span class="popular-number">1</span>
+                                    <div class="popular-content">
+                                        <a href="articles/gobeklitepe.html">Göbeklitepe: Tarihi Yeniden Yazan Keşif</a>
+                                        <span class="popular-category">Arkeoloji</span>
+                                    </div>
+                                </article>
+                                <article class="popular-item">
+                                    <span class="popular-number">2</span>
+                                    <div class="popular-content">
+                                        <a href="articles/yunan-mitolojisi.html">Antik Yunan Mitolojisinde Olimpos Tanrıları</a>
+                                        <span class="popular-category">Mitoloji</span>
+                                    </div>
+                                </article>
+                                <article class="popular-item">
+                                    <span class="popular-number">3</span>
+                                    <div class="popular-content">
+                                        <a href="#">Mısır Piramitlerinin Gizemi</a>
+                                        <span class="popular-category">Tarih</span>
+                                    </div>
+                                </article>
+                                <article class="popular-item">
+                                    <span class="popular-number">4</span>
+                                    <div class="popular-content">
+                                        <a href="#">Sümer Mitolojisi ve Gılgamış Destanı</a>
+                                        <span class="popular-category">Mitoloji</span>
+                                    </div>
+                                </article>
+                                <article class="popular-item">
+                                    <span class="popular-number">5</span>
+                                    <div class="popular-content">
+                                        <a href="#">Rönesans: Sanatın Yeniden Doğuşu</a>
+                                        <span class="popular-category">Sanat Tarihi</span>
+                                    </div>
+                                </article>
                             </div>
                         </div>
-                    </article>
 
-                    <!-- Article 3 -->
-                    <article class="article-card">
-                        <a href="#" class="article-image">
-                            <div class="article-image-placeholder">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                            </div>
-                            <span class="article-category">Sanat Tarihi</span>
-                        </a>
-                        <div class="article-content">
-                            <h3><a href="#">Rönesans: Sanatın Yeniden Doğuşu</a></h3>
-                            <p>Leonardo, Michelangelo ve Raffaello ile sanat tarihinin en parlak dönemi.</p>
-                            <div class="article-meta">
-                                <time datetime="2026-01-15">15 Ocak 2026</time>
-                                <span class="read-time">12 dk</span>
+                        <!-- Editörün Seçimi Section -->
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Editörün Seçimi</h3>
+                            <div class="editor-picks">
+                                <article class="editor-pick-item">
+                                    <a href="#" class="editor-pick-image">
+                                        <div class="article-image-placeholder">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                        </div>
+                                    </a>
+                                    <div class="editor-pick-content">
+                                        <span class="editor-pick-category">Tarih</span>
+                                        <a href="#">Osmanlı Mimarisinin Altın Çağı</a>
+                                    </div>
+                                </article>
+                                <article class="editor-pick-item">
+                                    <a href="#" class="editor-pick-image">
+                                        <div class="article-image-placeholder">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                        </div>
+                                    </a>
+                                    <div class="editor-pick-content">
+                                        <span class="editor-pick-category">Mitoloji</span>
+                                        <a href="#">Sümer Mitolojisi ve Gılgamış Destanı</a>
+                                    </div>
+                                </article>
                             </div>
                         </div>
-                    </article>
 
-                    <!-- Article 4 -->
-                    <article class="article-card">
-                        <a href="#" class="article-image">
-                            <div class="article-image-placeholder">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                            </div>
-                            <span class="article-category">Tarih</span>
-                        </a>
-                        <div class="article-content">
-                            <h3><a href="#">Osmanlı Mimarisinin Altın Çağı</a></h3>
-                            <p>Mimar Sinan'ın eserleri ve Osmanlı mimarisinin benzersiz estetiği.</p>
-                            <div class="article-meta">
-                                <time datetime="2026-01-10">10 Ocak 2026</time>
-                                <span class="read-time">9 dk</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Article 5 -->
-                    <article class="article-card">
-                        <a href="#" class="article-image">
-                            <div class="article-image-placeholder">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                            </div>
-                            <span class="article-category">Tarih</span>
-                        </a>
-                        <div class="article-content">
-                            <h3><a href="#">Mısır Piramitlerinin Gizemi</a></h3>
-                            <p>Firavunların ebedi anıtları ve antik Mısır'ın mühendislik harikası.</p>
-                            <div class="article-meta">
-                                <time datetime="2026-01-05">5 Ocak 2026</time>
-                                <span class="read-time">11 dk</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Article 6 -->
-                    <article class="article-card">
-                        <a href="#" class="article-image">
-                            <div class="article-image-placeholder">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                            </div>
-                            <span class="article-category">Mitoloji</span>
-                        </a>
-                        <div class="article-content">
-                            <h3><a href="#">Sümer Mitolojisi ve Gılgamış Destanı</a></h3>
-                            <p>İnsanlığın ilk yazılı destanı ve Mezopotamya'nın kadim tanrıları.</p>
-                            <div class="article-meta">
-                                <time datetime="2026-01-01">1 Ocak 2026</time>
-                                <span class="read-time">10 dk</span>
-                            </div>
-                        </div>
-                    </article>
+                    </aside>
                 </div>
             </div>
         </section>
