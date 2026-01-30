@@ -91,14 +91,28 @@
         showHome();
     }
 
+    // Check if we're on the main page (index.html) or an article page
+    function isMainPage() {
+        var path = window.location.pathname;
+        return path.endsWith('index.html') || path.endsWith('/') || path === '' || !path.includes('/articles/');
+    }
+
     // Initialize when DOM is ready
     function init() {
         // Handle top navigation clicks
         var topNavLinks = document.querySelectorAll('.top-nav a');
         topNavLinks.forEach(function(link) {
             link.addEventListener('click', function(e) {
-                e.preventDefault();
                 var href = this.getAttribute('href');
+
+                // If on article page and link goes to index.html, allow default navigation
+                if (!isMainPage() && (href.includes('index.html') || href.startsWith('../'))) {
+                    // Allow default behavior - don't prevent
+                    return;
+                }
+
+                // On main page, use SPA navigation
+                e.preventDefault();
                 var sectionId = href.replace('#', '');
                 navigateTo(sectionId);
             });
@@ -108,6 +122,15 @@
         var allLogos = document.querySelectorAll('.logo');
         allLogos.forEach(function(logo) {
             logo.addEventListener('click', function(e) {
+                var href = logo.getAttribute('href');
+
+                // If on article page and link goes to index.html, allow default navigation
+                if (!isMainPage() && href && (href.includes('index.html') || href.startsWith('../'))) {
+                    // Allow default behavior - don't prevent
+                    return;
+                }
+
+                // On main page, use SPA navigation
                 e.preventDefault();
                 navigateHome();
             });
