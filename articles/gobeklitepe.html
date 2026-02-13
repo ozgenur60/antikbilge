@@ -58,9 +58,23 @@
     }
     </script>
 
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://antikbilge.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Arkeoloji", "item": "https://antikbilge.com/#arkeoloji"},
+            {"@type": "ListItem", "position": 3, "name": "Göbeklitepe: Tarihi Yeniden Yazan Keşif"}
+        ]
+    }
+    </script>
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -130,6 +144,13 @@
             </div>
         </div>
 
+        <!-- Ad Space: Top -->
+        <div class="ad-space ad-top">
+            <div class="container">
+                <div class="ad-placeholder" data-ad-slot="top"><!-- AdSense kodu buraya --></div>
+            </div>
+        </div>
+
         <!-- Article Body -->
         <article class="article-body">
             <p>Güneydoğu Anadolu'nun kuru tepeleri arasında, insanlığın bilinen en eski tapınak kompleksi sessizce binlerce yıl bekledi. Göbeklitepe, 1994 yılında Alman arkeolog Klaus Schmidt'in dikkatini çektiğinde, kimse bu keşfin arkeoloji dünyasını kökten sarsacağını tahmin edemezdi.</p>
@@ -193,6 +214,13 @@
         </article>
     </main>
 
+    <!-- Ad Space: Bottom -->
+    <div class="ad-space ad-bottom">
+        <div class="container">
+            <div class="ad-placeholder" data-ad-slot="bottom"><!-- AdSense kodu buraya --></div>
+        </div>
+    </div>
+
     <!-- Related Articles -->
     <section class="related-articles">
         <div class="container">
@@ -248,6 +276,12 @@
                         <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                     </a>
                 </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="../gizlilik-politikasi.html">Gizlilik Politikası</a>
+                <a href="../cerez-politikasi.html">Çerez Politikası</a>
+                <a href="../kullanim-sartlari.html">Kullanım Şartları</a>
             </div>
 
             <div class="footer-bottom">

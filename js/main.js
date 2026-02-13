@@ -182,6 +182,43 @@
             });
         }
 
+        // Reading Time Calculation
+        var articleBody = document.querySelector('.article-body');
+        if (articleBody) {
+            var text = articleBody.textContent || articleBody.innerText;
+            var wordCount = text.trim().split(/\s+/).length;
+            var readingTime = Math.ceil(wordCount / 200);
+            var readTimeEl = document.querySelector('.article-header .read-time');
+            if (readTimeEl) {
+                readTimeEl.textContent = readingTime + ' dk okuma';
+            }
+        }
+
+        // Auto Table of Contents
+        if (articleBody) {
+            var headings = articleBody.querySelectorAll('h2');
+            if (headings.length >= 3) {
+                var toc = document.createElement('nav');
+                toc.className = 'toc';
+                toc.innerHTML = '<h3 class="toc-title">İçindekiler</h3>';
+                var tocList = document.createElement('ol');
+
+                headings.forEach(function(heading, index) {
+                    var id = 'baslik-' + (index + 1);
+                    heading.id = id;
+                    var li = document.createElement('li');
+                    var a = document.createElement('a');
+                    a.href = '#' + id;
+                    a.textContent = heading.textContent;
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+
+                toc.appendChild(tocList);
+                articleBody.insertBefore(toc, articleBody.firstChild);
+            }
+        }
+
         // Image Protection
         var protectedImages = document.querySelectorAll('.about-logo, .protected-image');
         protectedImages.forEach(function(img) {
