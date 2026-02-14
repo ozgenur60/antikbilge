@@ -1131,6 +1131,26 @@ html, body {
     padding: var(--space-md);
 }
 
+.article-body figure {
+    margin: var(--space-lg) 0;
+    padding: 0;
+}
+
+.article-body figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.article-body figure figcaption {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    text-align: center;
+    margin-top: var(--space-xs);
+    font-style: italic;
+}
+
 .article-tags {
     margin-top: var(--space-xl);
     padding-top: var(--space-md);
