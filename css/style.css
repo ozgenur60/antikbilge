@@ -1132,13 +1132,16 @@ html, body {
 }
 
 .article-body figure {
-    margin: var(--space-lg) 0;
+    margin: var(--space-lg) auto;
     padding: 0;
+    max-width: 700px;
 }
 
 .article-body figure img {
     width: 100%;
     height: auto;
+    max-height: 450px;
+    object-fit: cover;
     border-radius: 8px;
     display: block;
 }
