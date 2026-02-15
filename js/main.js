@@ -6,6 +6,14 @@
 (function() {
     'use strict';
 
+    // Disable browser's automatic scroll restoration on page reload
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    // Scroll to top on page load/refresh
+    window.scrollTo(0, 0);
+
     // Valid section IDs
     var validSections = ['hakkimizda', 'katilim', 'iletisim'];
 
