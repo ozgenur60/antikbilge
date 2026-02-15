@@ -1154,6 +1154,15 @@ html, body {
     font-style: italic;
 }
 
+.article-body figure figcaption .photo-credit {
+    display: block;
+    font-size: 0.75rem;
+    font-style: normal;
+    color: var(--color-text-light);
+    margin-top: 4px;
+    opacity: 0.8;
+}
+
 .article-tags {
     margin-top: var(--space-xl);
     padding-top: var(--space-md);
