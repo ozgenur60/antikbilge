@@ -1,22 +1,30 @@
-name: Deploy to Plesk FTP
+name: Deploy to Hosting (Plesk FTP)
 
 on:
   push:
     branches:
-      - main
+      - "claude/create-content-website-Mc217"
+      - "main"
 
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
           local-dir: ./
+          server-dir: /httpdocs/
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/.vscode/**
+            **/README*
