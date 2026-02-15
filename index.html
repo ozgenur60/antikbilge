@@ -81,6 +81,78 @@
     }
     </script>
 
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Anasayfa",
+                "item": "https://antikbilge.com/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- CollectionPage with ItemList Schema - Son Yazılar -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Antik Bilge - Son Yazılar",
+        "description": "Tarih, Mitoloji, Sanat Tarihi ve Arkeoloji hakkında en güncel içerikler",
+        "url": "https://antikbilge.com/",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "Article",
+                        "name": "Göbekli Tepe: İnancın Tarımdan Önce Gelmiş Olabileceğini Gösteren Arkeolojik Kırılma Noktası",
+                        "url": "https://antikbilge.com/articles/gobeklitepe-arkeolojik-kirilma.html",
+                        "description": "Neolitik devrim anlatısını sorgulatan arkeolojik keşif ve paradigma tartışması.",
+                        "datePublished": "2026-02-13",
+                        "author": {"@type": "Person", "name": "Özgenur Akbaba"}
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "Article",
+                        "name": "Olimpos Tanrıları: 12'li Liste Neden Değişir?",
+                        "url": "https://antikbilge.com/articles/olimpos-tanrilari-neden-degisir.html",
+                        "description": "Antik Yunan'da 12 Olimposlu listesi neden sabit değildi? Olimpos'un gerçek anlamını keşfedin.",
+                        "datePublished": "2026-02-15",
+                        "author": {"@type": "Person", "name": "Özgenur Akbaba"}
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- SiteNavigationElement Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SiteNavigationElement",
+        "name": ["Anasayfa", "Tarih", "Mitoloji", "Arkeoloji", "Sanat Tarihi"],
+        "url": [
+            "https://antikbilge.com/",
+            "https://antikbilge.com/tarih.html",
+            "https://antikbilge.com/mitoloji.html",
+            "https://antikbilge.com/arkeoloji.html",
+            "https://antikbilge.com/sanat-tarihi.html"
+        ]
+    }
+    </script>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
