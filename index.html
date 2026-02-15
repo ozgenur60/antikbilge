@@ -55,7 +55,29 @@
         "@type": "WebSite",
         "name": "Antik Bilge",
         "url": "https://antikbilge.com",
-        "inLanguage": "tr"
+        "inLanguage": "tr",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://antikbilge.com/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- Logo ImageObject Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://antikbilge.com/images/logo.png",
+        "url": "https://antikbilge.com/images/logo.png",
+        "name": "Antik Bilge Logo",
+        "description": "Antik Bilge web sitesi logosu - Tarih, Mitoloji, Sanat Tarihi ve Arkeoloji platformu",
+        "width": "200",
+        "height": "200"
     }
     </script>
 
@@ -106,7 +128,7 @@
     <header class="header" id="header">
         <div class="container">
             <a href="#" class="logo">
-                <img src="images/logo.png" alt="Antik Bilge" class="logo-img">
+                <img src="images/logo.png" alt="Antik Bilge Logo" class="logo-img" width="70" height="70" loading="eager">
                 <span class="logo-text">Antik Bilge</span>
             </a>
         </div>
@@ -141,7 +163,7 @@
                         <!-- Main Featured Article (Big - Left) -->
                         <article class="featured-main">
                             <a href="articles/gobeklitepe-arkeolojik-kirilma.html" class="featured-link">
-                                <img src="images/gobeklitepe-hava-gorunumu.jpg" alt="Göbekli Tepe havadan görünüm" class="featured-image">
+                                <img src="images/gobeklitepe-hava-gorunumu.jpg" alt="Göbekli Tepe arkeolojik alanı havadan görünüm" class="featured-image" width="800" height="450" loading="eager">
                                 <div class="featured-overlay">
                                     <span class="featured-category">Arkeoloji</span>
                                     <h2 class="featured-title">Göbekli Tepe: İnancın Tarımdan Önce Gelmiş Olabileceğini Gösteren Arkeolojik Kırılma Noktası</h2>
@@ -378,7 +400,7 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="about-image">
-                        <img src="images/ozgenur.jpg" alt="Özgenur Akbaba" class="about-logo" loading="lazy">
+                        <img src="images/ozgenur.jpg" alt="Özgenur Akbaba - Antik Bilge Kurucusu" class="about-logo" width="280" height="280" loading="lazy">
                     </div>
                     <div class="about-content">
                         <h2>Hakkımızda</h2>
@@ -478,7 +500,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <a href="#" class="logo">
-                        <img src="images/logo.png" alt="Antik Bilge" class="logo-img">
+                        <img src="images/logo.png" alt="Antik Bilge Logo" class="logo-img" width="70" height="70" loading="lazy">
                         <span class="logo-text">Antik Bilge</span>
                     </a>
                     <p>Geçmişin izinde, bilgeliğin peşinde.</p>

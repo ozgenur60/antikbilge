@@ -7,11 +7,26 @@ on:
       - "main"
 
 jobs:
-  ftp-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate Sitemap
+        run: node scripts/generate-sitemap.js
+
+      - name: Verify sitemap
+        run: |
+          echo "Generated sitemap.xml:"
+          head -20 sitemap.xml
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -26,5 +41,8 @@ jobs:
             **/.git*
             **/.github/**
             **/node_modules/**
+            **/scripts/**
             **/.vscode/**
+            **/.gitignore
+            **/CLAUDE.md
             **/README*
