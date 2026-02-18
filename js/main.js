@@ -1,1 +1,58 @@
-(function(){'use strict';if ('scrollRestoration' in history){history.scrollRestoration='manual';}window.scrollTo(0,0);var validSections=['hakkimizda','katilim','iletisim'];function getHash(){return window.location.hash.replace('#','');}function showSection(sectionId){var mainSection=document.querySelector('.articles');var aboutSection=document.getElementById('hakkimizda');var participationSection=document.getElementById('katilim');var contactSection=document.getElementById('iletisim');var pageSections=[aboutSection,participationSection,contactSection];if (mainSection){mainSection.style.display='none';}pageSections.forEach(function(section){if (section){section.style.display='none';}});var target=document.getElementById(sectionId);if (target){target.style.display='block';window.scrollTo(0,0);}}function showHome(){var mainSection=document.querySelector('.articles');var aboutSection=document.getElementById('hakkimizda');var participationSection=document.getElementById('katilim');var contactSection=document.getElementById('iletisim');var pageSections=[aboutSection,participationSection,contactSection];pageSections.forEach(function(section){if (section){section.style.display='none';}});if (mainSection){mainSection.style.display='block';}window.scrollTo(0,0);}function handleNavigation(){var hash=getHash();if (hash&&validSections.indexOf(hash)!== -1){showSection(hash);}else{showHome();}}function navigateTo(sectionId){if (validSections.indexOf(sectionId)!== -1){history.pushState({section:sectionId},'','#'+sectionId);showSection(sectionId);}}function navigateHome(){history.pushState({section:'home'},'',window.location.pathname);showHome();}function isMainPage(){var path=window.location.pathname;return path.endsWith('index.html')||path.endsWith('/')||path==='';}function init(){var topNavLinks=document.querySelectorAll('.top-nav a');topNavLinks.forEach(function(link){link.addEventListener('click',function(e){var href=this.getAttribute('href');if (!isMainPage()&&(href.includes('index.html')||href.startsWith('../'))){return;}e.preventDefault();var sectionId=href.replace('#','');navigateTo(sectionId);});});var allLogos=document.querySelectorAll('.logo');allLogos.forEach(function(logo){logo.addEventListener('click',function(e){var href=logo.getAttribute('href');if (!isMainPage()&&href&&(href.includes('index.html')||href.startsWith('../'))){return;}e.preventDefault();navigateHome();});});var homeLink=document.querySelector('.home-link');if (homeLink){homeLink.addEventListener('click',function(e){e.preventDefault();navigateHome();});}window.addEventListener('popstate',function(e){handleNavigation();});var hamburger=document.getElementById('hamburger');var categoryMenu=document.querySelector('.category-menu');if (hamburger&&categoryMenu){hamburger.addEventListener('click',function(){hamburger.classList.toggle('active');categoryMenu.classList.toggle('active');document.body.style.overflow=categoryMenu.classList.contains('active')?'hidden':'';});categoryMenu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){hamburger.classList.remove('active');categoryMenu.classList.remove('active');document.body.style.overflow='';});});}var contactForm=document.querySelector('.contact-form');if (contactForm){contactForm.addEventListener('submit',function(e){e.preventDefault();var formData=new FormData(this);var name=formData.get('name');alert('Teşekkürler '+name+'!Mesajınız alındı.');this.reset();});}var articleBody=document.querySelector('.article-body');if (articleBody){var text=articleBody.textContent||articleBody.innerText;var wordCount=text.trim().split(/\s+/).length;var readingTime=Math.ceil(wordCount/200);var readTimeEl=document.querySelector('.article-header .read-time');if (readTimeEl){readTimeEl.textContent=readingTime+' dk okuma';}}var protectedImages=document.querySelectorAll('.about-logo,.protected-image');protectedImages.forEach(function(img){img.addEventListener('contextmenu',function(e){e.preventDefault();return false;});img.addEventListener('dragstart',function(e){e.preventDefault();return false;});});handleNavigation();var initialStyle=document.getElementById('initial-state');if (initialStyle){initialStyle.remove();}}if (document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}})();
+(function(){'use strict';
+
+// Hamburger menu
+var hamburger=document.getElementById('hamburger');
+var categoryMenu=document.querySelector('.category-menu');
+if (hamburger&&categoryMenu){
+    hamburger.addEventListener('click',function(){
+        hamburger.classList.toggle('active');
+        categoryMenu.classList.toggle('active');
+        document.body.style.overflow=categoryMenu.classList.contains('active')?'hidden':'';
+    });
+    categoryMenu.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click',function(){
+            hamburger.classList.remove('active');
+            categoryMenu.classList.remove('active');
+            document.body.style.overflow='';
+        });
+    });
+}
+
+// Contact form
+var contactForm=document.querySelector('.contact-form');
+if (contactForm){
+    contactForm.addEventListener('submit',function(e){
+        e.preventDefault();
+        var formData=new FormData(this);
+        var name=formData.get('name');
+        alert('Teşekkürler '+name+'! Mesajınız alındı.');
+        this.reset();
+    });
+}
+
+// Article reading time
+var articleBody=document.querySelector('.article-body');
+if (articleBody){
+    var text=articleBody.textContent||articleBody.innerText;
+    var wordCount=text.trim().split(/\s+/).length;
+    var readingTime=Math.ceil(wordCount/200);
+    var readTimeEl=document.querySelector('.article-header .read-time');
+    if (readTimeEl){
+        readTimeEl.textContent=readingTime+' dk okuma';
+    }
+}
+
+// Protect images from right-click
+var protectedImages=document.querySelectorAll('.about-logo,.protected-image');
+protectedImages.forEach(function(img){
+    img.addEventListener('contextmenu',function(e){
+        e.preventDefault();
+        return false;
+    });
+    img.addEventListener('dragstart',function(e){
+        e.preventDefault();
+        return false;
+    });
+});
+
+})();
