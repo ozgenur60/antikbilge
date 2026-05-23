@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Son Nokta VIP Tourism & Transportation - Premium VIP tours and transfers in Antalya, Turkey.">
+    <title>Son Nokta VIP Tourism & Transportation | Antalya, Turkey</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Language Bar -->
+<div class="lang-bar">
+    <div class="container">
+        <div class="lang-buttons">
+            <button class="lang-btn active" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+            <button class="lang-btn" data-lang="tr" onclick="setLang('tr')">🇹🇷 Türkçe</button>
+            <button class="lang-btn" data-lang="de" onclick="setLang('de')">🇩🇪 Deutsch</button>
+            <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">🇷🇺 Русский</button>
+        </div>
+        <div class="top-contact">
+            <a href="tel:+905470600760">📞 +90 547 060 07 60</a>
+            <a href="https://wa.me/905470600760" target="_blank">💬 WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="logo">
+            <div class="logo-icon">✦</div>
+            <div class="logo-text">
+                <span class="logo-main">Son Nokta</span>
+                <span class="logo-sub" data-i18n="logo-sub">VIP Tourism & Transportation</span>
+            </div>
+        </div>
+        <nav class="nav" id="nav">
+            <a href="#home" data-i18n="nav-home">Home</a>
+            <a href="#destinations" data-i18n="nav-dest">Destinations</a>
+            <a href="#tours" data-i18n="nav-tours">VIP Tours</a>
+            <a href="#about" data-i18n="nav-about">About Us</a>
+            <a href="#contact" class="nav-cta" data-i18n="nav-book">Book Now</a>
+        </nav>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <p class="hero-tag" data-i18n="hero-tag">Antalya, Turkey</p>
+        <h1 class="hero-title" data-i18n="hero-title">Experience Turkey<br>in <span class="gold">VIP Luxury</span></h1>
+        <p class="hero-desc" data-i18n="hero-desc">Discover Turkey's most breathtaking historical wonders, ancient ruins, and natural beauty — all in premium comfort with your private guide.</p>
+        <div class="hero-buttons">
+            <a href="#tours" class="btn-gold" data-i18n="hero-btn1">Explore VIP Tours</a>
+            <a href="#contact" class="btn-outline" data-i18n="hero-btn2">Get a Free Quote</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat"><span class="stat-num">500+</span><span class="stat-label" data-i18n="stat1">Happy Clients</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">50+</span><span class="stat-label" data-i18n="stat2">Destinations</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">10+</span><span class="stat-label" data-i18n="stat3">Years Experience</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🚐</div>
+                <h3 data-i18n="feat1-title">Luxury Vehicles</h3>
+                <p data-i18n="feat1-desc">Mercedes Vito, Sprinter and VIP minibuses with A/C, Wi-Fi and refreshments</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">👑</div>
+                <h3 data-i18n="feat2-title">Private & Exclusive</h3>
+                <p data-i18n="feat2-desc">Fully personalized tours — no group tours, just you and your expert guide</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🌍</div>
+                <h3 data-i18n="feat3-title">Multilingual Guides</h3>
+                <p data-i18n="feat3-desc">English, German, Russian, Arabic speaking professional guides available</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">✈️</div>
+                <h3 data-i18n="feat4-title">Airport Transfers</h3>
+                <p data-i18n="feat4-desc">24/7 VIP airport pickup and drop-off service across all Antalya region</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Destinations -->
+<section class="destinations" id="destinations">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-tag" data-i18n="dest-tag">Turkey's Wonders</p>
+            <h2 class="section-title" data-i18n="dest-title">Iconic Destinations</h2>
+            <p class="section-desc" data-i18n="dest-desc">From ancient cities to natural marvels — we take you to Turkey's most unforgettable places</p>
+        </div>
+        <div class="destinations-grid">
+            <div class="dest-card featured">
+                <div class="dest-img dest-ephesus">
+                    <div class="dest-overlay"><span class="dest-badge" data-i18n="badge-pop">Most Popular</span></div>
+                </div>
+                <div class="dest-info">
+                    <h3 data-i18n="dest1-name">Ephesus (Efes)</h3>
+                    <p class="dest-loc" data-i18n="dest1-loc">📍 İzmir / Selçuk</p>
+                    <p data-i18n="dest1-desc">One of the best-preserved ancient cities in the world. Walk the same streets as the Romans — the Library of Celsus, the Grand Theatre, and the Temple of Artemis await.</p>
+                    <a href="#contact" class="btn-dest" data-i18n="dest-book">Book This Tour</a>
+                </div>
+            </div>
+            <div class="dest-card">
+                <div class="dest-img dest-cappadocia"><div class="dest-overlay"></div></div>
+                <div class="dest-info">
+                    <h3 data-i18n="dest2-name">Cappadocia</h3>
+                    <p class="dest-loc" data-i18n="dest2-loc">📍 Nevşehir</p>
+                    <p data-i18n="dest2-desc">Fairy chimneys, underground cities, hot air balloons at sunrise. A landscape unlike anywhere on Earth.</p>
+                    <a href="#contact" class="btn-dest" data-i18n="dest-book">Book This Tour</a>
+                </div>
+            </div>
+            <div class="dest-card">
+                <div class="dest-img dest-pamukkale"><div class="dest-overlay"></div></div>
+                <div class="dest-info">
+                    <h3 data-i18n="dest3-name">Pamukkale</h3>
+                    <p class="dest-loc" data-i18n="dest3-loc">📍 Denizli</p>
+                    <p data-i18n="dest3-desc">Famous white calcium terraces and the ancient spa city of Hierapolis — a UNESCO World Heritage Site.</p>
+                    <a href="#contact" class="btn-dest" data-i18n="dest-book">Book This Tour</a>
+                </div>
+            </div>
+            <div class="dest-card">
+                <div class="dest-img dest-antalya"><div class="dest-overlay"></div></div>
+                <div class="dest-info">
+                    <h3 data-i18n="dest4-name">Antalya Old City</h3>
+                    <p class="dest-loc" data-i18n="dest4-loc">📍 Antalya</p>
+                    <p data-i18n="dest4-desc">Kaleiçi old town, Hadrian's Gate, Roman harbour and the turquoise Mediterranean coast — history meets paradise.</p>
+                    <a href="#contact" class="btn-dest" data-i18n="dest-book">Book This Tour</a>
+                </div>
+            </div>
+            <div class="dest-card">
+                <div class="dest-img dest-istanbul"><div class="dest-overlay"></div></div>
+                <div class="dest-info">
+                    <h3 data-i18n="dest6-name">Istanbul</h3>
+                    <p class="dest-loc" data-i18n="dest6-loc">📍 Istanbul</p>
+                    <p data-i18n="dest6-desc">Hagia Sophia, Topkapi Palace, the Grand Bazaar and the Bosphorus — where East meets West.</p>
+                    <a href="#contact" class="btn-dest" data-i18n="dest-book">Book This Tour</a>
+                </div>
+            </div>
+            <div class="dest-card">
+                <div class="dest-img dest-perge"><div class="dest-overlay"></div></div>
+                <div class="dest-info">
+                    <h3 data-i18n="dest7-name">Perge & Aspendos</h3>
+                    <p class="dest-loc" data-i18n="dest7-loc">📍 Antalya Region</p>
+                    <p data-i18n="dest7-desc">Magnificent Roman ruins on your doorstep — the ancient theatre of Aspendos is one of the best preserved in the world.</p>
+                    <a href="#contact" class="btn-dest" data-i18n="dest-book">Book This Tour</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tours -->
+<section class="tours" id="tours">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-tag" data-i18n="tours-tag">Exclusive Packages</p>
+            <h2 class="section-title" data-i18n="tours-title">VIP Tour Packages</h2>
+            <p class="section-desc" data-i18n="tours-desc">Everything included — transport, guide, and unforgettable memories</p>
+        </div>
+        <div class="tours-grid">
+            <div class="tour-card">
+                <div class="tour-header tour-daily">
+                    <span class="tour-icon">🌅</span>
+                    <h3 data-i18n="tour1-title">Daily VIP Tours</h3>
+                    <p class="tour-duration" data-i18n="tour1-dur">1 Day</p>
+                </div>
+                <ul class="tour-features">
+                    <li>✓ <span data-i18n="tour1-f1">Antalya Old City & Waterfalls</span></li>
+                    <li>✓ <span data-i18n="tour1-f2">Perge & Aspendos Ruins</span></li>
+                    <li>✓ <span data-i18n="tour1-f3">Side Ancient City</span></li>
+                    <li>✓ <span data-i18n="tour1-f4">Pamukkale Day Trip</span></li>
+                    <li>✓ <span data-i18n="tour1-f5">Lunch & refreshments included</span></li>
+                    <li>✓ <span data-i18n="tour1-f6">Hotel pickup & drop-off</span></li>
+                </ul>
+                <a href="#contact" class="btn-gold full-width" data-i18n="tour-inquiry">Send Inquiry</a>
+            </div>
+            <div class="tour-card featured-tour">
+                <div class="tour-badge-top" data-i18n="badge-best">Best Value</div>
+                <div class="tour-header tour-multi">
+                    <span class="tour-icon">🏛️</span>
+                    <h3 data-i18n="tour2-title">Multi-Day VIP Tours</h3>
+                    <p class="tour-duration" data-i18n="tour2-dur">2 - 5 Days</p>
+                </div>
+                <ul class="tour-features">
+                    <li>✓ <span data-i18n="tour2-f1">Ephesus + Pamukkale (2 days)</span></li>
+                    <li>✓ <span data-i18n="tour2-f2">Cappadocia Discovery (2-3 days)</span></li>
+                    <li>✓ <span data-i18n="tour2-f3">Istanbul Cultural Tour (3 days)</span></li>
+                    <li>✓ <span data-i18n="tour2-f4">Aegean Coast Explorer (5 days)</span></li>
+                    <li>✓ <span data-i18n="tour2-f5">4-5 star hotel accommodation</span></li>
+                    <li>✓ <span data-i18n="tour2-f6">All meals & entrance fees</span></li>
+                </ul>
+                <a href="#contact" class="btn-gold full-width" data-i18n="tour-inquiry">Send Inquiry</a>
+            </div>
+            <div class="tour-card">
+                <div class="tour-header tour-transfer">
+                    <span class="tour-icon">✈️</span>
+                    <h3 data-i18n="tour3-title">VIP Transfers</h3>
+                    <p class="tour-duration" data-i18n="tour3-dur">Airport / Hotel / Port</p>
+                </div>
+                <ul class="tour-features">
+                    <li>✓ <span data-i18n="tour3-f1">Antalya Airport (AYT) transfers</span></li>
+                    <li>✓ <span data-i18n="tour3-f2">Hotel to hotel transfers</span></li>
+                    <li>✓ <span data-i18n="tour3-f3">Cruise port pickups</span></li>
+                    <li>✓ <span data-i18n="tour3-f4">Mercedes Vito / Sprinter</span></li>
+                    <li>✓ <span data-i18n="tour3-f5">Meet & greet with name sign</span></li>
+                    <li>✓ <span data-i18n="tour3-f6">24/7 availability</span></li>
+                </ul>
+                <a href="#contact" class="btn-gold full-width" data-i18n="tour-inquiry">Send Inquiry</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Booking -->
+<section class="booking" id="contact">
+    <div class="container">
+        <div class="booking-wrapper">
+            <div class="booking-info">
+                <p class="section-tag" data-i18n="book-tag">Reserve Your Spot</p>
+                <h2 data-i18n="book-title">Book Your VIP Tour</h2>
+                <p data-i18n="book-desc">Fill in the form and we will contact you within 2 hours with a personalized offer.</p>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <span class="c-icon">📞</span>
+                        <div>
+                            <strong data-i18n="c-phone">Phone / WhatsApp</strong>
+                            <a href="tel:+905470600760">+90 547 060 07 60</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="c-icon">📍</span>
+                        <div>
+                            <strong data-i18n="c-location">Location</strong>
+                            <span data-i18n="c-loc-val">Antalya, Turkey</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="c-icon">🕐</span>
+                        <div>
+                            <strong data-i18n="c-hours">Working Hours</strong>
+                            <span data-i18n="c-hours-val">24/7 Available</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/905470600760?text=Hello%2C%20I%20would%20like%20to%20book%20a%20VIP%20tour." target="_blank" class="btn-whatsapp">
+                    💬 <span data-i18n="wa-btn">Chat on WhatsApp</span>
+                </a>
+            </div>
+            <div class="booking-form-wrap">
+                <form class="booking-form" id="bookingForm" onsubmit="submitForm(event)">
+                    <h3 data-i18n="form-title">Reservation Request</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="form-name">Full Name *</label>
+                            <input type="text" name="name" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form-country">Country *</label>
+                            <input type="text" name="country" placeholder="United Kingdom" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="form-email">Email *</label>
+                            <input type="email" name="email" placeholder="john@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form-phone">Phone / WhatsApp *</label>
+                            <input type="tel" name="phone" placeholder="+44 700 000 0000" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="form-date">Tour Date *</label>
+                            <input type="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form-persons">Number of Persons *</label>
+                            <select name="persons" required>
+                                <option value="">Select...</option>
+                                <option>1 Person</option>
+                                <option>2 Persons</option>
+                                <option>3-4 Persons</option>
+                                <option>5-8 Persons</option>
+                                <option>9+ Persons</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form-tour">Tour / Destination *</label>
+                        <select name="tour" required>
+                            <option value="">Select a tour...</option>
+                            <option>Ephesus Ancient City</option>
+                            <option>Cappadocia</option>
+                            <option>Pamukkale & Hierapolis</option>
+                            <option>Antalya Old City Tour</option>
+                            <option>Perge & Aspendos</option>
+                            <option>Istanbul</option>
+                            <option>Airport / Hotel Transfer</option>
+                            <option>Custom Tour</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form-notes">Special Requests / Notes</label>
+                        <textarea name="notes" rows="3" placeholder="Any special requests..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-gold full-width submit-btn">
+                        <span data-i18n="form-submit">Send Reservation Request</span>
+                    </button>
+                    <p class="form-note" data-i18n="form-note">* We respond within 2 hours via WhatsApp or email</p>
+                </form>
+                <div class="form-success" id="formSuccess" style="display:none;">
+                    <div class="success-icon">✓</div>
+                    <h3 data-i18n="success-title">Thank You!</h3>
+                    <p data-i18n="success-msg">Your request has been received. We will contact you within 2 hours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-img-col">
+                <div class="about-img-box">
+                    <div class="about-img-main about-img-antalya"></div>
+                    <div class="about-badge">
+                        <span class="badge-num">10+</span>
+                        <span class="badge-txt" data-i18n="about-badge">Years of Excellence</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <p class="section-tag" data-i18n="about-tag">Who We Are</p>
+                <h2 data-i18n="about-title">Son Nokta VIP — Your Trusted Travel Partner in Turkey</h2>
+                <p data-i18n="about-p1">Based in Antalya, Son Nokta VIP Tourism & Transportation has been providing premium travel services to international visitors for over a decade. We specialize in private, luxury tours.</p>
+                <p data-i18n="about-p2">Our team speaks English, German, Russian and Arabic — ensuring you feel comfortable throughout your journey.</p>
+                <div class="about-values">
+                    <div class="value-item"><span class="value-icon">🛡️</span><span data-i18n="val1">Safe & Licensed</span></div>
+                    <div class="value-item"><span class="value-icon">⭐</span><span data-i18n="val2">5-Star Service</span></div>
+                    <div class="value-item"><span class="value-icon">💎</span><span data-i18n="val3">Luxury Vehicles</span></div>
+                    <div class="value-item"><span class="value-icon">🤝</span><span data-i18n="val4">500+ Happy Guests</span></div>
+                </div>
+                <a href="#contact" class="btn-gold" data-i18n="about-cta">Plan My Tour</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-tag" data-i18n="test-tag">Guest Reviews</p>
+            <h2 class="section-title" data-i18n="test-title">What Our Guests Say</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p data-i18n="test1-text">"Absolutely incredible experience. Our driver and guide was professional, punctual and very knowledgeable. The trip to Ephesus was the highlight of our Turkey holiday!"</p>
+                <div class="test-author">
+                    <div class="test-avatar">JM</div>
+                    <div><strong>James Mitchell</strong><span>🇬🇧 United Kingdom</span></div>
+                </div>
+            </div>
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p data-i18n="test2-text">"Wir haben die Cappadocia-Tour gebucht und waren begeistert. Sehr professioneller Service, komfortables Fahrzeug. Absolut empfehlenswert!"</p>
+                <div class="test-author">
+                    <div class="test-avatar">AK</div>
+                    <div><strong>Anna Kristoffersen</strong><span>🇩🇪 Germany</span></div>
+                </div>
+            </div>
+            <div class="test-card">
+                <div class="stars">★★★★★</div>
+                <p data-i18n="test3-text">"The Pamukkale tour was magical. Son Nokta handled everything perfectly — pickup, the tour, lunch, everything. We will definitely book again!"</p>
+                <div class="test-author">
+                    <div class="test-avatar">SM</div>
+                    <div><strong>Sarah & Mike</strong><span>🇺🇸 United States</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-icon">✦</div>
+                    <div>
+                        <span class="logo-main">Son Nokta</span>
+                        <span class="logo-sub" data-i18n="logo-sub">VIP Tourism & Transportation</span>
+                    </div>
+                </div>
+                <p data-i18n="footer-desc">Premium VIP tours and transfers across Turkey. Based in Antalya, serving guests from around the world.</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="foot-quick">Quick Links</h4>
+                <a href="#home" data-i18n="nav-home">Home</a>
+                <a href="#destinations" data-i18n="nav-dest">Destinations</a>
+                <a href="#tours" data-i18n="nav-tours">VIP Tours</a>
+                <a href="#about" data-i18n="nav-about">About Us</a>
+                <a href="#contact" data-i18n="nav-book">Book Now</a>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="foot-tours">Popular Tours</h4>
+                <a href="#contact">Ephesus Tour</a>
+                <a href="#contact">Cappadocia Tour</a>
+                <a href="#contact">Pamukkale Tour</a>
+                <a href="#contact">Istanbul Tour</a>
+                <a href="#contact" data-i18n="foot-transfer">Airport Transfer</a>
+            </div>
+            <div class="footer-contact">
+                <h4 data-i18n="foot-contact">Contact</h4>
+                <a href="tel:+905470600760">📞 +90 547 060 07 60</a>
+                <a href="https://wa.me/905470600760" target="_blank">💬 WhatsApp</a>
+                <p>📍 Antalya, Turkey</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer-copy">© 2025 Son Nokta VIP Tourism & Transportation. All rights reserved.</p>
+            <p>Antalya, Turkey 🇹🇷</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
