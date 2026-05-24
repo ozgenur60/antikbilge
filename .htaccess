@@ -4,6 +4,7 @@
 
 # Enable Rewrite Engine
 RewriteEngine On
+RewriteBase /
 
 # =====================================================
 # 1. HTTPS REDIRECT (HTTP -> HTTPS)
