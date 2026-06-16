@@ -11,11 +11,9 @@ if (hamburger&&categoryMenu){
     });
     categoryMenu.querySelectorAll('a').forEach(function(link){
         link.addEventListener('click',function(){
-            // If clicking the dropdown parent in mobile mode, skip (handled by toggle)
             var isMobileOpen=categoryMenu.classList.contains('active');
             var isDropdownParent=link.parentElement&&link.parentElement.classList.contains('has-dropdown')&&link===link.parentElement.querySelector(':scope > a');
             if (isMobileOpen&&isDropdownParent) return;
-            // Close hamburger menu
             hamburger.classList.remove('active');
             categoryMenu.classList.remove('active');
             document.body.style.overflow='';
@@ -34,10 +32,8 @@ document.querySelectorAll('.has-dropdown').forEach(function(item){
         e.stopPropagation();
         var isMobileOpen=categoryMenu&&categoryMenu.classList.contains('active');
         if (isMobileOpen){
-            // Mobile: toggle sub-items open/close
             item.classList.toggle('mobile-open');
         } else {
-            // Desktop: toggle .open class
             var isOpen=item.classList.contains('open');
             document.querySelectorAll('.has-dropdown.open').forEach(function(el){el.classList.remove('open');});
             if (!isOpen) item.classList.add('open');
@@ -51,6 +47,23 @@ document.addEventListener('click',function(e){
         document.querySelectorAll('.has-dropdown.open').forEach(function(el){el.classList.remove('open');});
     }
 });
+
+// Cookie consent banner
+(function(){
+    if (localStorage.getItem('cookieConsent')) return;
+    var banner=document.createElement('div');
+    banner.className='cookie-banner';
+    banner.innerHTML='<p>Bu site, hizmet kalitesini artırmak ve size özel reklamlar sunmak amacıyla Google Analytics ve Google AdSense çerezleri kullanmaktadır. Siteyi kullanmaya devam ederek <a href="cerez-politikasi.html">Çerez Politikamızı</a> kabul etmiş sayılırsınız.</p><div class="cookie-banner-buttons"><button class="cookie-accept">Kabul Et</button><button class="cookie-decline">Reddet</button></div>';
+    document.body.appendChild(banner);
+    banner.querySelector('.cookie-accept').addEventListener('click',function(){
+        localStorage.setItem('cookieConsent','accepted');
+        banner.classList.add('hidden');
+    });
+    banner.querySelector('.cookie-decline').addEventListener('click',function(){
+        localStorage.setItem('cookieConsent','declined');
+        banner.classList.add('hidden');
+    });
+})();
 
 // Contact form
 var contactForm=document.querySelector('.contact-form');

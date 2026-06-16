@@ -1,6 +1,1 @@
-# ads.txt - Antik Bilge
-# Replace PUBLISHER_ID with your actual Google AdSense publisher ID
-# Format: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
-#
-# Uncomment the line below and replace with your AdSense publisher ID:
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-4502747052776832, DIRECT, f08c47fec0942fa0
