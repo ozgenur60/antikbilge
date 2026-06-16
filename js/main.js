@@ -18,6 +18,29 @@ if (hamburger&&categoryMenu){
     });
 }
 
+// Dropdown click toggle for desktop / touch
+document.querySelectorAll('.has-dropdown').forEach(function(item){
+    var trigger=item.querySelector(':scope > a');
+    var menu=item.querySelector(':scope > .dropdown-menu');
+    if (!trigger||!menu) return;
+    trigger.addEventListener('click',function(e){
+        var hamburgerVisible=hamburger&&getComputedStyle(hamburger).display!=='none';
+        if (!hamburgerVisible){
+            e.preventDefault();
+            var isOpen=item.classList.contains('open');
+            document.querySelectorAll('.has-dropdown.open').forEach(function(el){el.classList.remove('open');});
+            if (!isOpen) item.classList.add('open');
+        }
+    });
+});
+
+// Close dropdown on outside click
+document.addEventListener('click',function(e){
+    if (!e.target.closest('.has-dropdown')){
+        document.querySelectorAll('.has-dropdown.open').forEach(function(el){el.classList.remove('open');});
+    }
+});
+
 // Contact form
 var contactForm=document.querySelector('.contact-form');
 if (contactForm){
