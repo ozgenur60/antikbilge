@@ -11,11 +11,11 @@ if (hamburger&&categoryMenu){
     });
     categoryMenu.querySelectorAll('a').forEach(function(link){
         link.addEventListener('click',function(){
-            // If clicking the dropdown parent link in mobile mode, let the toggle handler deal with it
-            var isMobile=hamburger&&getComputedStyle(hamburger).display!=='none';
+            // If clicking the dropdown parent in mobile mode, skip (handled by toggle)
+            var isMobileOpen=categoryMenu.classList.contains('active');
             var isDropdownParent=link.parentElement&&link.parentElement.classList.contains('has-dropdown')&&link===link.parentElement.querySelector(':scope > a');
-            if (isMobile&&isDropdownParent) return;
-            // Otherwise close the hamburger menu
+            if (isMobileOpen&&isDropdownParent) return;
+            // Close hamburger menu
             hamburger.classList.remove('active');
             categoryMenu.classList.remove('active');
             document.body.style.overflow='';
@@ -30,14 +30,14 @@ document.querySelectorAll('.has-dropdown').forEach(function(item){
     var menu=item.querySelector(':scope > .dropdown-menu');
     if (!trigger||!menu) return;
     trigger.addEventListener('click',function(e){
-        var isMobile=hamburger&&getComputedStyle(hamburger).display!=='none';
-        if (isMobile){
-            // Mobile: toggle sub-items, don't navigate
-            e.preventDefault();
+        e.preventDefault();
+        e.stopPropagation();
+        var isMobileOpen=categoryMenu&&categoryMenu.classList.contains('active');
+        if (isMobileOpen){
+            // Mobile: toggle sub-items open/close
             item.classList.toggle('mobile-open');
         } else {
-            // Desktop: toggle .open class, don't navigate
-            e.preventDefault();
+            // Desktop: toggle .open class
             var isOpen=item.classList.contains('open');
             document.querySelectorAll('.has-dropdown.open').forEach(function(el){el.classList.remove('open');});
             if (!isOpen) item.classList.add('open');
