@@ -11,21 +11,32 @@ if (hamburger&&categoryMenu){
     });
     categoryMenu.querySelectorAll('a').forEach(function(link){
         link.addEventListener('click',function(){
+            // If clicking the dropdown parent link in mobile mode, let the toggle handler deal with it
+            var isMobile=hamburger&&getComputedStyle(hamburger).display!=='none';
+            var isDropdownParent=link.parentElement&&link.parentElement.classList.contains('has-dropdown')&&link===link.parentElement.querySelector(':scope > a');
+            if (isMobile&&isDropdownParent) return;
+            // Otherwise close the hamburger menu
             hamburger.classList.remove('active');
             categoryMenu.classList.remove('active');
             document.body.style.overflow='';
+            document.querySelectorAll('.has-dropdown.mobile-open').forEach(function(el){el.classList.remove('mobile-open');});
         });
     });
 }
 
-// Dropdown click toggle for desktop / touch
+// Dropdown click toggle
 document.querySelectorAll('.has-dropdown').forEach(function(item){
     var trigger=item.querySelector(':scope > a');
     var menu=item.querySelector(':scope > .dropdown-menu');
     if (!trigger||!menu) return;
     trigger.addEventListener('click',function(e){
-        var hamburgerVisible=hamburger&&getComputedStyle(hamburger).display!=='none';
-        if (!hamburgerVisible){
+        var isMobile=hamburger&&getComputedStyle(hamburger).display!=='none';
+        if (isMobile){
+            // Mobile: toggle sub-items, don't navigate
+            e.preventDefault();
+            item.classList.toggle('mobile-open');
+        } else {
+            // Desktop: toggle .open class, don't navigate
             e.preventDefault();
             var isOpen=item.classList.contains('open');
             document.querySelectorAll('.has-dropdown.open').forEach(function(el){el.classList.remove('open');});
@@ -34,7 +45,7 @@ document.querySelectorAll('.has-dropdown').forEach(function(item){
     });
 });
 
-// Close dropdown on outside click
+// Close desktop dropdown on outside click
 document.addEventListener('click',function(e){
     if (!e.target.closest('.has-dropdown')){
         document.querySelectorAll('.has-dropdown.open').forEach(function(el){el.classList.remove('open');});
