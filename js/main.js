@@ -27,6 +27,17 @@ document.querySelectorAll('.has-dropdown').forEach(function(item){
     var trigger=item.querySelector(':scope > a');
     var menu=item.querySelector(':scope > .dropdown-menu');
     if (!trigger||!menu) return;
+
+    // Desktop hover support
+    item.addEventListener('mouseenter',function(){
+        if (window.innerWidth>992){
+            item.classList.add('hover-open');
+        }
+    });
+    item.addEventListener('mouseleave',function(){
+        item.classList.remove('hover-open');
+    });
+
     trigger.addEventListener('click',function(e){
         e.preventDefault();
         e.stopPropagation();
