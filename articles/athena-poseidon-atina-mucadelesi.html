@@ -60,7 +60,7 @@
             "name": "Antik Bilge",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://antikbilge.com/images/logo.webp",
+                "url": "https://antikbilge.com/images/logo.png",
                 "width": 200,
                 "height": 200
             }
@@ -104,7 +104,7 @@
     }
     </script>
 
-    <!-- FAQPage Schema -->
+    <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -197,6 +197,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4502747052776832"
      crossorigin="anonymous"></script>
@@ -231,76 +232,74 @@
     <header class="header" id="header">
         <div class="container">
             <a href="../index.html" class="logo">
-                <img src="../images/logo.webp" alt="Antik Bilge Logo" class="logo-img" width="70" height="70" loading="eager">
+                <img src="../images/logo.webp" alt="Antik Bilge Logo" class="logo-img" width="70" height="70" loading="lazy">
                 <span class="logo-text">Antik Bilge</span>
             </a>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="nav-bar">
+    <!-- Category Bar -->
+    <nav class="category-bar">
         <div class="container">
-            <button class="mobile-menu-btn" aria-label="Menüyü Aç">
+            <ul class="category-menu">
+                <li><a href="../index.html">Anasayfa</a></li>
+                <li><a href="../tarih.html">Tarih</a></li>
+                <li class="has-dropdown"><a href="../mitoloji.html">Mitoloji <span class="dropdown-arrow">&#9660;</span></a><ul class="dropdown-menu"><li><a href="../misir-mitolojisi.html">Mısır Mitolojisi</a></li><li><a href="../yunan-mitolojisi.html">Yunan Mitolojisi</a></li><li><a href="../turk-mitolojisi.html">Türk Mitolojisi</a></li><li><a href="../mezopotamya-mitolojisi.html">Mezopotamya Mitolojisi</a></li></ul></li>
+                <li><a href="../arkeoloji.html">Arkeoloji</a></li>
+                <li><a href="../sanat-tarihi.html">Sanat Tarihi</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="main-nav">
-                <li class="dropdown">
-                    <a href="../mitoloji.html" class="dropdown-trigger">Mitoloji <svg class="dropdown-arrow" width="10" height="10" viewBox="0 0 10 10"><path d="M2 4l3 3 3-3" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../yunan-mitolojisi.html">Yunan Mitolojisi</a></li>
-                        <li><a href="../misir-mitolojisi.html">Mısır Mitolojisi</a></li>
-                        <li><a href="../turk-mitolojisi.html">Türk Mitolojisi</a></li>
-                        <li><a href="../mezopotamya-mitolojisi.html">Mezopotamya Mitolojisi</a></li>
-                    </ul>
-                </li>
-                <li><a href="../tarih.html">Tarih</a></li>
-                <li><a href="../arkeoloji.html">Arkeoloji</a></li>
-                <li><a href="../sanat-tarihi.html">Sanat Tarihi</a></li>
-            </ul>
         </div>
     </nav>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb-container">
-        <div class="container">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="../index.html">Anasayfa</a>
-                <span class="separator">›</span>
-                <a href="../mitoloji.html">Mitoloji</a>
-                <span class="separator">›</span>
-                <a href="../yunan-mitolojisi.html">Yunan Mitolojisi</a>
-                <span class="separator">›</span>
-                <span class="current">Athena ile Poseidon'un Atina Mücadelesi</span>
-            </nav>
-        </div>
-    </div>
+    <main class="article-page">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li><a href="../index.html">Ana Sayfa</a></li>
+                    <li class="has-dropdown"><a href="../mitoloji.html">Mitoloji <span class="dropdown-arrow">&#9660;</span></a><ul class="dropdown-menu"><li><a href="../misir-mitolojisi.html">Mısır Mitolojisi</a></li><li><a href="../yunan-mitolojisi.html">Yunan Mitolojisi</a></li><li><a href="../turk-mitolojisi.html">Türk Mitolojisi</a></li><li><a href="../mezopotamya-mitolojisi.html">Mezopotamya Mitolojisi</a></li></ul></li>
+                    <li><a href="../yunan-mitolojisi.html">Yunan Mitolojisi</a></li>
+                    <li aria-current="page">Athena ile Poseidon'un Atina Mücadelesi</li>
+                </ol>
+            </div>
+        </nav>
 
-    <!-- Main Content -->
-    <main class="article-main">
-        <div class="container">
-            <article class="article-content-page">
-                <header class="article-header">
-                    <span class="article-category-label">Yunan Mitolojisi</span>
-                    <h1>Athena ile Poseidon'un Atina Mücadelesi: Zeytin Ağacı, Deniz Gücü ve Bir Şehrin Kimliği</h1>
-                    <div class="article-meta-header">
-                        <time datetime="2026-06-18">18 Haziran 2026</time>
-                        <span class="separator">•</span>
-                        <span class="read-time">24 dakika</span>
-                        <span class="separator">•</span>
-                        <span class="author">Özgenur Akbaba</span>
-                    </div>
-                    <figure class="article-cover">
-                        <img src="../images/athena-poseidon-atina-mucadelesi.webp" alt="Athena ile Poseidon'un Atina Mücadelesi - Zeytin Ağacı ve Deniz Gücü" loading="eager">
-                    </figure>
-                </header>
+        <!-- Article Header -->
+        <div class="article-header">
+            <div class="container">
+                <span class="article-category">Mitoloji</span>
+                <h1>Athena ile Poseidon'un Atina Mücadelesi: Zeytin Ağacı, Deniz Gücü ve Bir Şehrin Kimliği</h1>
+                <div class="article-meta">
+                    <span class="date">18 Haziran 2026</span>
+                    <span class="read-time">24 dk okuma</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ad Space: Top -->
+        <div class="ad-space ad-top">
+            <div class="container">
+                <div class="ad-placeholder" data-ad-slot="top"><!-- AdSense kodu buraya --></div>
+            </div>
+        </div>
+
+        <!-- Article Body -->
+        <article class="article-body">
+            <figure>
+                <img src="../images/athena-poseidon-atina-mucadelesi.webp" alt="Athena ile Poseidon'un Atina Mücadelesi - Zeytin Ağacı ve Deniz Gücü" width="700" height="450" loading="eager">
+                <figcaption>Athena ile Poseidon'un Atina üzerindeki yarışması, Yunan mitolojisinin en ünlü şehir efsanelerinden biridir.</figcaption>
+            </figure>
 
             <p>Antik Yunan mitolojisinde şehirlerin yalnızca insanlar tarafından kurulduğu düşünülmezdi. Bir kentin karakteri, çoğu zaman onu koruduğuna inanılan tanrıyla birlikte anlam kazanırdı. Bu yüzden Atina'nın adını <a href="athena-kimdir.html">Athena</a>'dan alması basit bir isim hikâyesi değildir. Bu anlatı, Yunan dünyasının en önemli şehirlerinden birinin kendisini hangi değerler üzerinden tanımladığını gösteren güçlü bir mitolojik sahnedir.</p>
 
             <p>Efsaneye göre Attika bölgesinin koruyuculuğu için iki büyük tanrı karşı karşıya gelir: <a href="athena-kimdir.html">Athena</a> ve <a href="poseidon-kimdir.html">Poseidon</a>. Biri aklın, stratejinin, zanaatın ve şehir düzeninin tanrıçasıdır. Diğeri denizlerin, depremlerin, atların ve doğanın dizginlenmesi zor güçlerinin hükümdarıdır. Bu mücadelede kılıçlar çekilmez, ordular çarpışmaz, tanrılar birbirini yok etmeye çalışmaz. Yarışmanın sonucu, insanlara sunulan iki armağanın değerine göre belirlenir.</p>
 
-            <p><a href="poseidon-kimdir.html">Poseidon</a>, gücünü kendisine yakışır bir şekilde gösterir. <a href="poseidon-kimdir.html">Üç dişli yabasını</a> kayaya vurur ve topraktan su fışkırır. Bazı anlatılarda bu su tuzludur; bazı yorumlarda ise deniz gücünü, savaşçı enerjiyi ve uzaklara açılma imkânını temsil eder. Her durumda Poseidon'un armağanı etkileyicidir. Atina'yı denizle, hareketle, genişlemeyle ve kudretle ilişkilendiren bir öneridir.</p>
+            <p><a href="poseidon-kimdir.html">Poseidon</a>, gücünü kendisine yakışır bir şekilde gösterir. Üç dişli yabasını kayaya vurur ve topraktan su fışkırır. Bazı anlatılarda bu su tuzludur; bazı yorumlarda ise deniz gücünü, savaşçı enerjiyi ve uzaklara açılma imkânını temsil eder. Her durumda Poseidon'un armağanı etkileyicidir. Atina'yı denizle, hareketle, genişlemeyle ve kudretle ilişkilendiren bir öneridir.</p>
 
             <p>Athena ise daha sessiz ama daha uzun ömürlü bir armağan sunar: zeytin ağacı. İlk anda Poseidon'un yarattığı dramatik etki kadar sarsıcı görünmeyebilir. Ancak zeytin ağacı, antik bir toplum için yalnızca bir bitki değildir. Meyvesi yiyecek sağlar, yağı gündelik yaşamda, aydınlatmada, törensel uygulamalarda ve ticarette kullanılır. Kök salar, nesiller boyunca ürün verir ve bir kentin sürdürülebilir refahını temsil eder.</p>
 
@@ -316,7 +315,7 @@
 
             <p>Athena'nın Atina'yla özdeşleşmesi özellikle Parthenon üzerinden güçlü biçimde görünür. Parthenon yalnızca bir tapınak değildir; Atina'nın siyasi, kültürel ve sanatsal iddiasının taşlaşmış hâlidir. Şehir, en görkemli mimari eserlerinden birini Athena'ya adayarak kendisini onun temsil ettiği değerlerle birlikte sunmuştur. Bu değerler arasında akıl, ölçü, zanaat, savunma ve medeni düzen öne çıkar.</p>
 
-            <p><a href="poseidon-kimdir.html">Poseidon</a>'un bu yarışmada yer alması ise anlatıya ayrı bir derinlik katar. Çünkü Atina yalnızca karasal bir şehir değildir. Özellikle klasik dönemde denizcilik, ticaret ve donanma gücü Atina'nın yükselişinde büyük rol oynayacaktır. Bu açıdan bakıldığında mit, Atina'nın denizi reddettiğini değil, <a href="poseidon-kimdir.html">deniz gücünü</a> Athena'nın temsil ettiği şehir aklının emrine verdiğini düşündürür.</p>
+            <p><a href="poseidon-kimdir.html">Poseidon</a>'un bu yarışmada yer alması ise anlatıya ayrı bir derinlik katar. Çünkü Atina yalnızca karasal bir şehir değildir. Özellikle klasik dönemde denizcilik, ticaret ve donanma gücü Atina'nın yükselişinde büyük rol oynayacaktır. Bu açıdan bakıldığında mit, Atina'nın denizi reddettiğini değil, deniz gücünü Athena'nın temsil ettiği şehir aklının emrine verdiğini düşündürür.</p>
 
             <p>Bu hikâyenin bu kadar uzun süre hatırlanmasının nedeni de burada aranmalıdır. Athena ile Poseidon'un mücadelesi, yalnızca mitolojik bir yarışma değildir. Atina'nın nasıl bir şehir olmak istediğine dair sembolik bir anlatıdır. Hızlı ve sarsıcı kudret mi, yoksa sabırlı ve üretken düzen mi? Mit, cevabını zeytin ağacının gölgesinde verir.</p>
 
@@ -344,8 +343,6 @@
 
             <p>Atina halkının Athena'yı seçmesi bu yüzden yalnızca ekonomik bir tercih olarak yorumlanamaz. Mitolojik açıdan bakıldığında şehir, kendisini hangi değerler üzerine inşa edeceğine karar vermektedir. Bir tarafta hareket, fetih ve kudretin sembolleri bulunurken, diğer tarafta üretim, istikrar ve süreklilik vardır. Athena'nın armağanı, toplumun günlük yaşamını destekleyen ve geleceğini güvence altına alan bir düzen önerir.</p>
 
-            <p>Bu noktada hikâyeyi modern gözle değerlendirmek de ilginçtir. Çünkü Atina tarih boyunca yalnızca felsefesiyle değil, ticaretiyle, deniz gücüyle ve siyasi etkisiyle de öne çıkmıştır. Başka bir deyişle şehir, Poseidon'un temsil ettiği alanlardan tamamen uzak durmamıştır. Ancak mit, bu başarıların temelinde Athena'nın temsil ettiği aklın ve düzenin bulunması gerektiğini vurgular.</p>
-
             <p>Belki de bu yüzden zeytin ağacı, Antik Yunan kültürünün en güçlü sembollerinden biri hâline gelmiştir. Çünkü o yalnızca bir bitki değildir. Emek vermeyi, beklemeyi, geleceği düşünmeyi ve elde edilen refahı korumayı temsil eder. Athena'nın zaferi de aslında tam olarak bu değerlerin zaferidir.</p>
 
             <h2>Yarışmanın Kazananını Kim Belirledi?</h2>
@@ -358,21 +355,15 @@
 
             <p>Kararın nasıl verildiğine dair ayrıntılar değişse de sonuç değişmez. Şehir Athena'nın korumasına bırakılır ve onun adıyla anılmaya başlar. Ancak <a href="poseidon-kimdir.html">Poseidon</a>'un bu sonucu kabullendiğini söylemek zordur. Bazı anlatılarda öfkelendiği ve Attika topraklarına zarar verdiği aktarılır. Bu ayrıntı da mitin önemli bir yönünü ortaya çıkarır: Tanrılar arasındaki rekabet sona ermiş olsa bile, doğanın temsil ettiği güçler hiçbir zaman tamamen ortadan kalkmaz.</p>
 
-            <p>Bu nedenle yarışmanın sonucu yalnızca bir kazanan ve bir kaybeden belirlemez. Aynı zamanda Atina'nın kimliğini şekillendiren iki büyük gücün ilişkisini de tanımlar. Athena şehrin adı ve koruyucusu olur; fakat Poseidon'un temsil ettiği deniz gücü ve hareketlilik de Atina'nın tarihindeki yerini korumaya devam eder.</p>
-
             <h2>Bu Hikâye Atina Hakkında Ne Anlatıyordu?</h2>
 
             <p>Athena ile Poseidon arasındaki mücadele ilk bakışta iki tanrının rekabeti gibi görünür. Ancak mitolojik anlatılar çoğu zaman yalnızca görünen hikâyeyi anlatmaz. Bu efsanenin asıl gücü de burada ortaya çıkar. Çünkü anlatı dikkatle incelendiğinde, aslında Atina'nın kendisi hakkında bir açıklama olduğu anlaşılır.</p>
 
             <p>Antik şehirler yalnızca binalardan, surlardan ve limanlardan oluşmazdı. Her şehir kendi geçmişini, kimliğini ve dünyadaki yerini açıklayan hikâyeler üretirdi. Atina da bunu Athena ile Poseidon arasındaki yarışma üzerinden yapmıştır. Hikâye, şehrin neden Athena'nın adını taşıdığını açıklarken aynı zamanda hangi değerleri ön plana çıkardığını da göstermektedir.</p>
 
-            <p><a href="athena-kimdir.html">Athena'nın zaferi</a>, aklın kaba kuvvete üstün gelmesi şeklinde yorumlanabilir; ancak bu yorum tek başına yeterli değildir. Çünkü Poseidon'un temsil ettiği güçler de Atina'nın tarihinde büyük rol oynayacaktır. Şehir zamanla Akdeniz'in en önemli deniz güçlerinden biri hâline gelecek, ticaret yollarında etkili olacak ve donanmasıyla rakiplerine üstünlük sağlayacaktır. Bu açıdan bakıldığında Atina'nın gelişiminde Poseidon'un temsil ettiği alanların da önemli olduğu açıktır.</p>
-
-            <p>Mitin asıl söylediği şey daha farklıdır. Atina, deniz gücünü reddeden bir şehir değildir; fakat bu gücün hangi amaçla kullanılacağı konusunda Athena'nın temsil ettiği ilkeleri merkeze yerleştirir. Başka bir ifadeyle hikâye, ham gücün tek başına yeterli olmadığını anlatır. Gücün yönlendirilmesi, planlanması ve sürdürülebilir bir düzene dönüştürülmesi gerekir. Athena'nın zaferi bu düşüncenin sembolü olarak görülebilir.</p>
+            <p>Mitin asıl söylediği şey şudur: Atina, deniz gücünü reddeden bir şehir değildir; fakat bu gücün hangi amaçla kullanılacağı konusunda Athena'nın temsil ettiği ilkeleri merkeze yerleştirir. Başka bir ifadeyle hikâye, ham gücün tek başına yeterli olmadığını anlatır. Gücün yönlendirilmesi, planlanması ve sürdürülebilir bir düzene dönüştürülmesi gerekir. Athena'nın zaferi bu düşüncenin sembolü olarak görülebilir.</p>
 
             <p>Bu nedenle Atina'nın altın çağında ortaya çıkan birçok unsur Athena mitiyle uyum gösterir. Felsefenin gelişmesi, sanatın desteklenmesi, mimarinin yükselişi ve siyasi tartışmaların kamusal yaşamın parçası hâline gelmesi tesadüf değildir. Şehir kendisini yalnızca askerî başarılarla değil, kültürel ve düşünsel üretimle de tanımlamaya başlamıştır. Mitoloji ise bu durumu geriye dönük olarak Athena'nın seçilmesiyle açıklamıştır.</p>
-
-            <p>Bu yüzden Athena ile Poseidon'un mücadelesi yalnızca geçmişte yaşandığına inanılan bir olay değildir. O, Atina'nın kendisini nasıl görmek istediğinin mitolojik ifadesidir. Şehir, gücü tamamen reddetmez; ancak gücün akıl tarafından yönlendirilmesi gerektiğini savunur. Hikâyenin yüzyıllar boyunca etkisini korumasının sebeplerinden biri de budur.</p>
 
             <h2>Athena ile Poseidon Mücadelesi Sanat ve Kültürde Nasıl Yaşadı?</h2>
 
@@ -382,9 +373,7 @@
 
             <p>Roma döneminde de hikâye yaşamaya devam etmiş, farklı sanat eserlerinde yeniden yorumlanmıştır. Daha sonraki yüzyıllarda Avrupa'da klasik kültüre duyulan ilginin artmasıyla birlikte Athena ve Poseidon mücadelesi resimlerde, şiirlerde ve tarih çalışmalarında yeniden ortaya çıkmıştır. Özellikle Rönesans ve sonrasında antik dünyanın sembollerine duyulan hayranlık, bu efsanenin unutulmamasını sağlamıştır.</p>
 
-            <p>Günümüzde bile hikâye farklı biçimlerde yaşamayı sürdürmektedir. Mitoloji kitaplarında, belgesellerde, eğitim içeriklerinde ve popüler kültürde Athena ile Poseidon arasındaki yarışma sık sık anlatılır. Bunun nedeni yalnızca hikâyenin eski olması değildir. İnsanlar hâlâ bu anlatının merkezindeki soruyla ilgilenmektedir: Bir toplumu gerçekten güçlü yapan şey nedir?</p>
-
-            <p>Bu soru antik Atina için olduğu kadar modern toplumlar için de anlam taşır. Güç mü daha değerlidir, yoksa onu yönlendiren bilgi ve strateji mi? Hızlı başarı mı daha önemlidir, yoksa uzun vadeli refah mı? Athena ile Poseidon'un mücadelesi bu nedenle yalnızca geçmişe ait bir efsane olarak kalmaz. Her dönemin kendi koşullarında yeniden yorumlanabilecek bir düşünce alanı sunar.</p>
+            <p>Günümüzde bile hikâye farklı biçimlerde yaşamayı sürdürmektedir. Mitoloji kitaplarında, belgesellerde, eğitim içeriklerinde ve popüler kültürde Athena ile Poseidon arasındaki yarışma sık sık anlatılır. Bu soru antik Atina için olduğu kadar modern toplumlar için de anlam taşır. Güç mü daha değerlidir, yoksa onu yönlendiren bilgi ve strateji mi? Athena ile Poseidon'un mücadelesi bu nedenle yalnızca geçmişe ait bir efsane olarak kalmaz.</p>
 
             <h2>Sonuç: Athena ile Poseidon'un Yarışması Neden Hâlâ Hatırlanıyor?</h2>
 
@@ -429,50 +418,52 @@
             <p>Çünkü bu hikâye yalnızca mitolojik bir yarışma değil, bir toplumun hangi değerleri ön plana çıkarması gerektiğine dair evrensel bir anlatı olarak görülmektedir.</p>
 
             <h2>Kaynakça</h2>
-            <ul class="kaynakca-list">
-                <li>Apollodoros, <em>Bibliotheca.</em></li>
-                <li>Pausanias, <em>Description of Greece.</em></li>
-                <li>Herodotos, <em>Histories.</em></li>
-                <li>Strabon, <em>Geographika.</em></li>
-                <li>Plutarkhos, <em>Theseus'un Hayatı.</em></li>
-                <li>Hesiodos, <em>Theogonia.</em></li>
-                <li>Homerik İlahiler.</li>
-                <li>Walter Burkert, <em>Greek Religion.</em></li>
-                <li>Karl Kerényi, <em>The Gods of the Greeks.</em></li>
-                <li>Robin Hard, <em>The Routledge Handbook of Greek Mythology.</em></li>
-                <li>Timothy Gantz, <em>Early Greek Myth: A Guide to Literary and Artistic Sources.</em></li>
-                <li>Jenny March, <em>The Penguin Book of Classical Myths.</em></li>
-                <li>Sarah Iles Johnston, <em>The Story of Myth.</em></li>
-                <li>Richard Buxton, <em>The Complete World of Greek Mythology.</em></li>
-                <li>Edith Hamilton, <em>Mythology: Timeless Tales of Gods and Heroes.</em></li>
-                <li>Mark P. O. Morford & Robert J. Lenardon, <em>Classical Mythology.</em></li>
-                <li>Theoi Greek Mythology Project – Athena & Poseidon Contest.</li>
-                <li>Encyclopaedia Britannica – Athena.</li>
-                <li>Encyclopaedia Britannica – Poseidon.</li>
-                <li>World History Encyclopedia – Athena.</li>
-                <li>World History Encyclopedia – Poseidon.</li>
-                <li>Oxford Classical Dictionary – Athena maddesi.</li>
-                <li>Oxford Classical Dictionary – Poseidon maddesi.</li>
-            </ul>
 
-            <!-- Related Articles -->
-            <div class="related-articles">
-                <h3>İlgili Makaleler</h3>
-                <div class="related-grid">
-                    <a href="athena-kimdir.html" class="related-card">
-                        <img src="../images/athena-kapak.webp" alt="Athena Kimdir?" loading="lazy">
-                        <h4>Athena Kimdir?</h4>
-                    </a>
-                    <a href="poseidon-kimdir.html" class="related-card">
-                        <img src="../images/poseidon-kimdir.webp" alt="Poseidon Kimdir?" loading="lazy">
-                        <h4>Poseidon Kimdir?</h4>
-                    </a>
-                    <a href="olimpos-tanrilari.html" class="related-card">
-                        <img src="../images/olimpos-tanrilari.webp" alt="Olimpos Tanrıları" loading="lazy">
-                        <h4>Olimpos Tanrıları</h4>
-                    </a>
-                </div>
-            </div>
+            <p>Apollodoros. <em>Bibliotheca.</em></p>
+
+            <p>Pausanias. <em>Description of Greece.</em></p>
+
+            <p>Herodotos. <em>Histories.</em></p>
+
+            <p>Strabon. <em>Geographika.</em></p>
+
+            <p>Plutarkhos. <em>Theseus'un Hayatı.</em></p>
+
+            <p>Hesiodos. <em>Theogonia.</em></p>
+
+            <p>Homerik İlahiler.</p>
+
+            <p>Walter Burkert. <em>Greek Religion.</em></p>
+
+            <p>Karl Kerényi. <em>The Gods of the Greeks.</em></p>
+
+            <p>Robin Hard. <em>The Routledge Handbook of Greek Mythology.</em></p>
+
+            <p>Timothy Gantz. <em>Early Greek Myth: A Guide to Literary and Artistic Sources.</em></p>
+
+            <p>Jenny March. <em>The Penguin Book of Classical Myths.</em></p>
+
+            <p>Sarah Iles Johnston. <em>The Story of Myth.</em></p>
+
+            <p>Richard Buxton. <em>The Complete World of Greek Mythology.</em></p>
+
+            <p>Edith Hamilton. <em>Mythology: Timeless Tales of Gods and Heroes.</em></p>
+
+            <p>Mark P. O. Morford & Robert J. Lenardon. <em>Classical Mythology.</em></p>
+
+            <p>Theoi Greek Mythology Project – Athena & Poseidon Contest.</p>
+
+            <p>Encyclopaedia Britannica – Athena.</p>
+
+            <p>Encyclopaedia Britannica – Poseidon.</p>
+
+            <p>World History Encyclopedia – Athena.</p>
+
+            <p>World History Encyclopedia – Poseidon.</p>
+
+            <p>Oxford Classical Dictionary – Athena maddesi.</p>
+
+            <p>Oxford Classical Dictionary – Poseidon maddesi.</p>
 
             <div class="article-tags">
                 <a href="#" class="tag">Athena</a>
@@ -483,57 +474,106 @@
                 <a href="#" class="tag">Akropolis</a>
                 <a href="#" class="tag">Parthenon</a>
             </div>
-            </article>
-        </div>
+
+            <div class="article-share">
+                <span>Paylaş:</span>
+                <a href="#" class="share-btn" title="Twitter'da paylaş">X</a>
+                <a href="#" class="share-btn" title="Facebook'ta paylaş">f</a>
+                <a href="#" class="share-btn" title="LinkedIn'de paylaş">in</a>
+            </div>
+        </article>
     </main>
+
+    <!-- Ad Space: Bottom -->
+    <div class="ad-space ad-bottom">
+        <div class="container">
+            <div class="ad-placeholder" data-ad-slot="bottom"><!-- AdSense kodu buraya --></div>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <section class="related-articles">
+        <div class="container">
+            <h2 class="section-title">İlgili Yazılar</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <a href="athena-kimdir.html" class="article-image">
+                        <img src="../images/athena-kapak.webp" alt="Athena Kimdir" loading="lazy">
+                        <span class="article-category">Mitoloji</span>
+                    </a>
+                    <div class="article-content">
+                        <h3><a href="athena-kimdir.html">Athena Kimdir? Yunan Mitolojisinin Bilgelik, Strateji ve Savaş Tanrıçası</a></h3>
+                        <p>Zeus'un başından doğuşu, bilgelik ve strateji tanrıçası olmasının nedeni ve Atina'nın koruyucusu oluşu...</p>
+                        <div class="article-meta">
+                            <span class="date">17 Haziran 2026</span>
+                            <span class="read-time">24 dk okuma</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <a href="poseidon-kimdir.html" class="article-image">
+                        <img src="../images/poseidon-kimdir.webp" alt="Poseidon Kimdir" loading="lazy">
+                        <span class="article-category">Mitoloji</span>
+                    </a>
+                    <div class="article-content">
+                        <h3><a href="poseidon-kimdir.html">Poseidon Kimdir? Denizlerin, Depremlerin ve Fırtınaların Güçlü Tanrısı</a></h3>
+                        <p>Üç dişli yabası, atlarla ilişkisi, Athena ile rekabeti ve Odysseus'u yıllarca cezalandırması...</p>
+                        <div class="article-meta">
+                            <span class="date">17 Haziran 2026</span>
+                            <span class="read-time">25 dk okuma</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <a href="olimpos-tanrilari.html" class="article-image">
+                        <img src="../images/olimpos-tanrilari-meclisi.webp" alt="Olimpos Tanrıları" loading="lazy">
+                        <span class="article-category">Mitoloji</span>
+                    </a>
+                    <div class="article-content">
+                        <h3><a href="olimpos-tanrilari.html">Olimpos Tanrıları: 12'li Liste Neden Değişir?</a></h3>
+                        <p>Antik Yunan'da 12 Olimposlu listesi neden sabit değildi? Olimpos'un gerçek anlamını keşfedin...</p>
+                        <div class="article-meta">
+                            <span class="date">15 Şubat 2026</span>
+                            <span class="read-time">8 dk okuma</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Antik Bilge</h3>
-                    <p>Antik uygarlıkların izinde bilgelik yolculuğu. Tarih, mitoloji, arkeoloji ve sanat tarihi içerikleriyle geçmişin kapılarını aralıyoruz.</p>
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <img src="../images/logo.webp" alt="Antik Bilge Logo" class="logo-img" width="70" height="70" loading="lazy">
+                        <span class="logo-text">Antik Bilge</span>
+                    </a>
+                    <p>Geçmişin izinde, bilgeliğin peşinde.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Kategoriler</h3>
-                    <ul>
-                        <li><a href="../mitoloji.html">Mitoloji</a></li>
-                        <li><a href="../tarih.html">Tarih</a></li>
-                        <li><a href="../arkeoloji.html">Arkeoloji</a></li>
-                        <li><a href="../sanat-tarihi.html">Sanat Tarihi</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Hızlı Bağlantılar</h3>
-                    <ul>
-                        <li><a href="../hakkimizda.html">Hakkımızda</a></li>
-                        <li><a href="../iletisim.html">İletişim</a></li>
-                        <li><a href="../gizlilik-politikasi.html">Gizlilik Politikası</a></li>
-                        <li><a href="../cerez-politikasi.html">Çerez Politikası</a></li>
-                        <li><a href="../kullanim-sartlari.html">Kullanım Şartları</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Bizi Takip Edin</h3>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/share/1DYcnzTosd/?mibextid=wwXlfr" target="_blank" rel="noopener" aria-label="Facebook">
-                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </a>
-                        <a href="https://x.com/AntikBilgee" target="_blank" rel="noopener" aria-label="X">
-                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                        <a href="https://www.instagram.com/antik.bilge" target="_blank" rel="noopener" aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                        <a href="https://youtube.com/@antikbilge" target="_blank" rel="noopener" aria-label="YouTube">
-                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        </a>
-                    </div>
+
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/antik.bilge" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@antikbilge" target="_blank" rel="noopener" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
                 </div>
             </div>
+
+            <div class="footer-links">
+                <a href="../hakkimizda.html">Hakkımızda</a>
+                <a href="../iletisim.html">İletişim</a>
+                <a href="../gizlilik-politikasi.html">Gizlilik Politikası</a>
+                <a href="../cerez-politikasi.html">Çerez Politikası</a>
+                <a href="../kullanim-sartlari.html">Kullanım Şartları</a>
+            </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Antik Bilge. Tüm hakları saklıdır.</p>
+                <p>&copy; 2026 Antik Bilge. Tüm hakları saklıdır.</p>
             </div>
         </div>
     </footer>
