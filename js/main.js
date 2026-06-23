@@ -1,227 +1,116 @@
-/**
- * Antik Bilge - Main JavaScript
- * Single page navigation with URL hash support
- */
+(function(){'use strict';
 
-(function() {
-    'use strict';
-
-    // Valid section IDs
-    var validSections = ['hakkimizda', 'katilim', 'iletisim'];
-
-    // Get current hash from URL
-    function getHash() {
-        return window.location.hash.replace('#', '');
-    }
-
-    // Show specific section, hide others
-    function showSection(sectionId) {
-        var mainSection = document.querySelector('.articles');
-        var aboutSection = document.getElementById('hakkimizda');
-        var participationSection = document.getElementById('katilim');
-        var contactSection = document.getElementById('iletisim');
-        var pageSections = [aboutSection, participationSection, contactSection];
-
-        // Hide main articles section
-        if (mainSection) {
-            mainSection.style.display = 'none';
-        }
-
-        // Hide all page sections
-        pageSections.forEach(function(section) {
-            if (section) {
-                section.style.display = 'none';
-            }
+// Hamburger menu
+var hamburger=document.getElementById('hamburger');
+var categoryMenu=document.querySelector('.category-menu');
+if (hamburger&&categoryMenu){
+    hamburger.addEventListener('click',function(){
+        hamburger.classList.toggle('active');
+        categoryMenu.classList.toggle('active');
+        document.body.style.overflow=categoryMenu.classList.contains('active')?'hidden':'';
+    });
+    categoryMenu.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click',function(){
+            var isMobileOpen=categoryMenu.classList.contains('active');
+            var isDropdownParent=link.parentElement&&link.parentElement.classList.contains('has-dropdown')&&link===link.parentElement.querySelector(':scope > a');
+            if (isMobileOpen&&isDropdownParent) return;
+            hamburger.classList.remove('active');
+            categoryMenu.classList.remove('active');
+            document.body.style.overflow='';
+            document.querySelectorAll('.has-dropdown.mobile-open').forEach(function(el){el.classList.remove('mobile-open');});
         });
+    });
+}
 
-        // Show target section
-        var target = document.getElementById(sectionId);
-        if (target) {
-            target.style.display = 'block';
-            window.scrollTo(0, 0);
+// Dropdown click toggle
+document.querySelectorAll('.has-dropdown').forEach(function(item){
+    var trigger=item.querySelector(':scope > a');
+    var menu=item.querySelector(':scope > .dropdown-menu');
+    if (!trigger||!menu) return;
+
+    // Desktop hover support
+    item.addEventListener('mouseenter',function(){
+        if (window.innerWidth>992){
+            item.classList.add('hover-open');
         }
-    }
+    });
+    item.addEventListener('mouseleave',function(){
+        item.classList.remove('hover-open');
+    });
 
-    // Show home page (articles)
-    function showHome() {
-        var mainSection = document.querySelector('.articles');
-        var aboutSection = document.getElementById('hakkimizda');
-        var participationSection = document.getElementById('katilim');
-        var contactSection = document.getElementById('iletisim');
-        var pageSections = [aboutSection, participationSection, contactSection];
-
-        // Hide all page sections
-        pageSections.forEach(function(section) {
-            if (section) {
-                section.style.display = 'none';
-            }
-        });
-
-        // Show main articles section
-        if (mainSection) {
-            mainSection.style.display = 'block';
-        }
-
-        window.scrollTo(0, 0);
-    }
-
-    // Handle navigation based on current URL hash
-    function handleNavigation() {
-        var hash = getHash();
-
-        if (hash && validSections.indexOf(hash) !== -1) {
-            showSection(hash);
+    trigger.addEventListener('click',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var isMobileOpen=categoryMenu&&categoryMenu.classList.contains('active');
+        if (isMobileOpen){
+            item.classList.toggle('mobile-open');
         } else {
-            showHome();
+            var isOpen=item.classList.contains('open');
+            document.querySelectorAll('.has-dropdown.open').forEach(function(el){el.classList.remove('open');});
+            if (!isOpen) item.classList.add('open');
         }
+    });
+});
+
+// Close desktop dropdown on outside click
+document.addEventListener('click',function(e){
+    if (!e.target.closest('.has-dropdown')){
+        document.querySelectorAll('.has-dropdown.open').forEach(function(el){el.classList.remove('open');});
     }
+});
 
-    // Navigate to a section (updates URL and shows section)
-    function navigateTo(sectionId) {
-        if (validSections.indexOf(sectionId) !== -1) {
-            // Use pushState for browser history support
-            history.pushState({ section: sectionId }, '', '#' + sectionId);
-            showSection(sectionId);
-        }
+// Cookie consent banner
+(function(){
+    if (localStorage.getItem('cookieConsent')) return;
+    var banner=document.createElement('div');
+    banner.className='cookie-banner';
+    banner.innerHTML='<p>Bu site, hizmet kalitesini artırmak ve size özel reklamlar sunmak amacıyla Google Analytics ve Google AdSense çerezleri kullanmaktadır. Siteyi kullanmaya devam ederek <a href="cerez-politikasi.html">Çerez Politikamızı</a> kabul etmiş sayılırsınız.</p><div class="cookie-banner-buttons"><button class="cookie-accept">Kabul Et</button><button class="cookie-decline">Reddet</button></div>';
+    document.body.appendChild(banner);
+    banner.querySelector('.cookie-accept').addEventListener('click',function(){
+        localStorage.setItem('cookieConsent','accepted');
+        banner.classList.add('hidden');
+    });
+    banner.querySelector('.cookie-decline').addEventListener('click',function(){
+        localStorage.setItem('cookieConsent','declined');
+        banner.classList.add('hidden');
+    });
+})();
+
+// Contact form
+var contactForm=document.querySelector('.contact-form');
+if (contactForm){
+    contactForm.addEventListener('submit',function(e){
+        e.preventDefault();
+        var formData=new FormData(this);
+        var name=formData.get('name');
+        alert('Teşekkürler '+name+'! Mesajınız alındı.');
+        this.reset();
+    });
+}
+
+// Article reading time
+var articleBody=document.querySelector('.article-body');
+if (articleBody){
+    var text=articleBody.textContent||articleBody.innerText;
+    var wordCount=text.trim().split(/\s+/).length;
+    var readingTime=Math.ceil(wordCount/200);
+    var readTimeEl=document.querySelector('.article-header .read-time');
+    if (readTimeEl){
+        readTimeEl.textContent=readingTime+' dk okuma';
     }
+}
 
-    // Navigate to home
-    function navigateHome() {
-        history.pushState({ section: 'home' }, '', window.location.pathname);
-        showHome();
-    }
+// Protect images from right-click
+var protectedImages=document.querySelectorAll('.about-logo,.protected-image');
+protectedImages.forEach(function(img){
+    img.addEventListener('contextmenu',function(e){
+        e.preventDefault();
+        return false;
+    });
+    img.addEventListener('dragstart',function(e){
+        e.preventDefault();
+        return false;
+    });
+});
 
-    // Check if we're on the main page (index.html) or an article page
-    function isMainPage() {
-        var path = window.location.pathname;
-        return path.endsWith('index.html') || path.endsWith('/') || path === '' || !path.includes('/articles/');
-    }
-
-    // Initialize when DOM is ready
-    function init() {
-        // Handle top navigation clicks
-        var topNavLinks = document.querySelectorAll('.top-nav a');
-        topNavLinks.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                var href = this.getAttribute('href');
-
-                // If on article page and link goes to index.html, allow default navigation
-                if (!isMainPage() && (href.includes('index.html') || href.startsWith('../'))) {
-                    // Allow default behavior - don't prevent
-                    return;
-                }
-
-                // On main page, use SPA navigation
-                e.preventDefault();
-                var sectionId = href.replace('#', '');
-                navigateTo(sectionId);
-            });
-        });
-
-        // Handle ALL logo clicks (header and footer)
-        var allLogos = document.querySelectorAll('.logo');
-        allLogos.forEach(function(logo) {
-            logo.addEventListener('click', function(e) {
-                var href = logo.getAttribute('href');
-
-                // If on article page and link goes to index.html, allow default navigation
-                if (!isMainPage() && href && (href.includes('index.html') || href.startsWith('../'))) {
-                    // Allow default behavior - don't prevent
-                    return;
-                }
-
-                // On main page, use SPA navigation
-                e.preventDefault();
-                navigateHome();
-            });
-        });
-
-        // Handle home link in category menu
-        var homeLink = document.querySelector('.home-link');
-        if (homeLink) {
-            homeLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                navigateHome();
-            });
-        }
-
-        // Handle browser back/forward buttons
-        window.addEventListener('popstate', function(e) {
-            handleNavigation();
-        });
-
-        // Mobile Menu Toggle
-        var hamburger = document.getElementById('hamburger');
-        var categoryMenu = document.querySelector('.category-menu');
-
-        if (hamburger && categoryMenu) {
-            hamburger.addEventListener('click', function() {
-                hamburger.classList.toggle('active');
-                categoryMenu.classList.toggle('active');
-                document.body.style.overflow = categoryMenu.classList.contains('active') ? 'hidden' : '';
-            });
-
-            categoryMenu.querySelectorAll('a').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    hamburger.classList.remove('active');
-                    categoryMenu.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            });
-        }
-
-        // Form Handling
-        var contactForm = document.querySelector('.contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                var formData = new FormData(this);
-                var name = formData.get('name');
-                alert('Teşekkürler ' + name + '! Mesajınız alındı.');
-                this.reset();
-            });
-        }
-
-        // Reading Time Calculation
-        var articleBody = document.querySelector('.article-body');
-        if (articleBody) {
-            var text = articleBody.textContent || articleBody.innerText;
-            var wordCount = text.trim().split(/\s+/).length;
-            var readingTime = Math.ceil(wordCount / 200);
-            var readTimeEl = document.querySelector('.article-header .read-time');
-            if (readTimeEl) {
-                readTimeEl.textContent = readingTime + ' dk okuma';
-            }
-        }
-
-        // Image Protection
-        var protectedImages = document.querySelectorAll('.about-logo, .protected-image');
-        protectedImages.forEach(function(img) {
-            img.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-                return false;
-            });
-            img.addEventListener('dragstart', function(e) {
-                e.preventDefault();
-                return false;
-            });
-        });
-
-        // Initialize - show correct section based on URL hash
-        // IMPORTANT: Call this BEFORE removing initial-state style
-        handleNavigation();
-
-        // Remove initial state style AFTER inline styles are set
-        var initialStyle = document.getElementById('initial-state');
-        if (initialStyle) {
-            initialStyle.remove();
-        }
-    }
-
-    // Run init when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
 })();

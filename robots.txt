@@ -1,4 +1,56 @@
+# =====================================================
+# Antik Bilge - robots.txt
+# https://antikbilge.com
+# =====================================================
+
+# Allow all search engines
 User-agent: *
 Allow: /
 
+# Sitemap location
 Sitemap: https://antikbilge.com/sitemap.xml
+
+# Block unnecessary directories and files
+Disallow: /scripts/
+Disallow: /.git/
+Disallow: /.github/
+
+# Block temporary and config files
+Disallow: /*.bak$
+Disallow: /*.tmp$
+Disallow: /*.log$
+
+# Allow important resources
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /articles/
+
+# Crawl-delay for polite crawling (optional, not all bots respect this)
+# Crawl-delay: 1
+
+# =====================================================
+# Specific bot rules
+# =====================================================
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Yandex (for Turkish SEO)
+User-agent: Yandex
+Allow: /
+
+# Block AI training crawlers (optional - uncomment if desired)
+# User-agent: GPTBot
+# Disallow: /
+
+# User-agent: CCBot
+# Disallow: /
+
+# User-agent: anthropic-ai
+# Disallow: /
