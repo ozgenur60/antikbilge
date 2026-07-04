@@ -39,6 +39,8 @@ jobs:
           lftp "$FTP_HOST" -e "
             set ftp:ssl-allow yes
             set ftp:ssl-force no
+            set ssl:verify-certificate no
+            set ssl:check-hostname no
             set net:timeout 120
             set net:max-retries 5
             set net:reconnect-interval-base 5
