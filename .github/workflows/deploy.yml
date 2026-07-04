@@ -27,23 +27,28 @@ jobs:
           echo "Generated sitemap.xml:"
           head -20 sitemap.xml
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          timeout: 60000
-          security: loose
-          local-dir: ./
-          server-dir: /httpdocs/
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/node_modules/**
-            **/scripts/**
-            **/.vscode/**
-            **/.gitignore
-            **/CLAUDE.md
-            **/README*
+      - name: Deploy via LFTP
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USERNAME }}
+          FTP_PASS: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          sudo apt-get install -y lftp
+          lftp -c "
+            set ftp:ssl-allow yes;
+            set ftp:ssl-force no;
+            set net:timeout 120;
+            set net:max-retries 5;
+            set net:reconnect-interval-base 5;
+            set ftp:passive-mode yes;
+            open -u '$FTP_USER','$FTP_PASS' '$FTP_HOST';
+            mirror --reverse --delete --verbose \
+              --exclude-glob .git \
+              --exclude-glob .github \
+              --exclude-glob node_modules \
+              --exclude-glob scripts \
+              --exclude-glob CLAUDE.md \
+              --exclude-glob README.md \
+              ./ /httpdocs/;
+            quit
+          "
