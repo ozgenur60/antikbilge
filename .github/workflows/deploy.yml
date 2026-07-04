@@ -33,7 +33,9 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
+          protocol: ftps
+          timeout: 60000
+          security: loose
           local-dir: ./
           server-dir: /httpdocs/
           exclude: |
