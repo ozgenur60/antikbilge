@@ -45,7 +45,9 @@ jobs:
             set net:max-retries 5
             set net:reconnect-interval-base 5
             set ftp:passive-mode yes
-            mirror --reverse --delete --verbose --exclude-glob .git/ --exclude-glob .github/ --exclude-glob node_modules/ --exclude-glob scripts/ --exclude-glob CLAUDE.md --exclude-glob README.md ./ /httpdocs/
+            set ftp:use-site-chmod no
+            set ftp:use-mff no
+            mirror --reverse --delete --verbose --no-perms --exclude-glob .git/ --exclude-glob .github/ --exclude-glob node_modules/ --exclude-glob scripts/ --exclude-glob CLAUDE.md --exclude-glob README.md ./ /httpdocs/
             quit
           "
           rm -f ~/.netrc
