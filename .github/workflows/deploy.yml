@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Generate Sitemap
         run: node scripts/generate-sitemap.js
@@ -34,15 +34,16 @@ jobs:
           FTP_PASS: ${{ secrets.FTP_PASSWORD }}
         run: |
           sudo apt-get install -y lftp
-          cat > /tmp/deploy.lftp << EOF
-          set ftp:ssl-allow yes
-          set ftp:ssl-force no
-          set net:timeout 120
-          set net:max-retries 5
-          set net:reconnect-interval-base 5
-          set ftp:passive-mode yes
-          open -u $FTP_USER,$FTP_PASS $FTP_HOST
-          mirror --reverse --delete --verbose --exclude-glob .git/ --exclude-glob .github/ --exclude-glob node_modules/ --exclude-glob scripts/ --exclude-glob CLAUDE.md --exclude-glob README.md ./ /httpdocs/
-          quit
-          EOF
-          lftp -f /tmp/deploy.lftp
+          printf 'machine %s login %s password %s\n' "$FTP_HOST" "$FTP_USER" "$FTP_PASS" > ~/.netrc
+          chmod 600 ~/.netrc
+          lftp "$FTP_HOST" -e "
+            set ftp:ssl-allow yes
+            set ftp:ssl-force no
+            set net:timeout 120
+            set net:max-retries 5
+            set net:reconnect-interval-base 5
+            set ftp:passive-mode yes
+            mirror --reverse --delete --verbose --exclude-glob .git/ --exclude-glob .github/ --exclude-glob node_modules/ --exclude-glob scripts/ --exclude-glob CLAUDE.md --exclude-glob README.md ./ /httpdocs/
+            quit
+          "
+          rm -f ~/.netrc
