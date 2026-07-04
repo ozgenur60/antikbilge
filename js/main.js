@@ -64,7 +64,7 @@ document.addEventListener('click',function(e){
     if (localStorage.getItem('cookieConsent')) return;
     var banner=document.createElement('div');
     banner.className='cookie-banner';
-    banner.innerHTML='<p>Bu site, hizmet kalitesini artırmak ve size özel reklamlar sunmak amacıyla Google Analytics ve Google AdSense çerezleri kullanmaktadır. Siteyi kullanmaya devam ederek <a href="cerez-politikasi.html">Çerez Politikamızı</a> kabul etmiş sayılırsınız.</p><div class="cookie-banner-buttons"><button class="cookie-accept">Kabul Et</button><button class="cookie-decline">Reddet</button></div>';
+    banner.innerHTML='<p>Bu site, hizmet kalitesini artırmak ve size özel reklamlar sunmak amacıyla Google Analytics ve Google AdSense çerezleri kullanmaktadır. Siteyi kullanmaya devam ederek <a href="/cerez-politikasi">Çerez Politikamızı</a> kabul etmiş sayılırsınız.</p><div class="cookie-banner-buttons"><button class="cookie-accept">Kabul Et</button><button class="cookie-decline">Reddet</button></div>';
     document.body.appendChild(banner);
     banner.querySelector('.cookie-accept').addEventListener('click',function(){
         localStorage.setItem('cookieConsent','accepted');
