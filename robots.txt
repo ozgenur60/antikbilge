@@ -20,6 +20,11 @@ Disallow: /*.bak$
 Disallow: /*.tmp$
 Disallow: /*.log$
 
+# Block query string URLs (search parameters, tracking, etc.)
+Disallow: /*?s=
+Disallow: /*?p=
+Disallow: /*?page_id=
+
 # Allow important resources
 Allow: /css/
 Allow: /js/
