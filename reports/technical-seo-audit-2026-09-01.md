@@ -5,22 +5,23 @@
 | Metrik | Değer |
 |--------|-------|
 | Denetlenen HTML dosyası | 76 |
-| İlk taramada bulunan toplam sorun | 675 |
-| Otomatik düzeltilen | 480 |
-| İnsan kararı gereken (kalan) | 195 |
-| Değişen dosya | 76 |
+| Otomatik düzeltilen (madde) | 544 |
+| İnsan kararı gereken | 195 |
+| Değişen dosya | 75 |
+
+> Not: Denetim scripti ilk taramada 675 sorun raporladı. Bunların ~43'ü gerçekte yapılmayan sitemap düzeltmesine ait yanlış-pozitifti. Gerçek otomatik düzeltme: 363 + 72 + 57 + 44 + 8 = 544 madde.
 
 ---
 
-## Otomatik Düzeltilen Sorunlar (480)
-
-### 19 – Ham `&` HTML hatası (72 adet) ✅
-Google Fonts `<link href>` ve diğer `href` niteliklerinde `&` → `&amp;` dönüştürüldü.
-Etkilenen dosya: tüm HTML sayfaları (site geneli).
+## Otomatik Düzeltilen Sorunlar (544)
 
 ### 8 – Görsel boyut uyumsuzluğu (363 adet) ✅
 HTML'deki `width`/`height` nitelikleri gerçek WebP/PNG boyutlarıyla eşleştirildi.
 Etkilenen dosya: 73 makale ve kategori sayfası.
+
+### 19 – Ham `&` HTML hatası (72 adet) ✅
+Google Fonts `<link href>` ve diğer `href` niteliklerinde `&` → `&amp;` dönüştürüldü.
+Etkilenen dosya: tüm HTML sayfaları (site geneli).
 
 ### 11 – BreadcrumbList `Anasayfa` → `Ana Sayfa` adı (57 adet) ✅
 JSON-LD BreadcrumbList'in ilk öğesi görünür breadcrumb ile eşleştirildi.
@@ -29,49 +30,36 @@ JSON-LD BreadcrumbList'in ilk öğesi görünür breadcrumb ile eşleştirildi.
 Son breadcrumb öğesinde yalnızca soru işareti farkı olan JSON-LD kayıtları düzeltildi.
 Örnek: `"Akhilleus Kimdir"` → `"Akhilleus Kimdir?"`.
 
-### 10 – FAQPage son öğede eksik `?` (1 adet) ✅
-`articles/tutankhamunun-laneti-gercek-mi.html` — 2 FAQ sorusunda soru işareti eklendi.
-
-### 14 – Sitemap (eksik veya sahte URL) (~43 adet) ✅
-Mevcut indexlenebilir sayfalar sitemap'e eklendi; var olmayan URL'ler kaldırıldı.
+### 10 – FAQPage sorularında eksik `?` (8 adet, 1 dosyada) ✅
+`articles/tutankhamunun-laneti-gercek-mi.html` — 8 FAQ sorusunda soru işareti eklendi.
 
 ---
 
 ## İnsan Kararı Gereken Sorunlar (195)
 
-### 6 – Eksik görsel dosyaları (106 adet) ⚠️
-Aşağıdaki görsel yolları HTML'de yazılı ama dosya sisteminde mevcut değil.
-Görsel dosyalar yüklendiğinde sorun kendiliğinden çözülür; URL veya `src` değişikliği yapılmadı.
+### 6 – Eksik görsel dosyaları (50 benzersiz yol) ⚠️
+HTML'de yazılı ama dosya sisteminde bulunmayan 50 benzersiz görsel yolu tespit edildi.
+(Related posts bölümündeki eksik görseller bu 50'nin içinde; ayrı sayılmadı.)
+Görsel dosyalar yüklendiğinde sorun kendiliğinden çözülür; `src` değerleri değiştirilmedi.
 
 En sık tekrar eden eksik görseller:
 - `../images/antik-misir-tanrilari.webp`
 - `../images/olumden-sonra.webp`
 - `../images/antik-misirda-tanrilar.webp`
-- ve diğerleri (tüm liste: `reports/missing-images.txt`)
+- ve diğerleri
 
-### 20 – Related-item eksik görseli (50 adet) ⚠️
-Related posts bölümündeki `<img>` src'leri gerçek dosyaya ulaşmıyor.
-Görseller yüklenince çözülür.
-
-### 5 – Kırık iç bağlantılar (17 adet) ⚠️
-Aşağıdaki `href` değerleri gerçek bir HTML dosyasına ulaşmıyor:
+### 5 – Kırık iç bağlantılar (2 benzersiz hedef) ⚠️
+Gerçek kırık bağlantılar (`href="../"` → `index.html` çalışıyor; `index.html#anchor` dosyası mevcut):
 
 | Dosya | href | Not |
 |-------|------|-----|
-| `404.html` | `index.html#arkeoloji` | Anchor link; sayfa var ama # ID olmayabilir |
-| `404.html` | `index.html#mitoloji` | Aynı |
-| `404.html` | `index.html#tarih` | Aynı |
-| `404.html` | `index.html#sanat-tarihi` | Aynı |
 | `articles/antik-misirda-kediler-neden-kutsaldi.html` | `sekhmet-kimdir` (×10) | Makale henüz yok |
-| `articles/antik-misirda-kediler-neden-kutsaldi.html` | `../kullanim-kosullari` | Dosya adı `kullanim-sartlari` olabilir |
-| `articles/tutankhamun-kimdir.html` | `../` | `../index` yazılmalı mı? |
-| `articles/tutankhamunun-laneti-gercek-mi.html` | `../` | Aynı |
+| `articles/antik-misirda-kediler-neden-kutsaldi.html` | `../kullanim-kosullari` | Doğru ad `kullanim-sartlari.html` |
 
 > `sekhmet-kimdir` bağlantıları: Sekhmet makalesi yazılana kadar bu bağlantıları kaldırmak veya yoruma almak önerilir.
-> `../kullanim-kosullari`: Dosya adı `kullanim-sartlari.html` ise href güncellenmeli.
-> `../`: Ana sayfa bağlantısı — sunucu yapılandırmasına bağlı; çalışıyorsa sorun değil.
+> `../kullanim-kosullari`: href'i `../kullanim-sartlari` olarak güncellenmeli.
 
-### 9 – FAQ içerik uyumsuzluğu (9 adet) ⚠️
+### 9 – FAQ içerik uyumsuzluğu (9 dosya) ⚠️
 Görünür SSS bölümündeki sorular JSON-LD FAQPage'den tamamen farklı. Muhtemelen makale metni güncellendi ama JSON-LD güncellenmedi. İçerik kararı gerektirdiğinden otomatik düzeltilmedi.
 
 | Dosya |
@@ -86,7 +74,7 @@ Görünür SSS bölümündeki sorular JSON-LD FAQPage'den tamamen farklı. Muhte
 | `articles/titanlar-savasi.html` |
 | `articles/tutankhamun-kimdir.html` |
 
-### 11 – BreadcrumbList yapısal uyumsuzluk (3 adet) ⚠️
+### 11 – BreadcrumbList yapısal uyumsuzluk (3 dosya) ⚠️
 LD'deki öğe sayısı veya kategori adı görünür breadcrumb'dan farklı. Kategori kararı gerektirdiğinden otomatik düzeltilmedi.
 
 | Dosya | Sorun |
@@ -101,7 +89,7 @@ Bu bağlantılar işlevsel değil; hedef URL belirlendikten sonra doldurulabilir
 
 ---
 
-## Değişen Dosyalar (76)
+## Değişen Dosyalar (75)
 
 Görsel boyut düzeltmesi, `&amp;` dönüşümü veya BreadcrumbList adı düzeltmesi yapılan dosyalar (makale metni, başlık, meta description ve URL'ler değiştirilmedi):
 
@@ -175,9 +163,7 @@ katilim.html
 mezopotamya-mitolojisi.html
 misir-mitolojisi.html
 mitoloji.html
-reports/technical-seo-audit-2026-09-01.md
 sanat-tarihi.html
-sitemap.xml
 tarih.html
 turk-mitolojisi.html
 yunan-mitolojisi.html
