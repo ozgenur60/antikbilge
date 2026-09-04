@@ -88,3 +88,37 @@
     line-height: 1.2 !important;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .ccm-root .ccm-widget .ccm-modal-inner {
+    width: calc(100vw - 20px) !important;
+    height: 360px !important;
+    min-height: 0 !important;
+    max-height: 360px !important;
+    margin: 0 10px 10px !important;
+    overflow: hidden !important;
+  }
+
+  .ccm-root .ccm-widget .ccm-modal--body,
+  .ccm-root .ccm-widget .ccm-modal-body,
+  .ccm-root .ccm-widget .ccm-widget--text {
+    min-height: 0 !important;
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+  }
+
+  .ccm-root .ccm-widget .ccm-widget--title {
+    font-size: 19px !important;
+  }
+
+  .ccm-root .ccm-widget p {
+    font-size: 12px !important;
+    line-height: 1.3 !important;
+  }
+
+  .ccm-root .ccm-widget .ccm-modal--footer,
+  .ccm-root .ccm-widget .ccm-modal-footer {
+    flex: 0 0 auto !important;
+    padding: 8px 12px !important;
+  }
+}
