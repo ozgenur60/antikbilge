@@ -45,12 +45,46 @@
   }
 }
 
-/* Mobil */
-@media (max-width: 767px) {
+/* Mobil — bottom-sheet */
+@media screen and (max-width: 767px) {
   .ccm-root .ccm-widget .ccm-modal-inner {
+    width: calc(100vw - 24px) !important;
     height: auto !important;
     min-height: 0 !important;
-    max-height: 70vh !important;
+    max-height: 58svh !important;
+    margin: 0 12px 12px !important;
+    overflow: hidden !important;
+  }
+
+  .ccm-root .ccm-widget .ccm-modal--body,
+  .ccm-root .ccm-widget .ccm-modal-body {
+    min-height: 0 !important;
+    padding: 14px 16px !important;
     overflow-y: auto !important;
+  }
+
+  .ccm-root .ccm-widget .ccm-widget--title {
+    font-size: 21px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .ccm-root .ccm-widget p {
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .ccm-root .ccm-widget .ccm-modal--footer,
+  .ccm-root .ccm-widget .ccm-modal-footer {
+    padding: 10px 14px !important;
+    font-size: 11px !important;
+  }
+
+  .ccm-root .ccm-widget .ccm-widget--buttons .button,
+  .ccm-root .ccm-widget .ccm-widget--buttons button {
+    padding: 8px 10px !important;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
   }
 }
