@@ -1,22 +1,29 @@
 /* CCM19 Compact — Summer Rain panel */
 
-/* Desktop: sağ alt veya sol alt panel */
-@media screen and (min-width: 768px) {
-    .ccm-root .ccm-widget.ccm--alignment--bottomright .ccm-modal-inner,
-    .ccm-root .ccm-widget.ccm--alignment--bottomleft .ccm-modal-inner {
-        height: auto !important;
-        max-height: calc(100vh - 32px) !important;
-        width: min(360px, calc(100vw - 32px)) !important;
-        overflow-y: auto !important;
-    }
+/* Desktop */
+@media (min-width: 768px) {
+  .ccm-root .ccm-widget.ccm--alignment--bottomright .ccm-modal-inner,
+  .ccm-root .ccm-widget.ccm--alignment--bottomleft .ccm-modal-inner {
+    width: 360px !important;
+    height: 390px !important;
+    min-height: 0 !important;
+    max-height: calc(100vh - 32px) !important;
+  }
+
+  .ccm-root .ccm-widget .ccm-modal--body,
+  .ccm-root .ccm-widget .ccm-modal-body,
+  .ccm-root .ccm-widget .ccm-widget--text {
+    min-height: 0 !important;
+    flex: 0 1 auto !important;
+  }
 }
 
-/* Mobil: tam genişlik, iç kaydırma */
-@media screen and (max-width: 767px) {
-    .ccm-root .ccm-widget.ccm--alignment--bottomright .ccm-modal-inner,
-    .ccm-root .ccm-widget.ccm--alignment--bottomleft .ccm-modal-inner {
-        width: 100% !important;
-        max-height: 70vh !important;
-        overflow-y: auto !important;
-    }
+/* Mobil */
+@media (max-width: 767px) {
+  .ccm-root .ccm-widget .ccm-modal-inner {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+  }
 }
