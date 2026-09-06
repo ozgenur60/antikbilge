@@ -1,0 +1,339 @@
+diff --git a/articles/athena-kimdir.html b/articles/athena-kimdir.html
+index 539eba1..25e40ad 100644
+--- a/articles/athena-kimdir.html
++++ b/articles/athena-kimdir.html
+@@ -24,12 +24,12 @@
+     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+-    <title>Athena Kimdir? Yunan Mitolojisinin Bilgelik, Strateji ve Savaş Tanrıçası | Antik Bilge</title>
++    <title>Athena Kimdir? Bilgelik ve Savaş Tanrıçasının Hikâyesi | Antik Bilge</title>
+ 
+     <!-- Open Graph / Facebook -->
+     <meta property="og:type" content="article">
+     <meta property="og:url" content="https://antikbilge.com/articles/athena-kimdir">
+-    <meta property="og:title" content="Athena Kimdir? Yunan Mitolojisinin Bilgelik, Strateji ve Savaş Tanrıçası">
++    <meta property="og:title" content="Athena Kimdir? Bilgelik ve Savaş Tanrıçasının Hikâyesi">
+     <meta property="og:description" content="Zeus'un başından doğuşu, bilgelik ve strateji tanrıçası olmasının nedeni, Atina'nın koruyucusu oluşu ve Yunan mitolojisindeki merkezi rolü.">
+     <meta property="og:image:width" content="1200">
+     <meta property="og:image:height" content="630">
+@@ -38,13 +38,13 @@
+     <meta property="og:site_name" content="Antik Bilge">
+     <meta property="article:author" content="Antik Bilge">
+     <meta property="article:published_time" content="2026-06-17T00:00:00+03:00">
+-    <meta property="article:modified_time" content="2026-06-17T00:00:00+03:00">
++    <meta property="article:modified_time" content="2026-09-07T00:00:00+03:00">
+     <meta property="article:section" content="Mitoloji">
+ 
+     <!-- Twitter / X -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:site" content="@AntikBilgee">
+-    <meta name="twitter:title" content="Athena Kimdir? Yunan Mitolojisinin Bilgelik, Strateji ve Savaş Tanrıçası">
++    <meta name="twitter:title" content="Athena Kimdir? Bilgelik ve Savaş Tanrıçasının Hikâyesi">
+     <meta name="twitter:description" content="Zeus'un başından doğuşu, bilgelik ve strateji tanrıçası olmasının nedeni, Atina'nın koruyucusu oluşu ve Yunan mitolojisindeki merkezi rolü.">
+     <meta name="twitter:image" content="https://antikbilge.com/images/athena-kapak.webp">
+ 
+@@ -57,7 +57,7 @@
+         "description": "Athena kimdir? Zeus'un başından doğuşu, bilgelik ve strateji tanrıçası olmasının nedeni, Atina'nın koruyucusu oluşu ve Yunan mitolojisindeki merkezi rolü.",
+         "image": "https://antikbilge.com/images/athena-kapak.webp",
+         "datePublished": "2026-06-17",
+-        "dateModified": "2026-06-17",
++        "dateModified": "2026-09-07",
+         "author": {
+             "@type": "Person",
+             "name": "Özgenur Akbaba",
+diff --git a/articles/medusa-kimdir.html b/articles/medusa-kimdir.html
+index 8b0c913..501148f 100644
+--- a/articles/medusa-kimdir.html
++++ b/articles/medusa-kimdir.html
+@@ -24,12 +24,12 @@
+     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+-    <title>Medusa Kimdir? Yunan Mitolojisinin En Ünlü Gorgonu ve Efsanesi | Antik Bilge</title>
++    <title>Medusa Kimdir? Efsanesi, Dönüşümü ve Gerçek Hikâyesi | Antik Bilge</title>
+ 
+     <!-- Open Graph / Facebook -->
+     <meta property="og:type" content="article">
+     <meta property="og:url" content="https://antikbilge.com/articles/medusa-kimdir">
+-    <meta property="og:title" content="Medusa Kimdir? Yunan Mitolojisinin En Ünlü Gorgonu ve Efsanesi">
++    <meta property="og:title" content="Medusa Kimdir? Efsanesi, Dönüşümü ve Gerçek Hikâyesi">
+     <meta property="og:description" content="Medusa'nın hikâyesi, yılan saçları, taşa çeviren bakışları, Perseus tarafından öldürülmesi ve Athena'nın kalkanındaki sembolik anlamı.">
+     <meta property="og:image:width" content="1200">
+     <meta property="og:image:height" content="630">
+@@ -38,13 +38,13 @@
+     <meta property="og:site_name" content="Antik Bilge">
+     <meta property="article:author" content="Antik Bilge">
+     <meta property="article:published_time" content="2026-06-16T00:00:00+03:00">
+-    <meta property="article:modified_time" content="2026-06-16T00:00:00+03:00">
++    <meta property="article:modified_time" content="2026-09-07T00:00:00+03:00">
+     <meta property="article:section" content="Mitoloji">
+ 
+     <!-- Twitter / X -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:site" content="@AntikBilgee">
+-    <meta name="twitter:title" content="Medusa Kimdir? Yunan Mitolojisinin En Ünlü Gorgonu ve Efsanesi">
++    <meta name="twitter:title" content="Medusa Kimdir? Efsanesi, Dönüşümü ve Gerçek Hikâyesi">
+     <meta name="twitter:description" content="Medusa'nın hikâyesi, yılan saçları, taşa çeviren bakışları, Perseus tarafından öldürülmesi ve Athena'nın kalkanındaki sembolik anlamı.">
+     <meta name="twitter:image" content="https://antikbilge.com/images/medusa-kapak.webp">
+ 
+@@ -57,7 +57,7 @@
+         "description": "Medusa'nın hikâyesi, yılan saçları, taşa çeviren bakışları, Perseus tarafından öldürülmesi ve Athena'nın kalkanındaki sembolik anlamı.",
+         "image": "https://antikbilge.com/images/medusa-kapak.webp",
+         "datePublished": "2026-06-16",
+-        "dateModified": "2026-06-16",
++        "dateModified": "2026-09-07",
+         "author": {
+             "@type": "Person",
+             "name": "Özgenur Akbaba",
+diff --git a/articles/minotor-efsanesi.html b/articles/minotor-efsanesi.html
+index 25a0d13..8e9de43 100644
+--- a/articles/minotor-efsanesi.html
++++ b/articles/minotor-efsanesi.html
+@@ -24,12 +24,12 @@
+     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+-    <title>Minotor Efsanesi: Labirentte Yaşayan Yarı İnsan Yarı Boğa Gerçekten Kimdi? | Antik Bilge</title>
++    <title>Minotor Efsanesi Nedir? Labirent ve Theseus'un Hikâyesi | Antik Bilge</title>
+ 
+     <!-- Open Graph / Facebook -->
+     <meta property="og:type" content="article">
+     <meta property="og:url" content="https://antikbilge.com/articles/minotor-efsanesi">
+-    <meta property="og:title" content="Minotor Efsanesi: Labirentte Yaşayan Yarı İnsan Yarı Boğa Gerçekten Kimdi">
++    <meta property="og:title" content="Minotor Efsanesi Nedir? Labirent ve Theseus'un Hikâyesi">
+     <meta property="og:description" content="Minotor'un hikayesi, Theseus'un mücadelesi, Ariadne'nin ipi ve Labirent'in sırrı. Yunan mitolojisinin en ünlü canavarı.">
+     <meta property="og:image:width" content="1200">
+     <meta property="og:image:height" content="630">
+@@ -38,13 +38,13 @@
+     <meta property="og:site_name" content="Antik Bilge">
+     <meta property="article:author" content="Antik Bilge">
+     <meta property="article:published_time" content="2026-06-25T00:00:00+03:00">
+-    <meta property="article:modified_time" content="2026-06-25T00:00:00+03:00">
++    <meta property="article:modified_time" content="2026-09-07T00:00:00+03:00">
+     <meta property="article:section" content="Mitoloji">
+ 
+     <!-- Twitter / X -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:site" content="@AntikBilgee">
+-    <meta name="twitter:title" content="Minotor Efsanesi: Labirentte Yaşayan Yarı İnsan Yarı Boğa Gerçekten Kimdi">
++    <meta name="twitter:title" content="Minotor Efsanesi Nedir? Labirent ve Theseus'un Hikâyesi">
+     <meta name="twitter:description" content="Minotor'un hikayesi, Theseus'un mücadelesi, Ariadne'nin ipi ve Labirent'in sırrı.">
+     <meta name="twitter:image" content="https://antikbilge.com/images/minotor-kapak.webp">
+ 
+@@ -57,7 +57,7 @@
+         "description": "Minotor Efsanesi: Labirentte yaşayan yarı insan yarı boğa kimdi? Theseus, Ariadne'nin ipi, Daidalos'un Labirenti ve Girit mitolojisinin en ünlü hikayesi.",
+         "image": "https://antikbilge.com/images/minotor-kapak.webp",
+         "datePublished": "2026-06-25",
+-        "dateModified": "2026-06-25",
++        "dateModified": "2026-09-07",
+         "author": {
+             "@type": "Person",
+             "name": "Özgenur Akbaba",
+diff --git a/articles/odysseia-destani-nedir.html b/articles/odysseia-destani-nedir.html
+index ada06fe..ea44862 100644
+--- a/articles/odysseia-destani-nedir.html
++++ b/articles/odysseia-destani-nedir.html
+@@ -15,7 +15,7 @@
+       gtag('config', 'G-CKN7B4X326');
+     </script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <meta name="description" content="Odysseia Destanı nedir? Homeros'un ölümsüz eseri, konusu, özeti, temaları ve dünya edebiyatına etkisi. Odysseus'un on yıllık eve dönüş mücadelesi, Polyphemos, Sirenler, Kalypso ve Phaiaklar.">
++    <meta name="description" content="Odysseia Destanı nedir? Homeros'un eserinin konusunu, Odysseus'un on yıllık dönüş yolculuğunu, kahramanlarını ve temel anlamlarını keşfedin.">
+     <meta name="keywords" content="odysseia destanı, homeros, odysseus, odysseia konusu, odysseia özeti, yunan mitolojisi, truva savaşı, polyphemos, sirenler, kalypso, nostos, eve dönüş">
+     <meta name="author" content="Antik Bilge">
+     <meta name="robots" content="index, follow">
+@@ -24,12 +24,12 @@
+     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+-    <title>Odysseia Destanı Nedir? Homeros'un Ölümsüz Eseri, Konusu, Özeti ve Derin Anlamı | Antik Bilge</title>
++    <title>Odysseia Destanı Nedir? Konusu, Özeti ve Kahramanları | Antik Bilge</title>
+ 
+     <!-- Open Graph / Facebook -->
+     <meta property="og:type" content="article">
+     <meta property="og:url" content="https://antikbilge.com/articles/odysseia-destani-nedir">
+-    <meta property="og:title" content="Odysseia Destanı Nedir? Homeros'un Ölümsüz Eseri, Konusu, Özeti ve Derin Anlamı">
++    <meta property="og:title" content="Odysseia Destanı Nedir? Konusu, Özeti ve Kahramanları">
+     <meta property="og:description" content="Odysseus'un on yıllık eve dönüş mücadelesi. Polyphemos, Sirenler, Kalypso ve Phaiaklar. Homeros'un ölümsüz destanının konusu, temaları ve dünya edebiyatına etkisi.">
+     <meta property="og:image:width" content="1200">
+     <meta property="og:image:height" content="630">
+@@ -38,13 +38,13 @@
+     <meta property="og:site_name" content="Antik Bilge">
+     <meta property="article:author" content="Antik Bilge">
+     <meta property="article:published_time" content="2026-07-05T00:00:00+03:00">
+-    <meta property="article:modified_time" content="2026-07-05T00:00:00+03:00">
++    <meta property="article:modified_time" content="2026-09-07T00:00:00+03:00">
+     <meta property="article:section" content="Mitoloji">
+ 
+     <!-- Twitter / X -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:site" content="@AntikBilgee">
+-    <meta name="twitter:title" content="Odysseia Destanı Nedir? Homeros'un Ölümsüz Eseri, Konusu, Özeti ve Derin Anlamı">
++    <meta name="twitter:title" content="Odysseia Destanı Nedir? Konusu, Özeti ve Kahramanları">
+     <meta name="twitter:description" content="Odysseus'un on yıllık eve dönüş mücadelesi. Polyphemos, Sirenler, Kalypso. Homeros'un ölümsüz destanının konusu ve temaları.">
+     <meta name="twitter:image" content="https://antikbilge.com/images/odysseia-kapak.webp">
+ 
+@@ -57,7 +57,7 @@
+         "description": "Odysseia Destanı nedir? Homeros'un ölümsüz eseri, konusu, özeti, temaları ve dünya edebiyatına etkisi. Odysseus'un on yıllık eve dönüş mücadelesi, Polyphemos, Sirenler, Kalypso ve Phaiaklar.",
+         "image": "https://antikbilge.com/images/odysseia-kapak.webp",
+         "datePublished": "2026-07-05",
+-        "dateModified": "2026-07-05",
++        "dateModified": "2026-09-07",
+         "author": {
+             "@type": "Person",
+             "name": "Özgenur Akbaba",
+diff --git a/articles/odysseus-kimdir.html b/articles/odysseus-kimdir.html
+index 47b0d7f..5fe5371 100644
+--- a/articles/odysseus-kimdir.html
++++ b/articles/odysseus-kimdir.html
+@@ -584,11 +584,11 @@
+                 <div class="related-grid">
+                     <a href="truva-savasi-nedir" class="related-item">
+                         <img src="../images/truva-savasi-kapak.webp" alt="Truva Savaşı Nedir" loading="lazy" width="1200" height="800">
+-                        <span>Truva Savaşı Nedir? Nedenleri, Kahramanları, Efsanesi ve Tarihsel Gerçekliği</span>
++                        <span>Truva Savaşı Nedir? Efsanesi ve Tarihsel Gerçekliği</span>
+                     </a>
+-                    <a href="akhilleus-kimdir" class="related-item">
+-                        <img src="../images/akhilleus-kapak.webp" alt="Akhilleus Kimdir" loading="lazy" width="1200" height="675">
+-                        <span>Akhilleus Kimdir? Troya Savaşı'nın En Büyük Kahramanı</span>
++                    <a href="odysseia-destani-nedir" class="related-item">
++                        <img src="../images/odysseia-kapak.webp" alt="Odysseia Destanı'nın konusu ve kahramanları" loading="lazy" width="400" height="120">
++                        <span>Odysseia Destanı Nedir? Konusu, Özeti ve Kahramanları</span>
+                     </a>
+                 </div>
+             </div>
+diff --git a/articles/truva-ati-gercek-mi.html b/articles/truva-ati-gercek-mi.html
+index 1c087a3..b933842 100644
+--- a/articles/truva-ati-gercek-mi.html
++++ b/articles/truva-ati-gercek-mi.html
+@@ -459,9 +459,9 @@
+             <div class="related-posts">
+                 <h3>Bunları da Okuyun</h3>
+                 <div class="related-grid">
+-                    <a href="zeus-kimdir" class="related-item">
+-                        <img src="../images/zeus-kapak.webp" alt="Zeus Kimdir" loading="lazy" width="400" height="120">
+-                        <span>Zeus Kimdir? Yunan Mitolojisinin En Güçlü Tanrısı</span>
++                    <a href="truva-savasi-nedir" class="related-item">
++                        <img src="../images/truva-savasi-kapak.webp" alt="Truva Savaşı'nın efsanesi ve tarihsel gerçekliği" loading="lazy" width="400" height="120">
++                        <span>Truva Savaşı Nedir? Efsanesi ve Tarihsel Gerçekliği</span>
+                     </a>
+                     <a href="olimpos-tanrilari" class="related-item">
+                         <img src="../images/olimpos-tanrilari-meclisi.webp" alt="Olimpos Tanrıları" loading="lazy" width="400" height="120">
+diff --git a/articles/truva-savasi-nedir.html b/articles/truva-savasi-nedir.html
+index 6f1bfcb..06f0aee 100644
+--- a/articles/truva-savasi-nedir.html
++++ b/articles/truva-savasi-nedir.html
+@@ -15,7 +15,7 @@
+       gtag('config', 'G-CKN7B4X326');
+     </script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <meta name="description" content="Truva Savaşı nedir? Helena'nın kaçırılması, Akhilleus'un öfkesi, Hektor'un ölümü, Truva Atı ve savaşın tarihsel gerçekliği. Nedenleri, kahramanları ve sonuçlarıyla tam rehber.">
++    <meta name="description" content="Truva Savaşı nedir? Helena, Akhilleus, Hektor ve Truva Atı efsanesini; savaşın nedenlerini ve tarihsel gerçekliğini kaynaklarıyla keşfedin.">
+     <meta name="keywords" content="truva savaşı, troya savaşı, helena, paris, akhilleus, hektor, odysseus, agamemnon, truva atı, homeros, ilyada, yunan mitolojisi, troya, hisarlık">
+     <meta name="author" content="Antik Bilge">
+     <meta name="robots" content="index, follow">
+@@ -24,12 +24,12 @@
+     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+-    <title>Truva Savaşı Nedir? Nedenleri, Kahramanları, Efsanesi ve Tarihsel Gerçekliği | Antik Bilge</title>
++    <title>Truva Savaşı Nedir? Efsanesi ve Tarihsel Gerçekliği | Antik Bilge</title>
+ 
+     <!-- Open Graph / Facebook -->
+     <meta property="og:type" content="article">
+     <meta property="og:url" content="https://antikbilge.com/articles/truva-savasi-nedir">
+-    <meta property="og:title" content="Truva Savaşı Nedir? Nedenleri, Kahramanları, Efsanesi ve Tarihsel Gerçekliği">
++    <meta property="og:title" content="Truva Savaşı Nedir? Efsanesi ve Tarihsel Gerçekliği">
+     <meta property="og:description" content="Helena'nın kaçırılması, Akhilleus'un öfkesi, Hektor'un ölümü, Truva Atı ve savaşın tarihsel gerçekliği. Nedenleri, kahramanları ve sonuçlarıyla Truva Savaşı rehberi.">
+     <meta property="og:image:width" content="1200">
+     <meta property="og:image:height" content="630">
+@@ -38,13 +38,13 @@
+     <meta property="og:site_name" content="Antik Bilge">
+     <meta property="article:author" content="Antik Bilge">
+     <meta property="article:published_time" content="2026-06-27T00:00:00+03:00">
+-    <meta property="article:modified_time" content="2026-06-27T00:00:00+03:00">
++    <meta property="article:modified_time" content="2026-09-07T00:00:00+03:00">
+     <meta property="article:section" content="Mitoloji">
+ 
+     <!-- Twitter / X -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:site" content="@AntikBilgee">
+-    <meta name="twitter:title" content="Truva Savaşı Nedir? Nedenleri, Kahramanları, Efsanesi ve Tarihsel Gerçekliği">
++    <meta name="twitter:title" content="Truva Savaşı Nedir? Efsanesi ve Tarihsel Gerçekliği">
+     <meta name="twitter:description" content="Helena'nın kaçırılması, Akhilleus'un öfkesi, Hektor'un ölümü, Truva Atı ve savaşın tarihsel gerçekliği.">
+     <meta name="twitter:image" content="https://antikbilge.com/images/truva-savasi-kapak.webp">
+ 
+@@ -57,7 +57,7 @@
+         "description": "Truva Savaşı nedir? Helena'nın kaçırılması, Akhilleus'un öfkesi, Hektor'un ölümü, Truva Atı ve savaşın tarihsel gerçekliği. Nedenleri, kahramanları ve sonuçlarıyla tam rehber.",
+         "image": "https://antikbilge.com/images/truva-savasi-kapak.webp",
+         "datePublished": "2026-06-27",
+-        "dateModified": "2026-06-27",
++        "dateModified": "2026-09-07",
+         "author": {
+             "@type": "Person",
+             "name": "Özgenur Akbaba",
+diff --git a/articles/zeus-kimdir.html b/articles/zeus-kimdir.html
+index 8fd177d..e489cb4 100644
+--- a/articles/zeus-kimdir.html
++++ b/articles/zeus-kimdir.html
+@@ -567,9 +567,9 @@
+                 <div class="related-posts">
+                     <h3>Bunları da Okuyun</h3>
+                     <div class="related-grid">
+-                        <a href="pegasus-kimdir" class="related-item">
+-                            <img src="../images/pegasus-kapak.webp" alt="Pegasus Kimdir" loading="lazy" width="400" height="120">
+-                            <span>Pegasus Kimdir? Kanatlı Atın Doğuşu ve Yunan Mitolojisindeki Gerçek Hikâyesi</span>
++                        <a href="athena-kimdir" class="related-item">
++                            <img src="../images/athena-kapak.webp" alt="Athena kimdir? Bilgelik ve savaş tanrıçası" loading="lazy" width="400" height="120">
++                            <span>Athena Kimdir? Bilgelik ve Savaş Tanrıçasının Hikâyesi</span>
+                         </a>
+                         <a href="olimpos-tanrilari" class="related-item">
+                             <img src="../images/olimpos-tanrilari-meclisi.webp" alt="Olimpos Tanrıları" loading="lazy" width="1344" height="800">
+diff --git a/sitemap.xml b/sitemap.xml
+index 0982604..ca697d1 100644
+--- a/sitemap.xml
++++ b/sitemap.xml
+@@ -152,7 +152,7 @@
+   </url>
+   <url>
+     <loc>https://antikbilge.com/articles/athena-kimdir</loc>
+-    <lastmod>2026-07-05</lastmod>
++    <lastmod>2026-09-07</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+@@ -242,13 +242,13 @@
+   </url>
+   <url>
+     <loc>https://antikbilge.com/articles/medusa-kimdir</loc>
+-    <lastmod>2026-07-05</lastmod>
++    <lastmod>2026-09-07</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://antikbilge.com/articles/minotor-efsanesi</loc>
+-    <lastmod>2026-07-05</lastmod>
++    <lastmod>2026-09-07</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+@@ -260,7 +260,7 @@
+   </url>
+   <url>
+     <loc>https://antikbilge.com/articles/odysseia-destani-nedir</loc>
+-    <lastmod>2026-07-05</lastmod>
++    <lastmod>2026-09-07</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+@@ -350,7 +350,7 @@
+   </url>
+   <url>
+     <loc>https://antikbilge.com/articles/truva-savasi-nedir</loc>
+-    <lastmod>2026-07-05</lastmod>
++    <lastmod>2026-09-07</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
