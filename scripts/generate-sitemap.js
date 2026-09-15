@@ -119,7 +119,8 @@ function generateSitemap() {
         // Build URL
         let url = SITE_URL + '/';
         if (relativePath !== 'index.html') {
-            url += relativePath;
+            // Public URLs are extensionless and match each page's canonical URL.
+            url += relativePath.replace(/\.html$/, '');
         }
 
         const lastmod = getLastModified(filePath);
