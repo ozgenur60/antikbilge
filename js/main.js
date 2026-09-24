@@ -3,6 +3,22 @@
 // Hamburger menu
 var hamburger=document.getElementById('hamburger');
 var categoryMenu=document.querySelector('.category-menu');
+
+// Keep the Roma Tarihi subcategory available across legacy static pages.
+if (categoryMenu){
+    var historyMenu=categoryMenu.querySelector('.has-dropdown > a[href$="tarih"] + .dropdown-menu');
+    if (historyMenu&&!historyMenu.querySelector('a[href$="roma-tarihi"]')){
+        var egyptLink=historyMenu.querySelector('a[href$="antik-misir-tarihi"]');
+        var romaItem=document.createElement('li');
+        var romaLink=document.createElement('a');
+        var prefix=egyptLink&&egyptLink.getAttribute('href').indexOf('../')===0?'../':'';
+        romaLink.href=prefix+'roma-tarihi';
+        romaLink.textContent='Roma Tarihi';
+        romaItem.appendChild(romaLink);
+        historyMenu.appendChild(romaItem);
+    }
+}
+
 if (hamburger&&categoryMenu){
     if (!categoryMenu.id) categoryMenu.id='category-menu';
     hamburger.setAttribute('aria-controls',categoryMenu.id);
