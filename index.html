@@ -15,7 +15,7 @@
       gtag('config', 'G-CKN7B4X326');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Geçmişin izinde, bilgeliğin peşinde. Tarih, Mitoloji, Sanat Tarihi ve Arkeoloji hakkında bilgilendirici içerikler">
+    <meta name="description" content="Antik Bilge; tarih, mitoloji, arkeoloji ve sanat tarihini güvenilir kaynaklarla anlatan, geçmişin izlerini günümüz okuruyla buluşturan içerik platformudur.">
     <meta name="keywords" content="tarih, mitoloji, sanat tarihi, arkeoloji, antik, medeniyet, göbeklitepe, yunan mitolojisi">
     <meta name="author" content="Antik Bilge">
     <meta name="robots" content="index, follow">
@@ -31,7 +31,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://antikbilge.com/">
     <meta property="og:title" content="Antik Bilge | Geçmişin İzinde, Bilgeliğin Peşinde">
-    <meta property="og:description" content="Geçmişin izinde, bilgeliğin peşinde. Tarih, Mitoloji, Sanat Tarihi ve Arkeoloji hakkında bilgilendirici içerikler">
+    <meta property="og:description" content="Antik Bilge; tarih, mitoloji, arkeoloji ve sanat tarihini güvenilir kaynaklarla anlatan, geçmişin izlerini günümüz okuruyla buluşturan içerik platformudur.">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image" content="https://antikbilge.com/images/logo.webp">
@@ -42,113 +42,65 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@AntikBilgee">
     <meta name="twitter:title" content="Antik Bilge | Geçmişin İzinde, Bilgeliğin Peşinde">
-    <meta name="twitter:description" content="Geçmişin izinde, bilgeliğin peşinde. Tarih, Mitoloji, Sanat Tarihi ve Arkeoloji hakkında bilgilendirici içerikler">
+    <meta name="twitter:description" content="Antik Bilge; tarih, mitoloji, arkeoloji ve sanat tarihini güvenilir kaynaklarla anlatan, geçmişin izlerini günümüz okuruyla buluşturan içerik platformudur.">
     <meta name="twitter:image" content="https://antikbilge.com/images/logo.webp">
 
-    <!-- Organization Schema -->
+    <!-- Antik Bilge identity and homepage schema -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Antik Bilge",
-        "url": "https://antikbilge.com",
-        "logo": "https://antikbilge.com/images/logo.webp",
-        "description": "Geçmişin izinde, bilgeliğin peşinde. Tarih, Mitoloji, Sanat Tarihi ve Arkeoloji hakkında bilgilendirici içerikler",
-        "sameAs": [
-            "https://www.instagram.com/antik.bilge",
-            "https://youtube.com/@antikbilge",
-            "https://x.com/AntikBilgee",
-            "https://www.facebook.com/share/1DYcnzTosd/"
-        ],
-        "founder": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://antikbilge.com/#organization",
+          "name": "Antik Bilge",
+          "url": "https://antikbilge.com/",
+          "description": "Antik Bilge; tarih, mitoloji, arkeoloji ve sanat tarihini güvenilir kaynaklarla anlatan, geçmişin izlerini günümüz okuruyla buluşturan içerik platformudur.",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://antikbilge.com/#logo",
+            "url": "https://antikbilge.com/images/logo.webp",
+            "contentUrl": "https://antikbilge.com/images/logo.webp",
+            "width": 200,
+            "height": 200
+          },
+          "founder": {
             "@type": "Person",
             "name": "Özgenur Akbaba"
+          },
+          "sameAs": [
+            "https://www.instagram.com/antik.bilge",
+            "https://x.com/AntikBilgee",
+            "https://www.facebook.com/share/1DYcnzTosd/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://antikbilge.com/#website",
+          "url": "https://antikbilge.com/",
+          "name": "Antik Bilge",
+          "description": "Antik Bilge; tarih, mitoloji, arkeoloji ve sanat tarihini güvenilir kaynaklarla anlatan, geçmişin izlerini günümüz okuruyla buluşturan içerik platformudur.",
+          "inLanguage": "tr-TR",
+          "publisher": {"@id": "https://antikbilge.com/#organization"}
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://antikbilge.com/#webpage",
+          "url": "https://antikbilge.com/",
+          "name": "Antik Bilge | Geçmişin İzinde, Bilgeliğin Peşinde",
+          "description": "Antik Bilge; tarih, mitoloji, arkeoloji ve sanat tarihini güvenilir kaynaklarla anlatan, geçmişin izlerini günümüz okuruyla buluşturan içerik platformudur.",
+          "isPartOf": {"@id": "https://antikbilge.com/#website"},
+          "about": {"@id": "https://antikbilge.com/#organization"},
+          "dateModified": "2026-09-24",
+          "inLanguage": "tr-TR",
+          "hasPart": [
+            {"@type": "CollectionPage", "@id": "https://antikbilge.com/tarih#webpage", "url": "https://antikbilge.com/tarih", "name": "Tarih"},
+            {"@type": "CollectionPage", "@id": "https://antikbilge.com/mitoloji#webpage", "url": "https://antikbilge.com/mitoloji", "name": "Mitoloji"},
+            {"@type": "CollectionPage", "@id": "https://antikbilge.com/arkeoloji#webpage", "url": "https://antikbilge.com/arkeoloji", "name": "Arkeoloji"},
+            {"@type": "CollectionPage", "@id": "https://antikbilge.com/sanat-tarihi#webpage", "url": "https://antikbilge.com/sanat-tarihi", "name": "Sanat Tarihi"}
+          ]
         }
-    }
-    </script>
-
-    <!-- WebSite Schema (for Google search box) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Antik Bilge",
-        "url": "https://antikbilge.com",
-        "inLanguage": "tr",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": "https://antikbilge.com/?s={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-
-    <!-- Site Navigation Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "https://antikbilge.com",
-        "name": "Antik Bilge",
-        "hasPart": [
-            {
-                "@type": "WebPage",
-                "url": "https://antikbilge.com/tarih",
-                "name": "Tarih",
-                "description": "Antik medeniyetlerden günümüze tarih makaleleri"
-            },
-            {
-                "@type": "WebPage",
-                "url": "https://antikbilge.com/mitoloji",
-                "name": "Mitoloji",
-                "description": "Antik tanrılar, efsaneler ve destanlar"
-            },
-            {
-                "@type": "WebPage",
-                "url": "https://antikbilge.com/arkeoloji",
-                "name": "Arkeoloji",
-                "description": "Antik medeniyetlerin izinde kazı alanları ve keşifler"
-            },
-            {
-                "@type": "WebPage",
-                "url": "https://antikbilge.com/sanat-tarihi",
-                "name": "Sanat Tarihi",
-                "description": "Rönesans'tan Barok'a antik çağlardan moderne sanat tarihi"
-            }
-        ]
-    }
-    </script>
-
-    <!-- Logo ImageObject Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ImageObject",
-        "contentUrl": "https://antikbilge.com/images/logo.webp",
-        "url": "https://antikbilge.com/images/logo.webp",
-        "name": "Antik Bilge Logo",
-        "description": "Antik Bilge web sitesi logosu - Tarih, Mitoloji, Sanat Tarihi ve Arkeoloji platformu",
-        "width": "200",
-        "height": "200"
-    }
-    </script>
-
-    <!-- BreadcrumbList Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Anasayfa",
-                "item": "https://antikbilge.com/"
-            }
-        ]
+      ]
     }
     </script>
 
@@ -458,7 +410,7 @@
     }
     </script>
 
-    <link rel="stylesheet" href="css/style.css?v=34">
+    <link rel="stylesheet" href="css/style.css?v=35">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://pagead2.googlesyndication.com">
@@ -524,7 +476,18 @@
     </nav>
 
     <main>
-        <h1 class="sr-only">Antik Bilge - Tarih, Mitoloji, Sanat Tarihi ve Arkeoloji</h1>
+        <section class="home-intro" aria-labelledby="home-title">
+            <div class="container">
+                <h1 id="home-title">Antik Bilge: Tarih, Mitoloji, Arkeoloji ve Sanat Tarihi</h1>
+                <p>Geçmişin izinde, bilgeliğin peşinde; güvenilir kaynaklara dayanan, akıcı ve kapsamlı içeriklerle uygarlıkları, mitleri, arkeolojik keşifleri ve sanat eserlerini inceliyoruz.</p>
+                <nav class="home-topic-links" aria-label="Antik Bilge ana kategorileri">
+                    <a href="tarih">Tarih</a>
+                    <a href="mitoloji">Mitoloji</a>
+                    <a href="arkeoloji">Arkeoloji</a>
+                    <a href="sanat-tarihi">Sanat Tarihi</a>
+                </nav>
+            </div>
+        </section>
         <!-- Articles Section -->
         <section class="articles" id="yazilar">
 
