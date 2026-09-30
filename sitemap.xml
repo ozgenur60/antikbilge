@@ -655,4 +655,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://antikbilge.com/articles/kardes-katli-yasasi-neden-cikarildi</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://antikbilge.com/images/kardes-katli-yasasi-neden-cikarildi.webp</image:loc>
+      <image:title>Kardeş Katli Yasası Neden Çıkarıldı?</image:title>
+      <image:caption>Fatih Sultan Mehmed portresi ve Osmanlı kardeş katli yasası</image:caption>
+    </image:image>
+  </url>
 </urlset>
