@@ -18,9 +18,6 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.antikbilge\.com [NC]
 RewriteRule ^(.*)$ https://antikbilge.com/$1 [L,R=301]
 
-# Redirect the incorrect Roman emperors article URL to its canonical page
-RewriteRule ^articles/roma-imparatorlari-neden-bu-kadar-sik-olduruluyordu(?:\.html)?/?$ https://antikbilge.com/articles/roma-imparatorlari-neden-olduruluyordu [R=301,L]
-
 # =====================================================
 # 3. TRAILING SLASH NORMALIZATION
 # Remove trailing slash from non-directory URLs
