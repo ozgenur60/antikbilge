@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://antikbilge.com/</loc>
     <lastmod>2026-09-24</lastmod>
@@ -685,4 +685,5 @@
     <loc>https://antikbilge.com/articles/cem-sultan-olayi-nedir</loc>
     <lastmod>2026-10-04</lastmod>
   </url>
+  <url><loc>https://antikbilge.com/articles/sehzade-mustafa-neden-olduruldu</loc><lastmod>2026-10-08</lastmod></url>
 </urlset>
