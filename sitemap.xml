@@ -686,4 +686,14 @@
     <lastmod>2026-10-04</lastmod>
   </url>
   <url><loc>https://antikbilge.com/articles/sehzade-mustafa-neden-olduruldu</loc><lastmod>2026-10-08</lastmod></url>
+  <url>
+    <loc>https://antikbilge.com/articles/yeniceriler-neden-kaldirildi</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://antikbilge.com/images/yeniceriler-neden-kaldirildi.webp</image:loc>
+      <image:title>Yeniçeriler Neden Kaldırıldı?</image:title>
+    </image:image>
+  </url>
 </urlset>
