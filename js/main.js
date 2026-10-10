@@ -143,6 +143,53 @@ if (contactForm){
     });
 }
 
+// Shared back-to-top control, independent of legacy stylesheet versions.
+if (!document.getElementById('back-to-top')){
+    var backToTopStyle=document.createElement('style');
+    backToTopStyle.textContent=`
+        .back-to-top{position:fixed;right:16px;right:max(16px,env(safe-area-inset-right));top:50%;transform:translateY(-50%);z-index:999;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid #d4b896;border-radius:50%;background:#f5e8c8;color:#1e3a5f;box-shadow:0 2px 8px rgba(0,0,0,.16);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+        .back-to-top[hidden]{display:none}
+        .back-to-top svg{width:24px;height:24px;pointer-events:none}
+        .back-to-top:focus-visible{outline:3px solid #1e3a5f;outline-offset:3px}
+        @media(hover:hover){.back-to-top:hover{background:#1e3a5f;color:#fff}}
+        @media(max-width:600px){.back-to-top{right:8px;right:max(8px,env(safe-area-inset-right))}}
+    `;
+    document.head.appendChild(backToTopStyle);
+    var backToTop=document.createElement('button');
+    backToTop.id='back-to-top';
+    backToTop.className='back-to-top';
+    backToTop.type='button';
+    backToTop.hidden=true;
+    backToTop.setAttribute('aria-label','Sayfanın başına dön');
+    backToTop.title='Sayfanın başına dön';
+    backToTop.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+    document.body.appendChild(backToTop);
+    var backToTopFrame=0;
+    function updateBackToTop(){
+        backToTopFrame=0;
+        backToTop.hidden=window.scrollY<=300;
+    }
+    window.addEventListener('scroll',function(){
+        if (!backToTopFrame) backToTopFrame=window.requestAnimationFrame(updateBackToTop);
+    },{passive:true});
+    window.addEventListener('pageshow',updateBackToTop);
+    backToTop.addEventListener('click',function(){
+        var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({top:0,left:0,behavior:reduceMotion?'instant':'smooth'});
+        // Keep keyboard focus near the destination after the button is hidden.
+        var destination=document.querySelector('.top-nav a,.logo a,a.logo,main,h1');
+        if (destination){
+            var temporaryFocus=!destination.matches('a[href],button,input,select,textarea,[tabindex]');
+            if (temporaryFocus){
+                destination.setAttribute('tabindex','-1');
+                destination.addEventListener('blur',function(){destination.removeAttribute('tabindex');},{once:true});
+            }
+            destination.focus({preventScroll:true});
+        }
+    });
+    updateBackToTop();
+}
+
 // Article reading time
 var articleBody=document.querySelector('.article-body');
 if (articleBody){
