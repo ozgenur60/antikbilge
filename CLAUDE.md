@@ -67,6 +67,17 @@ General principles:
 
 ## AI Assistant Instructions
 
+### Antik Bilge Editorial Voice
+
+- Start articles with a concrete, documented event, an artwork detail, a character's predicament, or the subject's central tension. Do not repeat the H1 as a question followed by a dictionary answer in the opening paragraph.
+- Answer the search intent within the first few paragraphs through connected prose. SEO wording must follow the narrative, never dictate a mechanical introduction.
+- Reference the scene-led openings of Kaplumbağa Terbiyecisi, Arnolfini and Âdem’in Yaratılışı, and the concrete historical framing of Hürrem Sultan and Şehzade Mustafa. Do not imitate generic openings such as “Tarih boyunca bazı…” or “Dünya edebiyatında bazı eserler…”.
+- Keep a warm, lucid and informative Turkish voice. Build curiosity from the subject itself, without invented dialogue, imagined emotions, sensational claims or a succession of empty rhetorical questions.
+- Explain evidence and uncertainty where relevant. Integrate these explanations into the narrative instead of repeatedly interrupting it with instructions about how the reader must interpret history.
+- Each paragraph must add a fact, connection or supported interpretation. Remove repeated definitions, repeated conclusions, redundant chronology and abstract closing sentences that merely restate the section.
+- Read and edit the entire article before publication, including transitions, FAQ consistency and the ending. Checking sources and correcting an introduction alone does not complete editorial review.
+- Preserve the CCM19 configuration, historical accuracy, source attribution and the distinction between evidence and interpretation when editing prose.
+
 ### When Working on This Repository
 
 1. **Before Making Changes**
