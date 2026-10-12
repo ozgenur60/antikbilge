@@ -27,7 +27,7 @@ Makaleler aşağıdaki görselleri referans alıyor; ancak bu dosyalar `images/`
 | `articles/osiris-kimdir.html` | `images/osiris-kapak.webp` |
 | `articles/ra-kimdir.html` | `images/ra.webp` (hero + og:image) |
 | `articles/olumden-sonraki-yasam-inanci.html` | `images/olumden-sonraki-yasam.webp` |
-| `articles/maat-kimdir.html` | `images/maat-kapak.webp` (hero + og:image) |
+| `articles/maat-kimdir.html` | `images/maat-seti-mezari-kabartmasi.webp` (hero + og:image) |
 | Birden fazla makale (related post) | `images/zeus-kapak.webp`, `images/hades-kimdir.webp`, `images/isis.webp`, `images/athena-medusa-lanet.webp`, `images/poseidon-kapak.webp`, `images/hukumdar-sehirler-kapak.webp`, `images/piramitler-insaat.webp`, `images/anubis-kapak.webp` |
 
 **Etki:** Kırık hero görseli kullanıcı deneyimini doğrudan bozar; kırık `og:image` sosyal paylaşımlarda site görselini yok eder. Google Search Console'da bu sayfalar için görsel indeksleme sıfır olacaktır.
