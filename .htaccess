@@ -29,6 +29,11 @@ RewriteRule ^ %1 [L,R=301]
 # =====================================================
 # 3.5 REMOVE .HTML EXTENSION FROM URLS
 # =====================================================
+# Redirect the old Roman emperors article slug to its current canonical URL.
+# Keep this before the generic clean-URL rewrite so the missing old path
+# receives a real 301 response instead of falling through to the 404 page.
+RewriteRule ^articles/roma-imparatorlari-neden-bu-kadar-sik-olduruluyordu(?:\.html)?/?$ /articles/roma-imparatorlari-neden-olduruluyordu [R=301,L,NC]
+
 # Redirect .html URLs to clean URLs (external redirect)
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
