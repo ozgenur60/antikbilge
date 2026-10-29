@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:ns1="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://antikbilge.com/</loc>
     <lastmod>2026-09-24</lastmod>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/yunan-mitolojisinde-evrenin-yaratilisi</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/titanlar-kimdir</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -68,7 +68,7 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/kronos-kimdir</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -104,7 +104,7 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/hera-kimdir</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -260,7 +260,7 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/odysseia-destani-nedir</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -356,7 +356,7 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/zeus-kimdir</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -516,7 +516,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Son içerik güncellemesi: 2026-09-15 -->
+
   <url>
     <loc>https://antikbilge.com/articles/arnolfininin-evlenmesi-tablosu-ne-anlatiyor</loc>
     <lastmod>2026-09-13</lastmod>
@@ -660,22 +660,22 @@
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://antikbilge.com/images/kardes-katli-yasasi-neden-cikarildi.webp</image:loc>
-      <image:title>Kardeş Katli Yasası Neden Çıkarıldı?</image:title>
-      <image:caption>Fatih Sultan Mehmed portresi ve Osmanlı kardeş katli yasası</image:caption>
-    </image:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/kardes-katli-yasasi-neden-cikarildi.webp</ns1:loc>
+      <ns1:title>Kardeş Katli Yasası Neden Çıkarıldı?</ns1:title>
+      <ns1:caption>Fatih Sultan Mehmed portresi ve Osmanlı kardeş katli yasası</ns1:caption>
+    </ns1:image>
   </url>
   <url>
     <loc>https://antikbilge.com/articles/osmanlida-harem-gercekte-nasil-isliyordu</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://antikbilge.com/images/osmanlida-harem-gercekte-nasil-isliyordu.webp</image:loc>
-      <image:title>Osmanlı’da Harem Gerçekte Nasıl İşliyordu?</image:title>
-      <image:caption>Topkapı Sarayı Harem-i Hümayun ve Osmanlı harem düzeni</image:caption>
-    </image:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/osmanlida-harem-gercekte-nasil-isliyordu.webp</ns1:loc>
+      <ns1:title>Osmanlı’da Harem Gerçekte Nasıl İşliyordu?</ns1:title>
+      <ns1:caption>Topkapı Sarayı Harem-i Hümayun ve Osmanlı harem düzeni</ns1:caption>
+    </ns1:image>
   </url>
   <url>
     <loc>https://antikbilge.com/articles/fatih-sultan-mehmet-istanbulu-nasil-fethetti</loc>
@@ -691,30 +691,30 @@
     <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://antikbilge.com/images/yeniceriler-neden-kaldirildi.webp</image:loc>
-      <image:title>Yeniçeriler Neden Kaldırıldı?</image:title>
-    </image:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/yeniceriler-neden-kaldirildi.webp</ns1:loc>
+      <ns1:title>Yeniçeriler Neden Kaldırıldı?</ns1:title>
+    </ns1:image>
   </url>
   <url>
     <loc>https://antikbilge.com/articles/pargali-ibrahim-pasa-neden-olduruldu</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://antikbilge.com/images/pargali-ibrahim-pasa-neden-olduruldu.webp</image:loc>
-      <image:title>Pargalı İbrahim Paşa Neden Öldürüldü?</image:title>
-    </image:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/pargali-ibrahim-pasa-neden-olduruldu.webp</ns1:loc>
+      <ns1:title>Pargalı İbrahim Paşa Neden Öldürüldü?</ns1:title>
+    </ns1:image>
   </url>
   <url>
     <loc>https://antikbilge.com/articles/osmanli-imparatorlugu-neden-yikildi</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://antikbilge.com/images/osmanli-imparatorlugu-neden-yikildi-kapak.webp</image:loc>
-      <image:title>Osmanlı İmparatorluğu Neden Yıkıldı?</image:title>
-    </image:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/osmanli-imparatorlugu-neden-yikildi-kapak.webp</ns1:loc>
+      <ns1:title>Osmanlı İmparatorluğu Neden Yıkıldı?</ns1:title>
+    </ns1:image>
   </url>
   <url><loc>https://antikbilge.com/articles/gilgamis-destani-nedir</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://antikbilge.com/articles/anunnakiler-kimdir</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
