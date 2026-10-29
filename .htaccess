@@ -34,6 +34,19 @@ RewriteRule ^ %1 [L,R=301]
 # receives a real 301 response instead of falling through to the 404 page.
 RewriteRule ^articles/roma-imparatorlari-neden-bu-kadar-sik-olduruluyordu(?:\.html)?/?$ /articles/roma-imparatorlari-neden-olduruluyordu [R=301,L,NC]
 
+# Redirect legacy root pages that were once resolved relative to /articles/.
+RewriteRule ^articles/(?:articles/)?index(?:\.html)?/?$ / [R=301,L,NC]
+RewriteRule ^articles/(mitoloji|katilim|gizlilik-politikasi|turk-mitolojisi|yunan-mitolojisi|hakkimizda|tarih|kullanim-sartlari|misir-mitolojisi|mezopotamya-mitolojisi|sanat-tarihi|arkeoloji|cerez-politikasi|iletisim)(?:\.html)?/?$ /$1 [R=301,L,NC]
+
+# Redirect malformed duplicate /articles/articles/ paths recorded by Google.
+RewriteRule ^articles/articles/(mitoloji|katilim)(?:\.html)?/?$ /$1 [R=301,L,NC]
+RewriteRule ^articles/articles/gobeklitepe-nedir(?:\.html)?/?$ /articles/gobeklitepe-nedir [R=301,L,NC]
+RewriteRule ^articles/articles/olimpos-tanrilari(?:\.html)?/?$ /articles/olimpos-tanrilari [R=301,L,NC]
+
+# Redirect superseded article slugs to their current canonical URLs.
+RewriteRule ^articles/gobeklitepe-arkeolojik-kirilma(?:\.html)?/?$ /articles/gobeklitepe-nedir [R=301,L,NC]
+RewriteRule ^articles/olimpos-tanrilari-neden-degisir(?:\.html)?/?$ /articles/olimpos-tanrilari [R=301,L,NC]
+
 # Redirect .html URLs to clean URLs (external redirect)
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
