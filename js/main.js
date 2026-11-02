@@ -215,4 +215,18 @@ protectedImages.forEach(function(img){
     });
 });
 
+// İskandinav Mitolojisi category link
+document.querySelectorAll('.dropdown-menu').forEach(function(menu){
+    var mythologyLink=menu.querySelector('a[href$="mezopotamya-mitolojisi"]');
+    if(mythologyLink&&!menu.querySelector('a[href$="iskandinav-mitolojisi"]')){
+        var item=document.createElement('li');
+        var link=document.createElement('a');
+        var isArticle=window.location.pathname.indexOf('/articles/')!==-1;
+        link.href=(isArticle?'../':'')+'iskandinav-mitolojisi';
+        link.textContent='İskandinav Mitolojisi';
+        item.appendChild(link);
+        mythologyLink.parentNode.insertAdjacentElement('afterend',item);
+    }
+});
+
 })();
