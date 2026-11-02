@@ -229,4 +229,22 @@ document.querySelectorAll('.dropdown-menu').forEach(function(menu){
     }
 });
 
+
+// Odin article listing for the newly opened Scandinavian mythology category
+(function(){
+    if(document.querySelector('a[href="articles/odin-kimdir"]')) return;
+    var card='<article class="article-card-horizontal"><a class="article-thumb" href="articles/odin-kimdir"><img alt="Lejre’de bulunan gümüş Odin figürini" height="900" loading="lazy" src="images/odin-lejre-figurini-kapak.webp" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" width="1600"><span class="article-category">İskandinav Mitolojisi</span></a><div class="article-content"><h3><a href="articles/odin-kimdir">Odin Kimdir? İskandinav Mitolojisinin Baş Tanrısının Gerçek Hikâyesi</a></h3><p>Tek gözün bedelinden rünlere, Valhalla’dan Ragnarök’e: Edda metinleri ve tarihî eserlerle Odin’in gerçek hikâyesi.</p><div class="article-meta"><time datetime="2026-11-02">2 Kasım 2026</time><span class="read-time">28 dk okuma</span></div></div></article>';
+    var path=window.location.pathname.replace(/\/$/,'');
+    if(path.endsWith('/iskandinav-mitolojisi')){
+        var empty=document.querySelector('.empty-category');
+        if(empty) empty.outerHTML=card;
+    }else if(path.endsWith('/index')||path===''){
+        var list=document.querySelector('.main-content .articles-list');
+        if(list) list.insertAdjacentHTML('afterbegin',card);
+    }else if(path.endsWith('/mitoloji')){
+        var main=document.querySelector('.main-content');
+        if(main) main.insertAdjacentHTML('afterbegin','<div class="content-section"><div class="section-header"><h2><a href="iskandinav-mitolojisi">İskandinav Mitolojisi</a></h2><a class="view-all" href="iskandinav-mitolojisi">Tümünü Gör</a></div><div class="articles-list">'+card+'</div></div>');
+    }
+})();
+
 })();
