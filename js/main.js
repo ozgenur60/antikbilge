@@ -247,4 +247,23 @@ document.querySelectorAll('.dropdown-menu').forEach(function(menu){
     }
 })();
 
+
+// Thor and Loki article listing
+(function(){
+    if(document.querySelector('a[href="articles/thor-ve-loki-marveldan-farklari"]')) return;
+    var card='<article class="article-card-horizontal"><a class="article-thumb" href="articles/thor-ve-loki-marveldan-farklari"><img alt="Eyrarland Thor heykelciği ve Snaptun Taşı" height="900" loading="lazy" src="images/thor-ve-loki-marveldan-farklari-kapak.webp" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" width="1600"><span class="article-category">İskandinav Mitolojisi</span></a><div class="article-content"><h3><a href="articles/thor-ve-loki-marveldan-farklari">Thor ve Loki: Marvel’dan Farkları ve Gerçek Mitolojik Hikâyeleri</a></h3><p>Gerçekte kardeşler mi? Mjölnir’in layıklık kuralından Hel ve Hela’ya, Edda metinleriyle Marvel’ın değiştirdiği ayrıntılar.</p><div class="article-meta"><time datetime="2026-11-03">3 Kasım 2026</time><span class="read-time">28 dk okuma</span></div></div></article>';
+    var path=window.location.pathname.replace(/\/$/,'');
+    if(path.endsWith('/iskandinav-mitolojisi')){
+        var list=document.querySelector('.main-content .articles-list');
+        if(list) list.insertAdjacentHTML('afterbegin',card);
+    }else if(path.endsWith('/index')||path===''||path==='/'){
+        var homeList=document.querySelector('.main-content .articles-list');
+        if(homeList) homeList.insertAdjacentHTML('afterbegin',card);
+    }else if(path.endsWith('/mitoloji')){
+        var scandi=Array.from(document.querySelectorAll('.content-section')).find(function(section){var a=section.querySelector('.section-header a[href="iskandinav-mitolojisi"]');return !!a;});
+        if(scandi){var articles=scandi.querySelector('.articles-list');if(articles) articles.insertAdjacentHTML('afterbegin',card);}
+        else{var main=document.querySelector('.main-content');if(main) main.insertAdjacentHTML('afterbegin','<div class="content-section"><div class="section-header"><h2><a href="iskandinav-mitolojisi">İskandinav Mitolojisi</a></h2><a class="view-all" href="iskandinav-mitolojisi">Tümünü Gör</a></div><div class="articles-list">'+card+'</div></div>');}
+    }
+})();
+
 })();
