@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:ns1="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://antikbilge.com/</loc>
@@ -796,6 +796,17 @@
       <ns1:loc>https://antikbilge.com/images/thor-ve-loki-marveldan-farklari-kapak.webp</ns1:loc>
       <ns1:title>Thor ve Loki: Marvel’dan Farkları ve Gerçek Mitolojik Hikâyeleri</ns1:title>
       <ns1:caption>Eyrarland Thor heykelciği ve Loki olarak yorumlanan Snaptun Taşı</ns1:caption>
+    </ns1:image>
+  </url>
+  <url>
+    <loc>https://antikbilge.com/articles/ragnarok-nedir</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/ragnarok-nedir-tanrilarin-sonu-kapak.webp</ns1:loc>
+      <ns1:title>Ragnarök Nedir? İskandinav Mitolojisinde Tanrıların Sonu</ns1:title>
+      <ns1:caption>George Wright’ın 1908 tarihli Ragnarök savaş sahnesi</ns1:caption>
     </ns1:image>
   </url>
 </urlset>

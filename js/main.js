@@ -266,4 +266,23 @@ document.querySelectorAll('.dropdown-menu').forEach(function(menu){
     }
 })();
 
+
+// Ragnarök article listing
+(function(){
+    if(document.querySelector('a[href="articles/ragnarok-nedir"]')) return;
+    var card='<article class="article-card-horizontal"><a class="article-thumb" href="articles/ragnarok-nedir"><img alt="George Wright’ın Ragnarök savaşını betimleyen 1908 tarihli çizimi" height="900" loading="lazy" src="images/ragnarok-nedir-tanrilarin-sonu-kapak.webp" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" width="1600"><span class="article-category">İskandinav Mitolojisi</span></a><div class="article-content"><h3><a href="articles/ragnarok-nedir">Ragnarök Nedir? İskandinav Mitolojisinde Tanrıların Sonu</a></h3><p>Tanrıların son savaşından yeni dünyanın doğuşuna; Odin, Thor, Loki, Fenrir ve Surtr’ın kaderini Edda kaynaklarıyla inceleyin.</p><div class="article-meta"><time datetime="2026-11-04">4 Kasım 2026</time><span class="read-time">29 dk okuma</span></div></div></article>';
+    var path=window.location.pathname.replace(/\/$/,'');
+    if(path.endsWith('/iskandinav-mitolojisi')){
+        var list=document.querySelector('.main-content .articles-list');
+        if(list) list.insertAdjacentHTML('afterbegin',card);
+    }else if(path.endsWith('/index')||path===''||path==='/'){
+        var homeList=document.querySelector('.main-content .articles-list');
+        if(homeList) homeList.insertAdjacentHTML('afterbegin',card);
+    }else if(path.endsWith('/mitoloji')){
+        var scandi=Array.from(document.querySelectorAll('.content-section')).find(function(section){return !!section.querySelector('.section-header a[href="iskandinav-mitolojisi"]');});
+        if(scandi){var articles=scandi.querySelector('.articles-list');if(articles) articles.insertAdjacentHTML('afterbegin',card);}
+        else{var main=document.querySelector('.main-content');if(main) main.insertAdjacentHTML('afterbegin','<div class="content-section"><div class="section-header"><h2><a href="iskandinav-mitolojisi">İskandinav Mitolojisi</a></h2><a class="view-all" href="iskandinav-mitolojisi">Tümünü Gör</a></div><div class="articles-list">'+card+'</div></div>');}
+    }
+})();
+
 })();
