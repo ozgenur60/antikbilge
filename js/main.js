@@ -1,3 +1,4 @@
+// Navigation cache revision: 2026-11-04-5
 (function(){'use strict';
 
 // Hamburger menu
