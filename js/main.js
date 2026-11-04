@@ -301,4 +301,14 @@ document.querySelectorAll('.dropdown-menu').forEach(function(menu){
     }
 });
 
+
+// Ayasofya article listing
+(function(){
+    if(document.querySelector('a[href="articles/ayasofyanin-hikayesi-bizanstan-bugune"]')) return;
+    var card='<article class="article-card-horizontal"><a class="article-thumb" href="articles/ayasofyanin-hikayesi-bizanstan-bugune"><img alt="Ayasofya’nın dış görünüşü" height="900" loading="lazy" src="images/ayasofyanin-hikayesi-bizanstan-bugune-kapak.webp" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" width="1600"><span class="article-category">Bizans Tarihi</span></a><div class="article-content"><h3><a href="articles/ayasofyanin-hikayesi-bizanstan-bugune">Ayasofya’nın Hikâyesi: Bizans’tan Bugüne</a></h3><p>Üç Ayasofya’dan Justinianus’un kubbesine, Bizans mozaiklerinden Osmanlı müdahalelerine ve bugünkü kullanımına uzanan 1.500 yıllık hikâye.</p><div class="article-meta"><time datetime="2026-11-04">4 Kasım 2026</time><span class="read-time">30 dk okuma</span></div></div></article>';
+    var path=window.location.pathname.replace(/\/$/,'');
+    if(path.endsWith('/bizans-tarihi')){var list=document.querySelector('.main-content .articles-list');if(list)list.insertAdjacentHTML('afterbegin',card);}
+    else if(path.endsWith('/index')||path===''||path==='/'){var list=document.querySelector('.main-content .articles-list');if(list)list.insertAdjacentHTML('afterbegin',card);}
+})();
+
 })();

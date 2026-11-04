@@ -815,4 +815,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://antikbilge.com/articles/ayasofyanin-hikayesi-bizanstan-bugune</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ns1:image><ns1:loc>https://antikbilge.com/images/ayasofyanin-hikayesi-bizanstan-bugune-kapak.webp</ns1:loc><ns1:title>Ayasofya’nın Hikâyesi: Bizans’tan Bugüne</ns1:title></ns1:image>
+  </url>
 </urlset>
