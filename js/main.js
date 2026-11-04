@@ -285,4 +285,19 @@ document.querySelectorAll('.dropdown-menu').forEach(function(menu){
     }
 })();
 
+
+// Bizans Tarihi category link
+document.querySelectorAll('.dropdown-menu').forEach(function(menu){
+    var ottomanLink=menu.querySelector('a[href$="osmanli-tarihi"]');
+    if(ottomanLink&&!menu.querySelector('a[href$="bizans-tarihi"]')){
+        var item=document.createElement('li');
+        var link=document.createElement('a');
+        var isArticle=window.location.pathname.indexOf('/articles/')!==-1;
+        link.href=(isArticle?'../':'')+'bizans-tarihi';
+        link.textContent='Bizans Tarihi';
+        item.appendChild(link);
+        ottomanLink.parentNode.insertAdjacentElement('afterend',item);
+    }
+});
+
 })();
