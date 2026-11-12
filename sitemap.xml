@@ -834,4 +834,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://antikbilge.com/articles/yavuz-sultan-selim-kimdir</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ns1:image><ns1:loc>https://antikbilge.com/images/yavuz-sultan-selim-kimdir-kapak.webp</ns1:loc><ns1:title>Yavuz Sultan Selim Kimdir? Hayatı, Seferleri ve Tartışılan Mirası</ns1:title><ns1:caption>I. Selim’in 16. yüzyıla tarihlenen Osmanlı minyatürü</ns1:caption></ns1:image>
+  </url>
 </urlset>
