@@ -1,0 +1,55 @@
+name: Apply navigation update
+
+on:
+  push:
+    branches: ["fix/unify-site-navigation"]
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: fix/unify-site-navigation
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Unify navigation
+        run: node scripts/unify-navigation.js
+
+      - name: Add navigation check to site checks
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const file = '.github/workflows/site-checks.yml';
+          let source = fs.readFileSync(file, 'utf8');
+          const needle = '      - name: Verify site infrastructure\n        run: node scripts/check-site-infrastructure.js\n';
+          const addition = '\n      - name: Verify site navigation\n        run: node scripts/check-site-navigation.js\n';
+          if (!source.includes('node scripts/check-site-navigation.js')) {
+            if (!source.includes(needle)) throw new Error('Site checks insertion point not found');
+            source = source.replace(needle, needle + addition);
+            fs.writeFileSync(file, source);
+          }
+          NODE
+
+      - name: Verify changes
+        run: |
+          node scripts/check-site-navigation.js
+          node scripts/check-site-infrastructure.js
+          node scripts/check-image-policy.js
+
+      - name: Commit generated navigation
+        run: |
+          git config user.name "Antik Bilge Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git rm .github/workflows/apply-navigation.yml
+          git add .github/workflows/site-checks.yml scripts '*.html' articles/*.html
+          git commit -m "Sitedeki tüm kategori menülerini birleştir"
+          git push origin fix/unify-site-navigation
