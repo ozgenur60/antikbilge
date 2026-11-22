@@ -27,6 +27,9 @@ jobs:
           echo "Generated sitemap.xml:"
           head -20 sitemap.xml
 
+      - name: Verify local article images
+        run: node scripts/check-image-policy.js
+
       - name: Deploy via LFTP
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
