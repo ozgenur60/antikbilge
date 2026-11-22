@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: fix/unify-site-navigation
+          persist-credentials: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -49,7 +50,6 @@ jobs:
         run: |
           git config user.name "Antik Bilge Bot"
           git config user.email "actions@users.noreply.github.com"
-          git rm .github/workflows/apply-navigation.yml
-          git add .github/workflows/site-checks.yml scripts '*.html' articles/*.html
+          git add -A
           git commit -m "Sitedeki tüm kategori menülerini birleştir"
-          git push origin fix/unify-site-navigation
+          git push
