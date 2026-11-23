@@ -25,3 +25,6 @@ jobs:
 
       - name: Verify site infrastructure
         run: node scripts/check-site-infrastructure.js
+
+      - name: Verify site navigation
+        run: node scripts/check-site-navigation.js
