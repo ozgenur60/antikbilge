@@ -30,6 +30,31 @@ for (const file of walkHtml(root)) {
       failures.push(`${path.relative(root, file)}: eksik stil dosyası ${href}.`);
     }
   }
+
+  if (path.dirname(file) === path.join(root, 'articles')) {
+    const canonicalTag = html.match(/<link\b[^>]*\brel=["']canonical["'][^>]*>/i)?.[0];
+    const canonical = canonicalTag?.match(/\bhref=["']([^"']+)["']/i)?.[1];
+    const articleSchemas = [];
+
+    for (const match of html.matchAll(
+      /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g
+    )) {
+      try {
+        const schema = JSON.parse(match[1]);
+        if (schema['@type'] === 'Article') articleSchemas.push(schema);
+      } catch (error) {
+        failures.push(`${path.relative(root, file)}: geçersiz JSON-LD (${error.message}).`);
+      }
+    }
+
+    if (articleSchemas.length !== 1) {
+      failures.push(
+        `${path.relative(root, file)}: tam olarak bir Article şeması bulunmalı; ${articleSchemas.length} bulundu.`
+      );
+    } else if (articleSchemas[0].mainEntityOfPage?.['@id'] !== canonical) {
+      failures.push(`${path.relative(root, file)}: Article şeması canonical adresle eşleşmiyor.`);
+    }
+  }
 }
 
 if (fs.existsSync(path.join(root, 'articles', 'osmanli-tarihi.html'))) {
