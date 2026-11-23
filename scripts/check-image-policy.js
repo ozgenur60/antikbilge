@@ -33,10 +33,23 @@ for (const file of htmlFiles) {
       }
     }
   }
+
+  for (let index = 0; index < lines.length; index++) {
+    const imageTags = lines[index].match(/<img\b[^>]*>/gi) || [];
+    for (const imageTag of imageTags) {
+      const hasWidth = /\bwidth=["']\d+["']/i.test(imageTag);
+      const hasHeight = /\bheight=["']\d+["']/i.test(imageTag);
+      if (!hasWidth || !hasHeight) {
+        violations.push(
+          `${path.relative(root, file)}:${index + 1} — görsel width/height eksik`
+        );
+      }
+    }
+  }
 }
 
 if (violations.length) {
-  console.error('Makale görselleri Antik Bilge sunucusundan yüklenmelidir:');
+  console.error('Görsel politikası ihlalleri:');
   console.error(violations.join('\n'));
   process.exit(1);
 }
