@@ -22,34 +22,21 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Unify navigation
-        run: node scripts/unify-navigation.js
-
-      - name: Add navigation check to site checks
+      - name: Apply HTML fixes
         run: |
-          node - <<'NODE'
-          const fs = require('fs');
-          const file = '.github/workflows/site-checks.yml';
-          let source = fs.readFileSync(file, 'utf8');
-          const needle = '      - name: Verify site infrastructure\n        run: node scripts/check-site-infrastructure.js\n';
-          const addition = '\n      - name: Verify site navigation\n        run: node scripts/check-site-navigation.js\n';
-          if (!source.includes('node scripts/check-site-navigation.js')) {
-            if (!source.includes(needle)) throw new Error('Site checks insertion point not found');
-            source = source.replace(needle, needle + addition);
-            fs.writeFileSync(file, source);
-          }
-          NODE
+          node scripts/unify-navigation.js
+          node scripts/fix-afrodit-schema.js
 
-      - name: Verify changes
+      - name: Verify HTML
         run: |
           node scripts/check-site-navigation.js
           node scripts/check-site-infrastructure.js
           node scripts/check-image-policy.js
 
-      - name: Commit generated navigation
+      - name: Commit HTML changes
         run: |
           git config user.name "Antik Bilge Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A
+          git add -- *.html articles/*.html
           git commit -m "Sitedeki tüm kategori menülerini birleştir"
           git push
