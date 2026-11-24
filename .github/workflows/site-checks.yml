@@ -29,5 +29,8 @@ jobs:
       - name: Verify site navigation
         run: node scripts/check-site-navigation.js
 
+      - name: Verify article breadcrumbs
+        run: node scripts/check-article-breadcrumbs.js
+
       - name: Verify sitemap coverage
         run: node scripts/check-sitemap-coverage.js
