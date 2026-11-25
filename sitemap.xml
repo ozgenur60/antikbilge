@@ -278,7 +278,10 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/oluler-kitabi-nedir</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-11-25</lastmod>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/antik-misir-tanrilari-hunefer-papirusu-kapak.webp</ns1:loc>
+    </ns1:image>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
