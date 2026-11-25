@@ -158,9 +158,12 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/athena-medusayi-neden-lanetledi</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/athena-aegis-mermer-met.webp</ns1:loc>
+    </ns1:image>
   </url>
   <url>
     <loc>https://antikbilge.com/articles/athena-poseidon-atina-mucadelesi</loc>
@@ -242,9 +245,12 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/medusa-kimdir</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/medusa-gorgoneion-met.webp</ns1:loc>
+    </ns1:image>
   </url>
   <url>
     <loc>https://antikbilge.com/articles/minotor-efsanesi</loc>
@@ -317,9 +323,12 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/perseus-medusayi-nasil-oldurdu</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/perseus-medusa-lekythos-met.webp</ns1:loc>
+    </ns1:image>
   </url>
   <url>
     <loc>https://antikbilge.com/articles/poseidon-kimdir</loc>
