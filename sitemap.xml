@@ -116,9 +116,12 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/perseus-kimdir</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/perseus-canova-kapak-met.webp</ns1:loc>
+    </ns1:image>
   </url>
   <url>
     <loc>https://antikbilge.com/articles/akhilleus-kimdir</loc>
@@ -152,9 +155,12 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/athena-kimdir</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/athena-aegis-mermer-met.webp</ns1:loc>
+    </ns1:image>
   </url>
   <url>
     <loc>https://antikbilge.com/articles/athena-medusayi-neden-lanetledi</loc>
@@ -311,9 +317,12 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/pegasus-kimdir</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/pegasos-bellerophon-gumus-kylix-met.webp</ns1:loc>
+    </ns1:image>
   </url>
   <url>
     <loc>https://antikbilge.com/articles/persephone-kacirilis</loc>
