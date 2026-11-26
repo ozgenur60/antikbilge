@@ -138,9 +138,12 @@ if (contactForm){
     contactForm.addEventListener('submit',function(e){
         e.preventDefault();
         var formData=new FormData(this);
-        var name=formData.get('name');
-        alert('Teşekkürler '+name+'! Mesajınız alındı.');
-        this.reset();
+        var subject='Antik Bilge iletişim mesajı';
+        var body='Adınız: '+formData.get('name')+'\r\n'+
+            'E-posta adresiniz: '+formData.get('email')+'\r\n\r\n'+formData.get('message');
+        var status=this.querySelector('.contact-status');
+        if (status) status.textContent='E-posta uygulamanız açılmadıysa iletişim adresine doğrudan yazabilirsiniz.';
+        window.location.href=this.action+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     });
 }
 
