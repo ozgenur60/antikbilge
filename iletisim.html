@@ -155,17 +155,22 @@
                             </a>
                         </div>
                     </div>
-                    <form class="contact-form" action="#" method="post">
+                    <form class="contact-form" action="mailto:antikbilge.co@gmail.com" method="post" enctype="text/plain">
+                        <p>Mesajınızı e-posta uygulamanızda açıp oradan gönderebilirsiniz.</p>
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Adınız" required>
+                            <label class="sr-only" for="contact-name">Adınız</label>
+                            <input type="text" id="contact-name" maxlength="120" name="name" placeholder="Adınız" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="E-posta adresiniz" required>
+                            <label class="sr-only" for="contact-email">E-posta adresiniz</label>
+                            <input type="email" id="contact-email" maxlength="254" name="email" placeholder="E-posta adresiniz" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
+                            <label class="sr-only" for="contact-message">Mesajınız</label>
+                            <textarea id="contact-message" maxlength="1600" name="message" placeholder="Mesajınız" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn-primary">Gönder</button>
+                        <button type="submit" class="btn-primary">E-posta Taslağını Aç</button>
+                        <p class="contact-status" role="status"></p>
                     </form>
                 </div>
             </article>
@@ -213,6 +218,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=2" defer></script>
+    <script src="js/main.js?v=3" defer></script>
 </body>
 </html>
