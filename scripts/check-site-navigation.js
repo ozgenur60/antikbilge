@@ -15,8 +15,8 @@ function htmlFiles(directory) {
 }
 
 const requiredLinks = [
-  ['Bizans Tarihi', /href="(?:\.\.\/)?bizans-tarihi(?:\.html)?"/g],
-  ['İskandinav Mitolojisi', /href="(?:\.\.\/)?iskandinav-mitolojisi(?:\.html)?"/g],
+  ['Bizans Tarihi', /href="(?:\.\.\/|\/)?bizans-tarihi(?:\.html)?"/g],
+  ['İskandinav Mitolojisi', /href="(?:\.\.\/|\/)?iskandinav-mitolojisi(?:\.html)?"/g],
 ];
 
 const failures = [];
