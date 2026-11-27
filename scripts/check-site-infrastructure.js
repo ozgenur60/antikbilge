@@ -25,7 +25,10 @@ for (const file of walkHtml(root)) {
   for (const match of html.matchAll(stylesheetPattern)) {
     const href = match[1];
     if (/^(?:https?:)?\/\//i.test(href)) continue;
-    const stylesheetPath = path.resolve(path.dirname(file), href.split('?')[0]);
+    const stylesheet = href.split('?')[0];
+    const stylesheetPath = stylesheet.startsWith('/')
+      ? path.join(root, stylesheet)
+      : path.resolve(path.dirname(file), stylesheet);
     if (!fs.existsSync(stylesheetPath)) {
       failures.push(`${path.relative(root, file)}: eksik stil dosyası ${href}.`);
     }
