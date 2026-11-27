@@ -242,9 +242,33 @@
   </url>
   <url>
     <loc>https://antikbilge.com/articles/ismini-hukumdarlardan-alan-sehirler</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/hukumdar-sehirler-antalya-kaleici.webp</ns1:loc>
+    </ns1:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/antalya-yivli-minare-valette.webp</ns1:loc>
+    </ns1:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/bursa-ulu-cami-carl-ha.webp</ns1:loc>
+    </ns1:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/edirne-selimiye-tysarczyk.webp</ns1:loc>
+    </ns1:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/iskenderun-sahil-dosseman.webp</ns1:loc>
+    </ns1:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/kayseri-kalesi-efeyik.webp</ns1:loc>
+    </ns1:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/sivas-cifte-minareli-medrese-flesier.webp</ns1:loc>
+    </ns1:image>
+    <ns1:image>
+      <ns1:loc>https://antikbilge.com/images/alanya-kizil-kule-bestalex.webp</ns1:loc>
+    </ns1:image>
   </url>
   <url>
     <loc>https://antikbilge.com/articles/maat-kimdir</loc>
